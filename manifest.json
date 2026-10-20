@@ -1,0 +1,25 @@
+{
+  "name": "MercadoVoz - Lista de Compras PWA",
+  "short_name": "MercadoVoz",
+  "description": "Lista de compras por voz em português com preços médios e envio para WhatsApp",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#047857",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
