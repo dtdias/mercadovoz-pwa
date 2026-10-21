@@ -1,5 +1,6 @@
 # 🛒 MercadoVoz — Lista de Compras PWA por Voz & WhatsApp
-
+> 🚀 **Acesse o aplicativo:** [lista.trajano.dev.br](https://lista.trajano.dev.br)
+> 
 O **MercadoVoz** é um **Progressive Web App (PWA)** leve, rápido e 100% em português brasileiro, desenvolvido para simplificar a criação e o controle de listas de compras de supermercado pelo celular ou computador. Com reconhecimento de voz nativo (`Web Speech API`), gestão de múltiplas listas com espelhamento de compras anteriores, base integrada de preços médios do varejo brasileiro e exportação formatada direto para o **WhatsApp**, o aplicativo funciona sem necessidade de login ou banco de dados externo.
 
 ## ✨ Funcionalidades Principais
