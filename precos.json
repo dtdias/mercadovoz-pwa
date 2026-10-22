@@ -1,0 +1,1302 @@
+{
+  "ultima_atualizacao": "2026-10-22 01:37:25",
+  "total_produtos": 162,
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Arroz (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 21.91
+    },
+    {
+      "id": 2,
+      "nome": "Arroz (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 29.99
+    },
+    {
+      "id": 3,
+      "nome": "Feijão (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 6.21
+    },
+    {
+      "id": 4,
+      "nome": "Feijão (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 43.82
+    },
+    {
+      "id": 5,
+      "nome": "Açúcar (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 35.17
+    },
+    {
+      "id": 6,
+      "nome": "Açúcar (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 47.5
+    },
+    {
+      "id": 7,
+      "nome": "Café (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 64.12
+    },
+    {
+      "id": 8,
+      "nome": "Café (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 8.71
+    },
+    {
+      "id": 9,
+      "nome": "Óleo de Soja (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 13.18
+    },
+    {
+      "id": 10,
+      "nome": "Óleo de Soja (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 47.19
+    },
+    {
+      "id": 11,
+      "nome": "Azeite de Oliva (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 27.56
+    },
+    {
+      "id": 12,
+      "nome": "Azeite de Oliva (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 11.69
+    },
+    {
+      "id": 13,
+      "nome": "Macarrão (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 32.89
+    },
+    {
+      "id": 14,
+      "nome": "Macarrão (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 63.31
+    },
+    {
+      "id": 15,
+      "nome": "Farinha de Trigo (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 5.97
+    },
+    {
+      "id": 16,
+      "nome": "Farinha de Trigo (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 8.55
+    },
+    {
+      "id": 17,
+      "nome": "Farinha de Mandioca (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 31.54
+    },
+    {
+      "id": 18,
+      "nome": "Farinha de Mandioca (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 35.82
+    },
+    {
+      "id": 19,
+      "nome": "Sal (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 21.53
+    },
+    {
+      "id": 20,
+      "nome": "Sal (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 54.8
+    },
+    {
+      "id": 21,
+      "nome": "Molho de Tomate (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 29.18
+    },
+    {
+      "id": 22,
+      "nome": "Molho de Tomate (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 38.86
+    },
+    {
+      "id": 23,
+      "nome": "Milho de Pipoca (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 15.61
+    },
+    {
+      "id": 24,
+      "nome": "Milho de Pipoca (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 63.93
+    },
+    {
+      "id": 25,
+      "nome": "Sardinha em Lata (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 33.83
+    },
+    {
+      "id": 26,
+      "nome": "Sardinha em Lata (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 29.93
+    },
+    {
+      "id": 27,
+      "nome": "Atum em Lata (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 58.23
+    },
+    {
+      "id": 28,
+      "nome": "Atum em Lata (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 18.73
+    },
+    {
+      "id": 29,
+      "nome": "Cereal Matinal (Padrão)",
+      "categoria": "Alimentos",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 11.28
+    },
+    {
+      "id": 30,
+      "nome": "Cereal Matinal (Premium)",
+      "categoria": "Alimentos",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 62.44
+    },
+    {
+      "id": 31,
+      "nome": "Leite Integral (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 47.08
+    },
+    {
+      "id": 32,
+      "nome": "Leite Integral (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 27.7
+    },
+    {
+      "id": 33,
+      "nome": "Leite Desnatado (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 22.08
+    },
+    {
+      "id": 34,
+      "nome": "Leite Desnatado (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 20.62
+    },
+    {
+      "id": 35,
+      "nome": "Manteiga (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 49.76
+    },
+    {
+      "id": 36,
+      "nome": "Manteiga (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 26.58
+    },
+    {
+      "id": 37,
+      "nome": "Margarina (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 43.25
+    },
+    {
+      "id": 38,
+      "nome": "Margarina (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 42.8
+    },
+    {
+      "id": 39,
+      "nome": "Queijo Mussarela (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 34.0
+    },
+    {
+      "id": 40,
+      "nome": "Queijo Mussarela (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 37.13
+    },
+    {
+      "id": 41,
+      "nome": "Queijo Prato (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 48.88
+    },
+    {
+      "id": 42,
+      "nome": "Queijo Prato (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 33.31
+    },
+    {
+      "id": 43,
+      "nome": "Requeijão (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 8.95
+    },
+    {
+      "id": 44,
+      "nome": "Requeijão (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 52.81
+    },
+    {
+      "id": 45,
+      "nome": "Iogurte Natural (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 31.3
+    },
+    {
+      "id": 46,
+      "nome": "Iogurte Natural (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 49.84
+    },
+    {
+      "id": 47,
+      "nome": "Creme de Leite (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 47.37
+    },
+    {
+      "id": 48,
+      "nome": "Creme de Leite (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 47.89
+    },
+    {
+      "id": 49,
+      "nome": "Leite Condensado (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 60.08
+    },
+    {
+      "id": 50,
+      "nome": "Leite Condensado (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 53.76
+    },
+    {
+      "id": 51,
+      "nome": "Queijo Minas (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 17.76
+    },
+    {
+      "id": 52,
+      "nome": "Queijo Minas (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 44.25
+    },
+    {
+      "id": 53,
+      "nome": "Nata (Padrão)",
+      "categoria": "Laticínios",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 50.33
+    },
+    {
+      "id": 54,
+      "nome": "Nata (Premium)",
+      "categoria": "Laticínios",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 55.83
+    },
+    {
+      "id": 55,
+      "nome": "Peito de Frango (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 18.5
+    },
+    {
+      "id": 56,
+      "nome": "Peito de Frango (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 27.8
+    },
+    {
+      "id": 57,
+      "nome": "Coxa de Frango (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 19.26
+    },
+    {
+      "id": 58,
+      "nome": "Coxa de Frango (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 60.7
+    },
+    {
+      "id": 59,
+      "nome": "Carne Bovina Moída (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 59.5
+    },
+    {
+      "id": 60,
+      "nome": "Carne Bovina Moída (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 19.87
+    },
+    {
+      "id": 61,
+      "nome": "Alcatra (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 38.85
+    },
+    {
+      "id": 62,
+      "nome": "Alcatra (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 10.49
+    },
+    {
+      "id": 63,
+      "nome": "Contrafilé (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 54.57
+    },
+    {
+      "id": 64,
+      "nome": "Contrafilé (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 25.76
+    },
+    {
+      "id": 65,
+      "nome": "Picanha (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 28.57
+    },
+    {
+      "id": 66,
+      "nome": "Picanha (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 12.86
+    },
+    {
+      "id": 67,
+      "nome": "Bisteca Suína (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 22.26
+    },
+    {
+      "id": 68,
+      "nome": "Bisteca Suína (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 5.66
+    },
+    {
+      "id": 69,
+      "nome": "Linguiça Toshana (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 46.98
+    },
+    {
+      "id": 70,
+      "nome": "Linguiça Toshana (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 61.47
+    },
+    {
+      "id": 71,
+      "nome": "Salsicha (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 48.69
+    },
+    {
+      "id": 72,
+      "nome": "Salsicha (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 41.64
+    },
+    {
+      "id": 73,
+      "nome": "Bacon (Padrão)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 38.7
+    },
+    {
+      "id": 74,
+      "nome": "Bacon (Premium)",
+      "categoria": "Carnes & Aves",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 15.82
+    },
+    {
+      "id": 75,
+      "nome": "Banana Prata (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 46.71
+    },
+    {
+      "id": 76,
+      "nome": "Banana Prata (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 45.04
+    },
+    {
+      "id": 77,
+      "nome": "Maçã Gala (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 37.76
+    },
+    {
+      "id": 78,
+      "nome": "Maçã Gala (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 56.36
+    },
+    {
+      "id": 79,
+      "nome": "Laranja Pera (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 38.43
+    },
+    {
+      "id": 80,
+      "nome": "Laranja Pera (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 13.06
+    },
+    {
+      "id": 81,
+      "nome": "Tomate (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 16.2
+    },
+    {
+      "id": 82,
+      "nome": "Tomate (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 56.83
+    },
+    {
+      "id": 83,
+      "nome": "Cebola (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 7.38
+    },
+    {
+      "id": 84,
+      "nome": "Cebola (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 39.95
+    },
+    {
+      "id": 85,
+      "nome": "Batata Inglesa (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 30.06
+    },
+    {
+      "id": 86,
+      "nome": "Batata Inglesa (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 34.68
+    },
+    {
+      "id": 87,
+      "nome": "Alho (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 50.25
+    },
+    {
+      "id": 88,
+      "nome": "Alho (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 21.22
+    },
+    {
+      "id": 89,
+      "nome": "Cenoura (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 30.98
+    },
+    {
+      "id": 90,
+      "nome": "Cenoura (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 54.72
+    },
+    {
+      "id": 91,
+      "nome": "Alface Americana (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 13.54
+    },
+    {
+      "id": 92,
+      "nome": "Alface Americana (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 31.68
+    },
+    {
+      "id": 93,
+      "nome": "Mamão Formosa (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 37.84
+    },
+    {
+      "id": 94,
+      "nome": "Mamão Formosa (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 16.13
+    },
+    {
+      "id": 95,
+      "nome": "Melancia (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 49.7
+    },
+    {
+      "id": 96,
+      "nome": "Melancia (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 3.88
+    },
+    {
+      "id": 97,
+      "nome": "Abacaxi (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 11.35
+    },
+    {
+      "id": 98,
+      "nome": "Abacaxi (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 22.43
+    },
+    {
+      "id": 99,
+      "nome": "Limão Taiti (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 44.17
+    },
+    {
+      "id": 100,
+      "nome": "Limão Taiti (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 61.43
+    },
+    {
+      "id": 101,
+      "nome": "Abobrinha (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 43.04
+    },
+    {
+      "id": 102,
+      "nome": "Abobrinha (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 60.7
+    },
+    {
+      "id": 103,
+      "nome": "Pimentão Verde (Padrão)",
+      "categoria": "Hortifruti",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 13.93
+    },
+    {
+      "id": 104,
+      "nome": "Pimentão Verde (Premium)",
+      "categoria": "Hortifruti",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 53.32
+    },
+    {
+      "id": 105,
+      "nome": "Refrigerante Guaraná (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 64.7
+    },
+    {
+      "id": 106,
+      "nome": "Refrigerante Guaraná (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 8.9
+    },
+    {
+      "id": 107,
+      "nome": "Refrigerante Cola (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 40.92
+    },
+    {
+      "id": 108,
+      "nome": "Refrigerante Cola (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 55.79
+    },
+    {
+      "id": 109,
+      "nome": "Suco de Laranja 1L (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 39.49
+    },
+    {
+      "id": 110,
+      "nome": "Suco de Laranja 1L (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 46.84
+    },
+    {
+      "id": 111,
+      "nome": "Água Mineral 500ml (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 49.84
+    },
+    {
+      "id": 112,
+      "nome": "Água Mineral 500ml (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 8.5
+    },
+    {
+      "id": 113,
+      "nome": "Água de Coco 1L (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 36.9
+    },
+    {
+      "id": 114,
+      "nome": "Água de Coco 1L (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 8.77
+    },
+    {
+      "id": 115,
+      "nome": "Cerveja Pilsen (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 23.9
+    },
+    {
+      "id": 116,
+      "nome": "Cerveja Pilsen (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 43.4
+    },
+    {
+      "id": 117,
+      "nome": "Vinho Tinto (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 28.25
+    },
+    {
+      "id": 118,
+      "nome": "Vinho Tinto (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 38.28
+    },
+    {
+      "id": 119,
+      "nome": "Chá Gelado (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 52.43
+    },
+    {
+      "id": 120,
+      "nome": "Chá Gelado (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 63.4
+    },
+    {
+      "id": 121,
+      "nome": "Energético (Padrão)",
+      "categoria": "Bebidas",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 40.25
+    },
+    {
+      "id": 122,
+      "nome": "Energético (Premium)",
+      "categoria": "Bebidas",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 7.35
+    },
+    {
+      "id": 123,
+      "nome": "Detergente Líquido (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 16.98
+    },
+    {
+      "id": 124,
+      "nome": "Detergente Líquido (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 39.15
+    },
+    {
+      "id": 125,
+      "nome": "Sabão em Pó (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 5.5
+    },
+    {
+      "id": 126,
+      "nome": "Sabão em Pó (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 9.69
+    },
+    {
+      "id": 127,
+      "nome": "Sabão Líquido (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 49.86
+    },
+    {
+      "id": 128,
+      "nome": "Sabão Líquido (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 5.57
+    },
+    {
+      "id": 129,
+      "nome": "Amaciante de Roupas (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 27.09
+    },
+    {
+      "id": 130,
+      "nome": "Amaciante de Roupas (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 48.11
+    },
+    {
+      "id": 131,
+      "nome": "Desinfetante (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 28.68
+    },
+    {
+      "id": 132,
+      "nome": "Desinfetante (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 20.67
+    },
+    {
+      "id": 133,
+      "nome": "Água Sanitária (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 20.96
+    },
+    {
+      "id": 134,
+      "nome": "Água Sanitária (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 9.73
+    },
+    {
+      "id": 135,
+      "nome": "Lustra Móveis (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 56.91
+    },
+    {
+      "id": 136,
+      "nome": "Lustra Móveis (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 61.82
+    },
+    {
+      "id": 137,
+      "nome": "Esponja de Aço (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 32.3
+    },
+    {
+      "id": 138,
+      "nome": "Esponja de Aço (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 51.48
+    },
+    {
+      "id": 139,
+      "nome": "Saco de Lixo 50L (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 33.76
+    },
+    {
+      "id": 140,
+      "nome": "Saco de Lixo 50L (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 14.97
+    },
+    {
+      "id": 141,
+      "nome": "Limpador Multiuso (Padrão)",
+      "categoria": "Limpeza",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 42.59
+    },
+    {
+      "id": 142,
+      "nome": "Limpador Multiuso (Premium)",
+      "categoria": "Limpeza",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 29.52
+    },
+    {
+      "id": 143,
+      "nome": "Papel Higiênico 12un (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 43.37
+    },
+    {
+      "id": 144,
+      "nome": "Papel Higiênico 12un (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 23.61
+    },
+    {
+      "id": 145,
+      "nome": "Sabonete (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "un",
+      "preco": 20.46
+    },
+    {
+      "id": 146,
+      "nome": "Sabonete (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 6.02
+    },
+    {
+      "id": 147,
+      "nome": "Shampoo (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 26.22
+    },
+    {
+      "id": 148,
+      "nome": "Shampoo (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 54.77
+    },
+    {
+      "id": 149,
+      "nome": "Condicionador (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "1L",
+      "preco": 7.7
+    },
+    {
+      "id": 150,
+      "nome": "Condicionador (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 15.47
+    },
+    {
+      "id": 151,
+      "nome": "Creme Dental (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 33.93
+    },
+    {
+      "id": 152,
+      "nome": "Creme Dental (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 62.18
+    },
+    {
+      "id": 153,
+      "nome": "Escova de Dentes (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 27.56
+    },
+    {
+      "id": 154,
+      "nome": "Escova de Dentes (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "pacote",
+      "preco": 21.58
+    },
+    {
+      "id": 155,
+      "nome": "Desodorante Roll-on (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "pacote",
+      "preco": 31.34
+    },
+    {
+      "id": 156,
+      "nome": "Desodorante Roll-on (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 46.93
+    },
+    {
+      "id": 157,
+      "nome": "Fio Dental (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 20.86
+    },
+    {
+      "id": 158,
+      "nome": "Fio Dental (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "kg",
+      "preco": 59.45
+    },
+    {
+      "id": 159,
+      "nome": "Protetor Solar (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 12.05
+    },
+    {
+      "id": 160,
+      "nome": "Protetor Solar (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "un",
+      "preco": 9.62
+    },
+    {
+      "id": 161,
+      "nome": "Algodão (Padrão)",
+      "categoria": "Higiene",
+      "variacao": "Padrão",
+      "unidade": "kg",
+      "preco": 23.59
+    },
+    {
+      "id": 162,
+      "nome": "Algodão (Premium)",
+      "categoria": "Higiene",
+      "variacao": "Premium",
+      "unidade": "1L",
+      "preco": 4.63
+    }
+  ]
+}
