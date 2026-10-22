@@ -1,1302 +1,904 @@
 {
-  "ultima_atualizacao": "2026-10-22 01:37:25",
-  "total_produtos": 162,
-  "produtos": [
-    {
-      "id": 1,
-      "nome": "Arroz (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 21.91
-    },
-    {
-      "id": 2,
-      "nome": "Arroz (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 29.99
-    },
-    {
-      "id": 3,
-      "nome": "Feijão (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 6.21
-    },
-    {
-      "id": 4,
-      "nome": "Feijão (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 43.82
-    },
-    {
-      "id": 5,
-      "nome": "Açúcar (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 35.17
-    },
-    {
-      "id": 6,
-      "nome": "Açúcar (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 47.5
-    },
-    {
-      "id": 7,
-      "nome": "Café (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 64.12
-    },
-    {
-      "id": 8,
-      "nome": "Café (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 8.71
-    },
-    {
-      "id": 9,
-      "nome": "Óleo de Soja (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 13.18
-    },
-    {
-      "id": 10,
-      "nome": "Óleo de Soja (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 47.19
-    },
-    {
-      "id": 11,
-      "nome": "Azeite de Oliva (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 27.56
-    },
-    {
-      "id": 12,
-      "nome": "Azeite de Oliva (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 11.69
-    },
-    {
-      "id": 13,
-      "nome": "Macarrão (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 32.89
-    },
-    {
-      "id": 14,
-      "nome": "Macarrão (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 63.31
-    },
-    {
-      "id": 15,
-      "nome": "Farinha de Trigo (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 5.97
-    },
-    {
-      "id": 16,
-      "nome": "Farinha de Trigo (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 8.55
-    },
-    {
-      "id": 17,
-      "nome": "Farinha de Mandioca (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 31.54
-    },
-    {
-      "id": 18,
-      "nome": "Farinha de Mandioca (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 35.82
-    },
-    {
-      "id": 19,
-      "nome": "Sal (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 21.53
-    },
-    {
-      "id": 20,
-      "nome": "Sal (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 54.8
-    },
-    {
-      "id": 21,
-      "nome": "Molho de Tomate (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 29.18
-    },
-    {
-      "id": 22,
-      "nome": "Molho de Tomate (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 38.86
-    },
-    {
-      "id": 23,
-      "nome": "Milho de Pipoca (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 15.61
-    },
-    {
-      "id": 24,
-      "nome": "Milho de Pipoca (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 63.93
-    },
-    {
-      "id": 25,
-      "nome": "Sardinha em Lata (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 33.83
-    },
-    {
-      "id": 26,
-      "nome": "Sardinha em Lata (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 29.93
-    },
-    {
-      "id": 27,
-      "nome": "Atum em Lata (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 58.23
-    },
-    {
-      "id": 28,
-      "nome": "Atum em Lata (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 18.73
-    },
-    {
-      "id": 29,
-      "nome": "Cereal Matinal (Padrão)",
-      "categoria": "Alimentos",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 11.28
-    },
-    {
-      "id": 30,
-      "nome": "Cereal Matinal (Premium)",
-      "categoria": "Alimentos",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 62.44
-    },
-    {
-      "id": 31,
-      "nome": "Leite Integral (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 47.08
-    },
-    {
-      "id": 32,
-      "nome": "Leite Integral (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 27.7
-    },
-    {
-      "id": 33,
-      "nome": "Leite Desnatado (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 22.08
-    },
-    {
-      "id": 34,
-      "nome": "Leite Desnatado (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 20.62
-    },
-    {
-      "id": 35,
-      "nome": "Manteiga (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 49.76
-    },
-    {
-      "id": 36,
-      "nome": "Manteiga (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 26.58
-    },
-    {
-      "id": 37,
-      "nome": "Margarina (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 43.25
-    },
-    {
-      "id": 38,
-      "nome": "Margarina (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 42.8
-    },
-    {
-      "id": 39,
-      "nome": "Queijo Mussarela (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 34.0
-    },
-    {
-      "id": 40,
-      "nome": "Queijo Mussarela (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 37.13
-    },
-    {
-      "id": 41,
-      "nome": "Queijo Prato (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 48.88
-    },
-    {
-      "id": 42,
-      "nome": "Queijo Prato (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 33.31
-    },
-    {
-      "id": 43,
-      "nome": "Requeijão (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 8.95
-    },
-    {
-      "id": 44,
-      "nome": "Requeijão (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 52.81
-    },
-    {
-      "id": 45,
-      "nome": "Iogurte Natural (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 31.3
-    },
-    {
-      "id": 46,
-      "nome": "Iogurte Natural (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 49.84
-    },
-    {
-      "id": 47,
-      "nome": "Creme de Leite (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 47.37
-    },
-    {
-      "id": 48,
-      "nome": "Creme de Leite (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 47.89
-    },
-    {
-      "id": 49,
-      "nome": "Leite Condensado (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 60.08
-    },
-    {
-      "id": 50,
-      "nome": "Leite Condensado (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 53.76
-    },
-    {
-      "id": 51,
-      "nome": "Queijo Minas (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 17.76
-    },
-    {
-      "id": 52,
-      "nome": "Queijo Minas (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 44.25
-    },
-    {
-      "id": 53,
-      "nome": "Nata (Padrão)",
-      "categoria": "Laticínios",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 50.33
-    },
-    {
-      "id": 54,
-      "nome": "Nata (Premium)",
-      "categoria": "Laticínios",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 55.83
-    },
-    {
-      "id": 55,
-      "nome": "Peito de Frango (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 18.5
-    },
-    {
-      "id": 56,
-      "nome": "Peito de Frango (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 27.8
-    },
-    {
-      "id": 57,
-      "nome": "Coxa de Frango (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 19.26
-    },
-    {
-      "id": 58,
-      "nome": "Coxa de Frango (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 60.7
-    },
-    {
-      "id": 59,
-      "nome": "Carne Bovina Moída (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 59.5
-    },
-    {
-      "id": 60,
-      "nome": "Carne Bovina Moída (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 19.87
-    },
-    {
-      "id": 61,
-      "nome": "Alcatra (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 38.85
-    },
-    {
-      "id": 62,
-      "nome": "Alcatra (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 10.49
-    },
-    {
-      "id": 63,
-      "nome": "Contrafilé (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 54.57
-    },
-    {
-      "id": 64,
-      "nome": "Contrafilé (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 25.76
-    },
-    {
-      "id": 65,
-      "nome": "Picanha (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 28.57
-    },
-    {
-      "id": 66,
-      "nome": "Picanha (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 12.86
-    },
-    {
-      "id": 67,
-      "nome": "Bisteca Suína (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 22.26
-    },
-    {
-      "id": 68,
-      "nome": "Bisteca Suína (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 5.66
-    },
-    {
-      "id": 69,
-      "nome": "Linguiça Toshana (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 46.98
-    },
-    {
-      "id": 70,
-      "nome": "Linguiça Toshana (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 61.47
-    },
-    {
-      "id": 71,
-      "nome": "Salsicha (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 48.69
-    },
-    {
-      "id": 72,
-      "nome": "Salsicha (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 41.64
-    },
-    {
-      "id": 73,
-      "nome": "Bacon (Padrão)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 38.7
-    },
-    {
-      "id": 74,
-      "nome": "Bacon (Premium)",
-      "categoria": "Carnes & Aves",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 15.82
-    },
-    {
-      "id": 75,
-      "nome": "Banana Prata (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 46.71
-    },
-    {
-      "id": 76,
-      "nome": "Banana Prata (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 45.04
-    },
-    {
-      "id": 77,
-      "nome": "Maçã Gala (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 37.76
-    },
-    {
-      "id": 78,
-      "nome": "Maçã Gala (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 56.36
-    },
-    {
-      "id": 79,
-      "nome": "Laranja Pera (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 38.43
-    },
-    {
-      "id": 80,
-      "nome": "Laranja Pera (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 13.06
-    },
-    {
-      "id": 81,
-      "nome": "Tomate (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 16.2
-    },
-    {
-      "id": 82,
-      "nome": "Tomate (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 56.83
-    },
-    {
-      "id": 83,
-      "nome": "Cebola (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 7.38
-    },
-    {
-      "id": 84,
-      "nome": "Cebola (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 39.95
-    },
-    {
-      "id": 85,
-      "nome": "Batata Inglesa (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 30.06
-    },
-    {
-      "id": 86,
-      "nome": "Batata Inglesa (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 34.68
-    },
-    {
-      "id": 87,
-      "nome": "Alho (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 50.25
-    },
-    {
-      "id": 88,
-      "nome": "Alho (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 21.22
-    },
-    {
-      "id": 89,
-      "nome": "Cenoura (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 30.98
-    },
-    {
-      "id": 90,
-      "nome": "Cenoura (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 54.72
-    },
-    {
-      "id": 91,
-      "nome": "Alface Americana (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 13.54
-    },
-    {
-      "id": 92,
-      "nome": "Alface Americana (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 31.68
-    },
-    {
-      "id": 93,
-      "nome": "Mamão Formosa (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 37.84
-    },
-    {
-      "id": 94,
-      "nome": "Mamão Formosa (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 16.13
-    },
-    {
-      "id": 95,
-      "nome": "Melancia (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 49.7
-    },
-    {
-      "id": 96,
-      "nome": "Melancia (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 3.88
-    },
-    {
-      "id": 97,
-      "nome": "Abacaxi (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 11.35
-    },
-    {
-      "id": 98,
-      "nome": "Abacaxi (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 22.43
-    },
-    {
-      "id": 99,
-      "nome": "Limão Taiti (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 44.17
-    },
-    {
-      "id": 100,
-      "nome": "Limão Taiti (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 61.43
-    },
-    {
-      "id": 101,
-      "nome": "Abobrinha (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 43.04
-    },
-    {
-      "id": 102,
-      "nome": "Abobrinha (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 60.7
-    },
-    {
-      "id": 103,
-      "nome": "Pimentão Verde (Padrão)",
-      "categoria": "Hortifruti",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 13.93
-    },
-    {
-      "id": 104,
-      "nome": "Pimentão Verde (Premium)",
-      "categoria": "Hortifruti",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 53.32
-    },
-    {
-      "id": 105,
-      "nome": "Refrigerante Guaraná (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 64.7
-    },
-    {
-      "id": 106,
-      "nome": "Refrigerante Guaraná (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 8.9
-    },
-    {
-      "id": 107,
-      "nome": "Refrigerante Cola (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 40.92
-    },
-    {
-      "id": 108,
-      "nome": "Refrigerante Cola (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 55.79
-    },
-    {
-      "id": 109,
-      "nome": "Suco de Laranja 1L (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 39.49
-    },
-    {
-      "id": 110,
-      "nome": "Suco de Laranja 1L (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 46.84
-    },
-    {
-      "id": 111,
-      "nome": "Água Mineral 500ml (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 49.84
-    },
-    {
-      "id": 112,
-      "nome": "Água Mineral 500ml (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 8.5
-    },
-    {
-      "id": 113,
-      "nome": "Água de Coco 1L (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 36.9
-    },
-    {
-      "id": 114,
-      "nome": "Água de Coco 1L (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 8.77
-    },
-    {
-      "id": 115,
-      "nome": "Cerveja Pilsen (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 23.9
-    },
-    {
-      "id": 116,
-      "nome": "Cerveja Pilsen (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 43.4
-    },
-    {
-      "id": 117,
-      "nome": "Vinho Tinto (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 28.25
-    },
-    {
-      "id": 118,
-      "nome": "Vinho Tinto (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 38.28
-    },
-    {
-      "id": 119,
-      "nome": "Chá Gelado (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 52.43
-    },
-    {
-      "id": 120,
-      "nome": "Chá Gelado (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 63.4
-    },
-    {
-      "id": 121,
-      "nome": "Energético (Padrão)",
-      "categoria": "Bebidas",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 40.25
-    },
-    {
-      "id": 122,
-      "nome": "Energético (Premium)",
-      "categoria": "Bebidas",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 7.35
-    },
-    {
-      "id": 123,
-      "nome": "Detergente Líquido (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 16.98
-    },
-    {
-      "id": 124,
-      "nome": "Detergente Líquido (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 39.15
-    },
-    {
-      "id": 125,
-      "nome": "Sabão em Pó (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 5.5
-    },
-    {
-      "id": 126,
-      "nome": "Sabão em Pó (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 9.69
-    },
-    {
-      "id": 127,
-      "nome": "Sabão Líquido (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 49.86
-    },
-    {
-      "id": 128,
-      "nome": "Sabão Líquido (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 5.57
-    },
-    {
-      "id": 129,
-      "nome": "Amaciante de Roupas (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 27.09
-    },
-    {
-      "id": 130,
-      "nome": "Amaciante de Roupas (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 48.11
-    },
-    {
-      "id": 131,
-      "nome": "Desinfetante (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 28.68
-    },
-    {
-      "id": 132,
-      "nome": "Desinfetante (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 20.67
-    },
-    {
-      "id": 133,
-      "nome": "Água Sanitária (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 20.96
-    },
-    {
-      "id": 134,
-      "nome": "Água Sanitária (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 9.73
-    },
-    {
-      "id": 135,
-      "nome": "Lustra Móveis (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 56.91
-    },
-    {
-      "id": 136,
-      "nome": "Lustra Móveis (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 61.82
-    },
-    {
-      "id": 137,
-      "nome": "Esponja de Aço (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 32.3
-    },
-    {
-      "id": 138,
-      "nome": "Esponja de Aço (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 51.48
-    },
-    {
-      "id": 139,
-      "nome": "Saco de Lixo 50L (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 33.76
-    },
-    {
-      "id": 140,
-      "nome": "Saco de Lixo 50L (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 14.97
-    },
-    {
-      "id": 141,
-      "nome": "Limpador Multiuso (Padrão)",
-      "categoria": "Limpeza",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 42.59
-    },
-    {
-      "id": 142,
-      "nome": "Limpador Multiuso (Premium)",
-      "categoria": "Limpeza",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 29.52
-    },
-    {
-      "id": 143,
-      "nome": "Papel Higiênico 12un (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 43.37
-    },
-    {
-      "id": 144,
-      "nome": "Papel Higiênico 12un (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 23.61
-    },
-    {
-      "id": 145,
-      "nome": "Sabonete (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "un",
-      "preco": 20.46
-    },
-    {
-      "id": 146,
-      "nome": "Sabonete (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 6.02
-    },
-    {
-      "id": 147,
-      "nome": "Shampoo (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 26.22
-    },
-    {
-      "id": 148,
-      "nome": "Shampoo (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 54.77
-    },
-    {
-      "id": 149,
-      "nome": "Condicionador (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "1L",
-      "preco": 7.7
-    },
-    {
-      "id": 150,
-      "nome": "Condicionador (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 15.47
-    },
-    {
-      "id": 151,
-      "nome": "Creme Dental (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 33.93
-    },
-    {
-      "id": 152,
-      "nome": "Creme Dental (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 62.18
-    },
-    {
-      "id": 153,
-      "nome": "Escova de Dentes (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 27.56
-    },
-    {
-      "id": 154,
-      "nome": "Escova de Dentes (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "pacote",
-      "preco": 21.58
-    },
-    {
-      "id": 155,
-      "nome": "Desodorante Roll-on (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "pacote",
-      "preco": 31.34
-    },
-    {
-      "id": 156,
-      "nome": "Desodorante Roll-on (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 46.93
-    },
-    {
-      "id": 157,
-      "nome": "Fio Dental (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 20.86
-    },
-    {
-      "id": 158,
-      "nome": "Fio Dental (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "kg",
-      "preco": 59.45
-    },
-    {
-      "id": 159,
-      "nome": "Protetor Solar (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 12.05
-    },
-    {
-      "id": 160,
-      "nome": "Protetor Solar (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "un",
-      "preco": 9.62
-    },
-    {
-      "id": 161,
-      "nome": "Algodão (Padrão)",
-      "categoria": "Higiene",
-      "variacao": "Padrão",
-      "unidade": "kg",
-      "preco": 23.59
-    },
-    {
-      "id": 162,
-      "nome": "Algodão (Premium)",
-      "categoria": "Higiene",
-      "variacao": "Premium",
-      "unidade": "1L",
-      "preco": 4.63
-    }
-  ]
+  "atualizado_em": "2026-10-22",
+  "total_produtos": 146,
+  "categorias": {
+    "Mercearia": [
+      {
+        "nome": "arroz parboilizado|arroz parbolizado|parboilizado|parbolizado",
+        "un": "Arroz Parboilizado (5kg)",
+        "preco": "pct",
+        "marca": 29.9
+      },
+      {
+        "nome": "arroz integral|integral",
+        "un": "Arroz Integral (1kg)",
+        "preco": "kg",
+        "marca": 7.99
+      },
+      {
+        "nome": "arroz arboreo|arroz arbóreo|arroz para risoto|arroz carnaroli|arboreo",
+        "un": "Arroz Arbóreo (1kg)",
+        "preco": "kg",
+        "marca": 16.9
+      },
+      {
+        "nome": "arroz basmati|arroz jasmine|arroz japones|arroz japonês|arroz sushi",
+        "un": "Arroz Especial / Basmati (1kg)",
+        "preco": "kg",
+        "marca": 18.9
+      },
+      {
+        "nome": "arroz negro|arroz preto|arroz vermelho",
+        "un": "Arroz Negro / Vermelho (500g)",
+        "preco": "pct",
+        "marca": 19.5
+      },
+      {
+        "nome": "arroz branco|arroz tipo 1|arroz agulhinha|arroz normal|arroz 5kg|arroz",
+        "un": "Arroz Branco / Tipo 1 (5kg)",
+        "preco": "pct",
+        "marca": 28.9
+      },
+      {
+        "nome": "extrato de tomate|extrato tomate|extrato",
+        "un": "Extrato de Tomate (340g)",
+        "preco": "un",
+        "marca": 3.89
+      },
+      {
+        "nome": "molho de tomate|molho tomate|passata de tomate|passata|polpa de tomate",
+        "un": "Molho de Tomate (300g)",
+        "preco": "sachê",
+        "marca": 2.59
+      },
+      {
+        "nome": "tomate pelado|tomates pelados",
+        "un": "Tomate Pelado (lata)",
+        "preco": "lata",
+        "marca": 6.49
+      },
+      {
+        "nome": "tomate seco",
+        "un": "Tomate Seco (200g)",
+        "preco": "pote",
+        "marca": 16.9
+      },
+      {
+        "nome": "feijao preto|feijão preto",
+        "un": "Feijão Preto (1kg)",
+        "preco": "kg",
+        "marca": 8.5
+      },
+      {
+        "nome": "feijao fradinho|feijão fradinho",
+        "un": "Feijão Fradinho (1kg)",
+        "preco": "kg",
+        "marca": 9.9
+      },
+      {
+        "nome": "feijao branco|feijão branco",
+        "un": "Feijão Branco (1kg)",
+        "preco": "kg",
+        "marca": 12.9
+      },
+      {
+        "nome": "feijao vermelho|feijão vermelho",
+        "un": "Feijão Vermelho (1kg)",
+        "preco": "kg",
+        "marca": 11.5
+      },
+      {
+        "nome": "feijao carioca|feijão carioca|feijao|feijão",
+        "un": "Feijão Carioca (1kg)",
+        "preco": "kg",
+        "marca": 7.9
+      },
+      {
+        "nome": "leite condensado|leite moca|leite moça",
+        "un": "Leite Condensado (395g)",
+        "preco": "cx",
+        "marca": 5.99
+      },
+      {
+        "nome": "doce de leite",
+        "un": "Doce de Leite (400g)",
+        "preco": "pote",
+        "marca": 12.9
+      },
+      {
+        "nome": "leite de coco",
+        "un": "Leite de Coco (200ml)",
+        "preco": "vd",
+        "marca": 4.79
+      },
+      {
+        "nome": "batata palha",
+        "un": "Batata Palha (120g)",
+        "preco": "pct",
+        "marca": 6.99
+      },
+      {
+        "nome": "alho picado|alho triturado|pasta de alho",
+        "un": "Alho Triturado (200g)",
+        "preco": "pote",
+        "marca": 6.49
+      },
+      {
+        "nome": "cafe extraforte|café extra forte|cafe extra forte",
+        "un": "Café Extraforte (500g)",
+        "preco": "pct",
+        "marca": 18.9
+      },
+      {
+        "nome": "cafe em graos|café em grãos|cafe em grao",
+        "un": "Café em Grãos (1kg)",
+        "preco": "pct",
+        "marca": 49.9
+      },
+      {
+        "nome": "cafe soluvel|café solúvel|nescafe|nescafé",
+        "un": "Café Solúvel (100g)",
+        "preco": "vd",
+        "marca": 12.9
+      },
+      {
+        "nome": "capsulas de cafe|cápsulas de café|capsula de cafe|capsula nespresso",
+        "un": "Cápsulas de Café (cx 10un)",
+        "preco": "cx",
+        "marca": 24.9
+      },
+      {
+        "nome": "cafe tradicional|cafe em po|café em pó|cafe|café|cafe pilao",
+        "un": "Café Tradicional (500g)",
+        "preco": "pct",
+        "marca": 18.9
+      },
+      {
+        "nome": "acucar cristal|açúcar cristal",
+        "un": "Açúcar Cristal (1kg)",
+        "preco": "kg",
+        "marca": 4.59
+      },
+      {
+        "nome": "acucar mascavo|açúcar mascavo",
+        "un": "Açúcar Mascavo (500g)",
+        "preco": "pct",
+        "marca": 7.99
+      },
+      {
+        "nome": "acucar demerara|açúcar demerara",
+        "un": "Açúcar Demerara (1kg)",
+        "preco": "kg",
+        "marca": 6.99
+      },
+      {
+        "nome": "adocante|adoçante|adocante sucralose|adocante stevia",
+        "un": "Adoçante Líquido (100ml)",
+        "preco": "fr",
+        "marca": 8.9
+      },
+      {
+        "nome": "acucar refinado|açúcar refinado|acucar|açúcar|acucar uniao",
+        "un": "Açúcar Refinado (1kg)",
+        "preco": "kg",
+        "marca": 4.99
+      },
+      {
+        "nome": "farinha de trigo com fermento",
+        "un": "Farinha de Trigo com Fermento (1kg)",
+        "preco": "kg",
+        "marca": 6.49
+      },
+      {
+        "nome": "farinha de trigo|trigo",
+        "un": "Farinha de Trigo (1kg)",
+        "preco": "kg",
+        "marca": 5.29
+      },
+      {
+        "nome": "farinha de mandioca",
+        "un": "Farinha de Mandioca (1kg)",
+        "preco": "kg",
+        "marca": 6.99
+      },
+      {
+        "nome": "farinha de rosca",
+        "un": "Farinha de Rosca (500g)",
+        "preco": "pct",
+        "marca": 5.49
+      },
+      {
+        "nome": "aveia em flocos|aveia",
+        "un": "Aveia em Flocos (200g)",
+        "preco": "pct",
+        "marca": 4.99
+      },
+      {
+        "nome": "fuba|fubá|milharina",
+        "un": "Fubá Mimoso (1kg)",
+        "preco": "kg",
+        "marca": 4.29
+      },
+      {
+        "nome": "polvilho azedo|polvilho doce|polvilho",
+        "un": "Polvilho (500g)",
+        "preco": "pct",
+        "marca": 6.99
+      },
+      {
+        "nome": "sardinha em lata|sardinha lata",
+        "un": "Sardinha em Lata (125g)",
+        "preco": "lata",
+        "marca": 4.99
+      },
+      {
+        "nome": "atum em lata|atum sólido|atum ralado|atum",
+        "un": "Atum em Lata (170g)",
+        "preco": "lata",
+        "marca": 7.99
+      },
+      {
+        "nome": "macarrao espaguete|macarrão espaguete|espaguete|spaghetti",
+        "un": "Macarrão Espaguete (500g)",
+        "preco": "pct",
+        "marca": 4.5
+      },
+      {
+        "nome": "macarrao parafuso|macarrão parafuso|fusilli",
+        "un": "Macarrão Parafuso (500g)",
+        "preco": "pct",
+        "marca": 4.5
+      },
+      {
+        "nome": "macarrao penne|penne",
+        "un": "Macarrão Penne (500g)",
+        "preco": "pct",
+        "marca": 4.79
+      },
+      {
+        "nome": "massa de lasanha|massa para lasanha|lasanha",
+        "un": "Massa para Lasanha (500g)",
+        "preco": "pct",
+        "marca": 7.99
+      },
+      {
+        "nome": "miojo|macarrao instantaneo|macarrão instantâneo",
+        "un": "Macarrão Instantâneo (85g)",
+        "preco": "pct",
+        "marca": 2.29
+      },
+      {
+        "nome": "macarrao|macarrão",
+        "un": "Macarrão (500g)",
+        "preco": "pct",
+        "marca": 4.5
+      },
+      {
+        "nome": "oleo de girassol|óleo de girassol|oleo de milho",
+        "un": "Óleo de Girassol / Milho (900ml)",
+        "preco": "un",
+        "marca": 9.9
+      },
+      {
+        "nome": "oleo de soja|óleo de soja|oleo|óleo",
+        "un": "Óleo de Soja (900ml)",
+        "preco": "un",
+        "marca": 6.49
+      },
+      {
+        "nome": "azeite extravirgem|azeite extra virgem|azeite de oliva|azeite",
+        "un": "Azeite Extravirgem (500ml)",
+        "preco": "vd",
+        "marca": 39.9
+      },
+      {
+        "nome": "vinagre de maca|vinagre de maçã",
+        "un": "Vinagre de Maçã (750ml)",
+        "preco": "un",
+        "marca": 5.9
+      },
+      {
+        "nome": "vinagre de alcool|vinagre de álcool|vinagre",
+        "un": "Vinagre de Álcool (750ml)",
+        "preco": "un",
+        "marca": 2.99
+      },
+      {
+        "nome": "sal grosso|sal para churrasco",
+        "un": "Sal Grosso (1kg)",
+        "preco": "kg",
+        "marca": 4.5
+      },
+      {
+        "nome": "sal refinado|sal de cozinha|sal",
+        "un": "Sal Refinado (1kg)",
+        "preco": "kg",
+        "marca": 2.79
+      },
+      {
+        "nome": "maionese|helmans|hellmanns",
+        "un": "Maionese Tradicional (500g)",
+        "preco": "pote",
+        "marca": 7.99
+      },
+      {
+        "nome": "ketchup|catchup",
+        "un": "Ketchup Tradicional (400g)",
+        "preco": "fr",
+        "marca": 7.49
+      },
+      {
+        "nome": "mostarda",
+        "un": "Mostarda Amarela (200g)",
+        "preco": "fr",
+        "marca": 5.9
+      }
+    ],
+    "Hortifrúti": [
+      {
+        "nome": "tomate cereja|tomatinho|tomate grape",
+        "un": "Tomate Cereja (bandeja)",
+        "preco": "bdj",
+        "marca": 6.99
+      },
+      {
+        "nome": "tomate italiano",
+        "un": "Tomate Italiano (kg)",
+        "preco": "kg",
+        "marca": 8.99
+      },
+      {
+        "nome": "tomate|tomates",
+        "un": "Tomate (kg)",
+        "preco": "kg",
+        "marca": 7.99
+      },
+      {
+        "nome": "batata doce|batatas doces",
+        "un": "Batata Doce (kg)",
+        "preco": "kg",
+        "marca": 5.49
+      },
+      {
+        "nome": "batata baroa|baroa|mandioquinha",
+        "un": "Batata Baroa (kg)",
+        "preco": "kg",
+        "marca": 14.9
+      },
+      {
+        "nome": "batata inglesa|batata lavada|batata normal|batata|batatas",
+        "un": "Batata Inglesa (kg)",
+        "preco": "kg",
+        "marca": 6.49
+      },
+      {
+        "nome": "cebola roxa",
+        "un": "Cebola Roxa (kg)",
+        "preco": "kg",
+        "marca": 8.99
+      },
+      {
+        "nome": "cebolinha|cheiro verde|coentro|salsa|salsinha",
+        "un": "Cebolinha / Cheiro Verde (mç)",
+        "preco": "mç",
+        "marca": 2.99
+      },
+      {
+        "nome": "cebola amarela|cebola comum|cebola|cebolas",
+        "un": "Cebola (kg)",
+        "preco": "kg",
+        "marca": 5.99
+      },
+      {
+        "nome": "alho|alho a granel",
+        "un": "Alho (kg)",
+        "preco": "kg",
+        "marca": 32.9
+      },
+      {
+        "nome": "banana prata",
+        "un": "Banana Prata (kg)",
+        "preco": "kg",
+        "marca": 6.99
+      },
+      {
+        "nome": "banana nanica|banana d'agua",
+        "un": "Banana Nanica (kg)",
+        "preco": "kg",
+        "marca": 5.99
+      },
+      {
+        "nome": "banana|bananas",
+        "un": "Banana (kg)",
+        "preco": "kg",
+        "marca": 6.49
+      },
+      {
+        "nome": "maca gala|maçã gala|maca|maçã|macas",
+        "un": "Maçã Gala (kg)",
+        "preco": "kg",
+        "marca": 10.9
+      },
+      {
+        "nome": "laranja pera|laranja para suco|laranja|laranjas",
+        "un": "Laranja Pera (kg)",
+        "preco": "kg",
+        "marca": 4.99
+      },
+      {
+        "nome": "limao taiti|limão taiti|limao|limão",
+        "un": "Limão Taiti (kg)",
+        "preco": "kg",
+        "marca": 5.49
+      },
+      {
+        "nome": "abacaxi|abacaxi perola",
+        "un": "Abacaxi Pérola (un)",
+        "preco": "un",
+        "marca": 7.99
+      },
+      {
+        "nome": "mamao|mamão|mamao papaya|mamao formosa",
+        "un": "Mamão (kg)",
+        "preco": "kg",
+        "marca": 8.9
+      },
+      {
+        "nome": "melancia",
+        "un": "Melancia (kg)",
+        "preco": "kg",
+        "marca": 3.49
+      },
+      {
+        "nome": "cenoura|cenouras",
+        "un": "Cenoura (kg)",
+        "preco": "kg",
+        "marca": 5.99
+      },
+      {
+        "nome": "alface crespa|alface americana|alface",
+        "un": "Alface (un)",
+        "preco": "un",
+        "marca": 3.49
+      }
+    ],
+    "Laticínios": [
+      {
+        "nome": "creme de leite",
+        "un": "Creme de Leite (200g)",
+        "preco": "cx",
+        "marca": 3.49
+      },
+      {
+        "nome": "leite de amendoas|leite de amêndoas|leite vegetal|leite de aveia|leite de soja",
+        "un": "Leite Vegetal (1L)",
+        "preco": "L",
+        "marca": 14.9
+      },
+      {
+        "nome": "leite em po|leite em pó|leite ninho",
+        "un": "Leite em Pó (400g)",
+        "preco": "pct",
+        "marca": 16.9
+      },
+      {
+        "nome": "leite desnatado",
+        "un": "Leite Desnatado (1L)",
+        "preco": "L",
+        "marca": 5.29
+      },
+      {
+        "nome": "leite semidesnatado|leite semi desnatado",
+        "un": "Leite Semidesnatado (1L)",
+        "preco": "L",
+        "marca": 5.19
+      },
+      {
+        "nome": "leite zero lactose|leite sem lactose|leite lactose",
+        "un": "Leite Zero Lactose (1L)",
+        "preco": "L",
+        "marca": 6.49
+      },
+      {
+        "nome": "leite integral|leite de vaca|leite",
+        "un": "Leite Integral (1L)",
+        "preco": "L",
+        "marca": 4.99
+      },
+      {
+        "nome": "queijo prato",
+        "un": "Queijo Prato Fatiado (kg)",
+        "preco": "kg",
+        "marca": 48.9
+      },
+      {
+        "nome": "queijo minas|minas frescal|queijo branco",
+        "un": "Queijo Minas Frescal (un)",
+        "preco": "un",
+        "marca": 19.9
+      },
+      {
+        "nome": "queijo ralado|parmesao ralado|queijo parmesao",
+        "un": "Queijo Parmesão Ralado (50g)",
+        "preco": "pct",
+        "marca": 5.49
+      },
+      {
+        "nome": "queijo mussarela|mussarela fatiada|mucarela|mussarela|queijo",
+        "un": "Queijo Mussarela Fatiado (kg)",
+        "preco": "kg",
+        "marca": 44.9
+      },
+      {
+        "nome": "requeijao|requeijão|requeijao cremoso",
+        "un": "Requeijão Cremoso (200g)",
+        "preco": "copo",
+        "marca": 7.99
+      },
+      {
+        "nome": "manteiga sem sal",
+        "un": "Manteiga sem Sal (200g)",
+        "preco": "pote",
+        "marca": 12.5
+      },
+      {
+        "nome": "manteiga com sal|manteiga",
+        "un": "Manteiga com Sal (200g)",
+        "preco": "pote",
+        "marca": 11.9
+      },
+      {
+        "nome": "margarina|qualy|doriana",
+        "un": "Margarina com Sal (500g)",
+        "preco": "pote",
+        "marca": 6.99
+      },
+      {
+        "nome": "iogurte natural|iogurte de morango|iogurte grego|iogurte",
+        "un": "Iogurte (170g)",
+        "preco": "un",
+        "marca": 3.49
+      }
+    ],
+    "Congelados": [
+      {
+        "nome": "batata congelada|batata frita|batata palito",
+        "un": "Batata Frita / Congelada (1kg)",
+        "preco": "pct",
+        "marca": 18.9
+      },
+      {
+        "nome": "pao de queijo|pão de queijo",
+        "un": "Pão de Queijo Congelado (1kg)",
+        "preco": "pct",
+        "marca": 19.9
+      }
+    ],
+    "Açougue": [
+      {
+        "nome": "carne moida|carne moída|patinho moido|patinho moído",
+        "un": "Carne Moída / Patinho (kg)",
+        "preco": "kg",
+        "marca": 38.9
+      },
+      {
+        "nome": "picanha",
+        "un": "Picanha Bovina (kg)",
+        "preco": "kg",
+        "marca": 69.9
+      },
+      {
+        "nome": "alcatra",
+        "un": "Alcatra Bovina (kg)",
+        "preco": "kg",
+        "marca": 44.9
+      },
+      {
+        "nome": "contrafile|contrafilé|contra file",
+        "un": "Contrafilé (kg)",
+        "preco": "kg",
+        "marca": 46.9
+      },
+      {
+        "nome": "costela bovina|costela de boi|costela",
+        "un": "Costela Bovina (kg)",
+        "preco": "kg",
+        "marca": 28.9
+      },
+      {
+        "nome": "carne de panela|acem|acém|musculo|músculo|carne bovina|carne de boi|carne",
+        "un": "Carne de Panela / Acém (kg)",
+        "preco": "kg",
+        "marca": 29.9
+      },
+      {
+        "nome": "peito de frango|file de frango|filé de frango|file de peito",
+        "un": "Filé de Peito de Frango (kg)",
+        "preco": "kg",
+        "marca": 21.9
+      },
+      {
+        "nome": "coxa e sobrecoxa|sobrecoxa|coxa de frango",
+        "un": "Coxa e Sobrecoxa de Frango (kg)",
+        "preco": "kg",
+        "marca": 13.9
+      },
+      {
+        "nome": "asa de frango|tulipa de frango|meio da asa",
+        "un": "Asa de Frango (kg)",
+        "preco": "kg",
+        "marca": 19.9
+      },
+      {
+        "nome": "frango a passarinho",
+        "un": "Frango a Passarinho (kg)",
+        "preco": "kg",
+        "marca": 15.9
+      },
+      {
+        "nome": "frango inteiro|frango resfriado|frango congelado|frango",
+        "un": "Frango Inteiro (kg)",
+        "preco": "kg",
+        "marca": 10.9
+      },
+      {
+        "nome": "linguica toscana|linguiça toscana|linguica de churrasco|linguica|linguiça",
+        "un": "Linguiça Toscana (kg)",
+        "preco": "kg",
+        "marca": 22.9
+      },
+      {
+        "nome": "linguica calabresa|linguiça calabresa|calabresa",
+        "un": "Linguiça Calabresa (kg)",
+        "preco": "kg",
+        "marca": 26.9
+      },
+      {
+        "nome": "bacon fatiado|bacon em pedaco|bacon em cubos|bacon",
+        "un": "Bacon em Pedaço / Fatiado (kg)",
+        "preco": "kg",
+        "marca": 34.9
+      },
+      {
+        "nome": "costelinha de porco|costela de porco|lombo de porco|carne de porco",
+        "un": "Costelinha de Porco (kg)",
+        "preco": "kg",
+        "marca": 27.9
+      },
+      {
+        "nome": "ovo caipira|ovos caipiras",
+        "un": "Ovos Caipiras (Dúzia)",
+        "preco": "dz",
+        "marca": 15.9
+      },
+      {
+        "nome": "ovo branco|ovos brancos|ovo|ovos",
+        "un": "Ovos Brancos (Dúzia)",
+        "preco": "dz",
+        "marca": 12.5
+      }
+    ],
+    "Peixaria": [
+      {
+        "nome": "tilapia|tilápia|file de tilapia|filé de tilápia",
+        "un": "Filé de Tilápia (kg)",
+        "preco": "kg",
+        "marca": 39.9
+      },
+      {
+        "nome": "salmao|salmão|file de salmao",
+        "un": "Salmão Fresco (kg)",
+        "preco": "kg",
+        "marca": 89.9
+      },
+      {
+        "nome": "camarao|camarão|camarao limpo",
+        "un": "Camarão Limpo (400g)",
+        "preco": "pct",
+        "marca": 36.9
+      },
+      {
+        "nome": "sardinha|sardinhas",
+        "un": "Sardinha Fresca (kg)",
+        "preco": "kg",
+        "marca": 15.9
+      }
+    ],
+    "Padaria": [
+      {
+        "nome": "pao de forma integral|pão de forma integral",
+        "un": "Pão de Forma Integral",
+        "preco": "pct",
+        "marca": 10.9
+      },
+      {
+        "nome": "pao de forma|pão de forma|pao pullman|pao de sanduiche",
+        "un": "Pão de Forma Tradicional",
+        "preco": "pct",
+        "marca": 8.5
+      },
+      {
+        "nome": "pao frances|pão francês|pao de sal|pão de sal|paozinho|pão",
+        "un": "Pão Francês / Sal (kg)",
+        "preco": "kg",
+        "marca": 16.9
+      },
+      {
+        "nome": "torrada|torradas",
+        "un": "Torrada Salgada (140g)",
+        "preco": "pct",
+        "marca": 5.9
+      }
+    ],
+    "Frios": [
+      {
+        "nome": "presunto cozido|presunto fatiado|presunto",
+        "un": "Presunto Cozido Fatiado (kg)",
+        "preco": "kg",
+        "marca": 29.9
+      },
+      {
+        "nome": "peito de peru|blanquet de peru",
+        "un": "Peito de Peru Fatiado (kg)",
+        "preco": "kg",
+        "marca": 54.9
+      },
+      {
+        "nome": "mortadela|mortadela defumada",
+        "un": "Mortadela Fatiada (kg)",
+        "preco": "kg",
+        "marca": 19.9
+      }
+    ],
+    "Bebidas": [
+      {
+        "nome": "coca cola 2l|coca-cola|coca cola|coca zero|coca",
+        "un": "Refrigerante Coca-Cola (2L)",
+        "preco": "2L",
+        "marca": 9.99
+      },
+      {
+        "nome": "guarana antarctica|guaraná antarctica|guarana 2l|guarana|guaraná",
+        "un": "Guaraná Antarctica (2L)",
+        "preco": "2L",
+        "marca": 8.99
+      },
+      {
+        "nome": "refrigerante|refri",
+        "un": "Refrigerante (2L)",
+        "preco": "2L",
+        "marca": 7.99
+      },
+      {
+        "nome": "agua com gas|água com gás",
+        "un": "Água Mineral com Gás (500ml)",
+        "preco": "pet",
+        "marca": 2.79
+      },
+      {
+        "nome": "agua sem gas|água sem gás|agua mineral|água mineral|agua|água",
+        "un": "Água Mineral sem Gás (1,5L)",
+        "preco": "pet",
+        "marca": 2.99
+      },
+      {
+        "nome": "suco de uva integral|suco de uva|suco integral",
+        "un": "Suco de Uva Integral (1,5L)",
+        "preco": "vd",
+        "marca": 16.9
+      },
+      {
+        "nome": "cerveja lata|cerveja heineken|cerveja amstel|cerveja brahma|cerveja",
+        "un": "Cerveja Lata (350ml)",
+        "preco": "lata",
+        "marca": 3.89
+      }
+    ],
+    "Limpeza": [
+      {
+        "nome": "detergente liquido|detergente ype|detergente ypê|detergente",
+        "un": "Detergente Líquido (500ml)",
+        "preco": "un",
+        "marca": 2.59
+      },
+      {
+        "nome": "sabao liquido|sabão líquido|omo liquido|ariel liquido",
+        "un": "Sabão Líquido para Roupas (3L)",
+        "preco": "gl",
+        "marca": 34.9
+      },
+      {
+        "nome": "sabao em barra|sabão em barra|sabao de coco",
+        "un": "Sabão em Barra (pct 5un)",
+        "preco": "pct",
+        "marca": 9.9
+      },
+      {
+        "nome": "sabao em po|sabão em pó|omo em po|sabao omo|sabao|sabão",
+        "un": "Sabão em Pó (1,6kg)",
+        "preco": "cx",
+        "marca": 19.9
+      },
+      {
+        "nome": "amaciante concentrado|amaciante comfort|amaciante downy|amaciante",
+        "un": "Amaciante Concentrado (1,5L)",
+        "preco": "fr",
+        "marca": 18.9
+      },
+      {
+        "nome": "agua sanitaria|água sanitária|qboa|cloro",
+        "un": "Água Sanitária (2L)",
+        "preco": "fr",
+        "marca": 6.99
+      },
+      {
+        "nome": "desinfetante perfumado|desinfetante pinho sol|desinfetante",
+        "un": "Desinfetante Perfumado (2L)",
+        "preco": "fr",
+        "marca": 8.9
+      },
+      {
+        "nome": "esponja dupla face|esponja de pia|esponja",
+        "un": "Esponja Dupla Face (pct 3un)",
+        "preco": "pct",
+        "marca": 4.99
+      },
+      {
+        "nome": "saco de lixo 50l|saco de lixo",
+        "un": "Saco de Lixo (pct)",
+        "preco": "pct",
+        "marca": 7.99
+      }
+    ],
+    "Higiene": [
+      {
+        "nome": "papel higienico folha dupla|papel higiênico folha dupla|papel higienico|papel higiênico",
+        "un": "Papel Higiênico Folha Dupla (12un)",
+        "preco": "pct",
+        "marca": 18.9
+      },
+      {
+        "nome": "sabonete liquido|sabonete líquido",
+        "un": "Sabonete Líquido (250ml)",
+        "preco": "fr",
+        "marca": 8.9
+      },
+      {
+        "nome": "sabonete em barra|sabonete dove|sabonete lux|sabonete",
+        "un": "Sabonete em Barra (85g)",
+        "preco": "un",
+        "marca": 2.99
+      },
+      {
+        "nome": "pasta de dente|creme dental|colgate",
+        "un": "Creme Dental (90g)",
+        "preco": "un",
+        "marca": 4.99
+      },
+      {
+        "nome": "escova de dentes|escova de dente|escova dental",
+        "un": "Escova de Dentes",
+        "preco": "un",
+        "marca": 8.9
+      },
+      {
+        "nome": "shampoo|xampu|pantene",
+        "un": "Shampoo (350ml)",
+        "preco": "fr",
+        "marca": 16.9
+      },
+      {
+        "nome": "condicionador",
+        "un": "Condicionador (350ml)",
+        "preco": "fr",
+        "marca": 18.9
+      },
+      {
+        "nome": "desodorante aerosol|desodorante rexona|desodorante",
+        "un": "Desodorante Aerosol (150ml)",
+        "preco": "fr",
+        "marca": 14.9
+      }
+    ]
+  }
 }
