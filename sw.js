@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mercadovoz-pwa-v5';
+const CACHE_NAME = 'mercadovoz-pwa-v6';
 const ASSETS = ['/', '/index.html', '/manifest.json', '/api/icon?size=192', '/api/icon?size=512'];
 
 self.addEventListener('install', (event) => {
