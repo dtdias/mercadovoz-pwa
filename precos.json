@@ -1,904 +1,5211 @@
 {
-  "atualizado_em": "2026-10-22",
-  "total_produtos": 146,
-  "categorias": {
-    "Mercearia": [
-      {
-        "nome": "arroz parboilizado|arroz parbolizado|parboilizado|parbolizado",
-        "un": "Arroz Parboilizado (5kg)",
-        "preco": "pct",
-        "marca": 29.9
-      },
-      {
-        "nome": "arroz integral|integral",
-        "un": "Arroz Integral (1kg)",
-        "preco": "kg",
-        "marca": 7.99
-      },
-      {
-        "nome": "arroz arboreo|arroz arbóreo|arroz para risoto|arroz carnaroli|arboreo",
-        "un": "Arroz Arbóreo (1kg)",
-        "preco": "kg",
-        "marca": 16.9
-      },
-      {
-        "nome": "arroz basmati|arroz jasmine|arroz japones|arroz japonês|arroz sushi",
-        "un": "Arroz Especial / Basmati (1kg)",
-        "preco": "kg",
-        "marca": 18.9
-      },
-      {
-        "nome": "arroz negro|arroz preto|arroz vermelho",
-        "un": "Arroz Negro / Vermelho (500g)",
-        "preco": "pct",
-        "marca": 19.5
-      },
-      {
-        "nome": "arroz branco|arroz tipo 1|arroz agulhinha|arroz normal|arroz 5kg|arroz",
-        "un": "Arroz Branco / Tipo 1 (5kg)",
-        "preco": "pct",
-        "marca": 28.9
-      },
-      {
-        "nome": "extrato de tomate|extrato tomate|extrato",
-        "un": "Extrato de Tomate (340g)",
-        "preco": "un",
-        "marca": 3.89
-      },
-      {
-        "nome": "molho de tomate|molho tomate|passata de tomate|passata|polpa de tomate",
-        "un": "Molho de Tomate (300g)",
-        "preco": "sachê",
-        "marca": 2.59
-      },
-      {
-        "nome": "tomate pelado|tomates pelados",
-        "un": "Tomate Pelado (lata)",
-        "preco": "lata",
-        "marca": 6.49
-      },
-      {
-        "nome": "tomate seco",
-        "un": "Tomate Seco (200g)",
-        "preco": "pote",
-        "marca": 16.9
-      },
-      {
-        "nome": "feijao preto|feijão preto",
-        "un": "Feijão Preto (1kg)",
-        "preco": "kg",
-        "marca": 8.5
-      },
-      {
-        "nome": "feijao fradinho|feijão fradinho",
-        "un": "Feijão Fradinho (1kg)",
-        "preco": "kg",
-        "marca": 9.9
-      },
-      {
-        "nome": "feijao branco|feijão branco",
-        "un": "Feijão Branco (1kg)",
-        "preco": "kg",
-        "marca": 12.9
-      },
-      {
-        "nome": "feijao vermelho|feijão vermelho",
-        "un": "Feijão Vermelho (1kg)",
-        "preco": "kg",
-        "marca": 11.5
-      },
-      {
-        "nome": "feijao carioca|feijão carioca|feijao|feijão",
-        "un": "Feijão Carioca (1kg)",
-        "preco": "kg",
-        "marca": 7.9
-      },
-      {
-        "nome": "leite condensado|leite moca|leite moça",
-        "un": "Leite Condensado (395g)",
-        "preco": "cx",
-        "marca": 5.99
-      },
-      {
-        "nome": "doce de leite",
-        "un": "Doce de Leite (400g)",
-        "preco": "pote",
-        "marca": 12.9
-      },
-      {
-        "nome": "leite de coco",
-        "un": "Leite de Coco (200ml)",
-        "preco": "vd",
-        "marca": 4.79
-      },
-      {
-        "nome": "batata palha",
-        "un": "Batata Palha (120g)",
-        "preco": "pct",
-        "marca": 6.99
-      },
-      {
-        "nome": "alho picado|alho triturado|pasta de alho",
-        "un": "Alho Triturado (200g)",
-        "preco": "pote",
-        "marca": 6.49
-      },
-      {
-        "nome": "cafe extraforte|café extra forte|cafe extra forte",
-        "un": "Café Extraforte (500g)",
-        "preco": "pct",
-        "marca": 18.9
-      },
-      {
-        "nome": "cafe em graos|café em grãos|cafe em grao",
-        "un": "Café em Grãos (1kg)",
-        "preco": "pct",
-        "marca": 49.9
-      },
-      {
-        "nome": "cafe soluvel|café solúvel|nescafe|nescafé",
-        "un": "Café Solúvel (100g)",
-        "preco": "vd",
-        "marca": 12.9
-      },
-      {
-        "nome": "capsulas de cafe|cápsulas de café|capsula de cafe|capsula nespresso",
-        "un": "Cápsulas de Café (cx 10un)",
-        "preco": "cx",
-        "marca": 24.9
-      },
-      {
-        "nome": "cafe tradicional|cafe em po|café em pó|cafe|café|cafe pilao",
-        "un": "Café Tradicional (500g)",
-        "preco": "pct",
-        "marca": 18.9
-      },
-      {
-        "nome": "acucar cristal|açúcar cristal",
-        "un": "Açúcar Cristal (1kg)",
-        "preco": "kg",
-        "marca": 4.59
-      },
-      {
-        "nome": "acucar mascavo|açúcar mascavo",
-        "un": "Açúcar Mascavo (500g)",
-        "preco": "pct",
-        "marca": 7.99
-      },
-      {
-        "nome": "acucar demerara|açúcar demerara",
-        "un": "Açúcar Demerara (1kg)",
-        "preco": "kg",
-        "marca": 6.99
-      },
-      {
-        "nome": "adocante|adoçante|adocante sucralose|adocante stevia",
-        "un": "Adoçante Líquido (100ml)",
-        "preco": "fr",
-        "marca": 8.9
-      },
-      {
-        "nome": "acucar refinado|açúcar refinado|acucar|açúcar|acucar uniao",
-        "un": "Açúcar Refinado (1kg)",
-        "preco": "kg",
-        "marca": 4.99
-      },
-      {
-        "nome": "farinha de trigo com fermento",
-        "un": "Farinha de Trigo com Fermento (1kg)",
-        "preco": "kg",
-        "marca": 6.49
-      },
-      {
-        "nome": "farinha de trigo|trigo",
-        "un": "Farinha de Trigo (1kg)",
-        "preco": "kg",
-        "marca": 5.29
-      },
-      {
-        "nome": "farinha de mandioca",
-        "un": "Farinha de Mandioca (1kg)",
-        "preco": "kg",
-        "marca": 6.99
-      },
-      {
-        "nome": "farinha de rosca",
-        "un": "Farinha de Rosca (500g)",
-        "preco": "pct",
-        "marca": 5.49
-      },
-      {
-        "nome": "aveia em flocos|aveia",
-        "un": "Aveia em Flocos (200g)",
-        "preco": "pct",
-        "marca": 4.99
-      },
-      {
-        "nome": "fuba|fubá|milharina",
-        "un": "Fubá Mimoso (1kg)",
-        "preco": "kg",
-        "marca": 4.29
-      },
-      {
-        "nome": "polvilho azedo|polvilho doce|polvilho",
-        "un": "Polvilho (500g)",
-        "preco": "pct",
-        "marca": 6.99
-      },
-      {
-        "nome": "sardinha em lata|sardinha lata",
-        "un": "Sardinha em Lata (125g)",
-        "preco": "lata",
-        "marca": 4.99
-      },
-      {
-        "nome": "atum em lata|atum sólido|atum ralado|atum",
-        "un": "Atum em Lata (170g)",
-        "preco": "lata",
-        "marca": 7.99
-      },
-      {
-        "nome": "macarrao espaguete|macarrão espaguete|espaguete|spaghetti",
-        "un": "Macarrão Espaguete (500g)",
-        "preco": "pct",
-        "marca": 4.5
-      },
-      {
-        "nome": "macarrao parafuso|macarrão parafuso|fusilli",
-        "un": "Macarrão Parafuso (500g)",
-        "preco": "pct",
-        "marca": 4.5
-      },
-      {
-        "nome": "macarrao penne|penne",
-        "un": "Macarrão Penne (500g)",
-        "preco": "pct",
-        "marca": 4.79
-      },
-      {
-        "nome": "massa de lasanha|massa para lasanha|lasanha",
-        "un": "Massa para Lasanha (500g)",
-        "preco": "pct",
-        "marca": 7.99
-      },
-      {
-        "nome": "miojo|macarrao instantaneo|macarrão instantâneo",
-        "un": "Macarrão Instantâneo (85g)",
-        "preco": "pct",
-        "marca": 2.29
-      },
-      {
-        "nome": "macarrao|macarrão",
-        "un": "Macarrão (500g)",
-        "preco": "pct",
-        "marca": 4.5
-      },
-      {
-        "nome": "oleo de girassol|óleo de girassol|oleo de milho",
-        "un": "Óleo de Girassol / Milho (900ml)",
-        "preco": "un",
-        "marca": 9.9
-      },
-      {
-        "nome": "oleo de soja|óleo de soja|oleo|óleo",
-        "un": "Óleo de Soja (900ml)",
-        "preco": "un",
-        "marca": 6.49
-      },
-      {
-        "nome": "azeite extravirgem|azeite extra virgem|azeite de oliva|azeite",
-        "un": "Azeite Extravirgem (500ml)",
-        "preco": "vd",
-        "marca": 39.9
-      },
-      {
-        "nome": "vinagre de maca|vinagre de maçã",
-        "un": "Vinagre de Maçã (750ml)",
-        "preco": "un",
-        "marca": 5.9
-      },
-      {
-        "nome": "vinagre de alcool|vinagre de álcool|vinagre",
-        "un": "Vinagre de Álcool (750ml)",
-        "preco": "un",
-        "marca": 2.99
-      },
-      {
-        "nome": "sal grosso|sal para churrasco",
-        "un": "Sal Grosso (1kg)",
-        "preco": "kg",
-        "marca": 4.5
-      },
-      {
-        "nome": "sal refinado|sal de cozinha|sal",
-        "un": "Sal Refinado (1kg)",
-        "preco": "kg",
-        "marca": 2.79
-      },
-      {
-        "nome": "maionese|helmans|hellmanns",
-        "un": "Maionese Tradicional (500g)",
-        "preco": "pote",
-        "marca": 7.99
-      },
-      {
-        "nome": "ketchup|catchup",
-        "un": "Ketchup Tradicional (400g)",
-        "preco": "fr",
-        "marca": 7.49
-      },
-      {
-        "nome": "mostarda",
-        "un": "Mostarda Amarela (200g)",
-        "preco": "fr",
-        "marca": 5.9
-      }
-    ],
-    "Hortifrúti": [
-      {
-        "nome": "tomate cereja|tomatinho|tomate grape",
-        "un": "Tomate Cereja (bandeja)",
-        "preco": "bdj",
-        "marca": 6.99
-      },
-      {
-        "nome": "tomate italiano",
-        "un": "Tomate Italiano (kg)",
-        "preco": "kg",
-        "marca": 8.99
-      },
-      {
-        "nome": "tomate|tomates",
-        "un": "Tomate (kg)",
-        "preco": "kg",
-        "marca": 7.99
-      },
-      {
-        "nome": "batata doce|batatas doces",
-        "un": "Batata Doce (kg)",
-        "preco": "kg",
-        "marca": 5.49
-      },
-      {
-        "nome": "batata baroa|baroa|mandioquinha",
-        "un": "Batata Baroa (kg)",
-        "preco": "kg",
-        "marca": 14.9
-      },
-      {
-        "nome": "batata inglesa|batata lavada|batata normal|batata|batatas",
-        "un": "Batata Inglesa (kg)",
-        "preco": "kg",
-        "marca": 6.49
-      },
-      {
-        "nome": "cebola roxa",
-        "un": "Cebola Roxa (kg)",
-        "preco": "kg",
-        "marca": 8.99
-      },
-      {
-        "nome": "cebolinha|cheiro verde|coentro|salsa|salsinha",
-        "un": "Cebolinha / Cheiro Verde (mç)",
-        "preco": "mç",
-        "marca": 2.99
-      },
-      {
-        "nome": "cebola amarela|cebola comum|cebola|cebolas",
-        "un": "Cebola (kg)",
-        "preco": "kg",
-        "marca": 5.99
-      },
-      {
-        "nome": "alho|alho a granel",
-        "un": "Alho (kg)",
-        "preco": "kg",
-        "marca": 32.9
-      },
-      {
-        "nome": "banana prata",
-        "un": "Banana Prata (kg)",
-        "preco": "kg",
-        "marca": 6.99
-      },
-      {
-        "nome": "banana nanica|banana d'agua",
-        "un": "Banana Nanica (kg)",
-        "preco": "kg",
-        "marca": 5.99
-      },
-      {
-        "nome": "banana|bananas",
-        "un": "Banana (kg)",
-        "preco": "kg",
-        "marca": 6.49
-      },
-      {
-        "nome": "maca gala|maçã gala|maca|maçã|macas",
-        "un": "Maçã Gala (kg)",
-        "preco": "kg",
-        "marca": 10.9
-      },
-      {
-        "nome": "laranja pera|laranja para suco|laranja|laranjas",
-        "un": "Laranja Pera (kg)",
-        "preco": "kg",
-        "marca": 4.99
-      },
-      {
-        "nome": "limao taiti|limão taiti|limao|limão",
-        "un": "Limão Taiti (kg)",
-        "preco": "kg",
-        "marca": 5.49
-      },
-      {
-        "nome": "abacaxi|abacaxi perola",
-        "un": "Abacaxi Pérola (un)",
-        "preco": "un",
-        "marca": 7.99
-      },
-      {
-        "nome": "mamao|mamão|mamao papaya|mamao formosa",
-        "un": "Mamão (kg)",
-        "preco": "kg",
-        "marca": 8.9
-      },
-      {
-        "nome": "melancia",
-        "un": "Melancia (kg)",
-        "preco": "kg",
-        "marca": 3.49
-      },
-      {
-        "nome": "cenoura|cenouras",
-        "un": "Cenoura (kg)",
-        "preco": "kg",
-        "marca": 5.99
-      },
-      {
-        "nome": "alface crespa|alface americana|alface",
-        "un": "Alface (un)",
-        "preco": "un",
-        "marca": 3.49
-      }
-    ],
-    "Laticínios": [
-      {
-        "nome": "creme de leite",
-        "un": "Creme de Leite (200g)",
-        "preco": "cx",
-        "marca": 3.49
-      },
-      {
-        "nome": "leite de amendoas|leite de amêndoas|leite vegetal|leite de aveia|leite de soja",
-        "un": "Leite Vegetal (1L)",
-        "preco": "L",
-        "marca": 14.9
-      },
-      {
-        "nome": "leite em po|leite em pó|leite ninho",
-        "un": "Leite em Pó (400g)",
-        "preco": "pct",
-        "marca": 16.9
-      },
-      {
-        "nome": "leite desnatado",
-        "un": "Leite Desnatado (1L)",
-        "preco": "L",
-        "marca": 5.29
-      },
-      {
-        "nome": "leite semidesnatado|leite semi desnatado",
-        "un": "Leite Semidesnatado (1L)",
-        "preco": "L",
-        "marca": 5.19
-      },
-      {
-        "nome": "leite zero lactose|leite sem lactose|leite lactose",
-        "un": "Leite Zero Lactose (1L)",
-        "preco": "L",
-        "marca": 6.49
-      },
-      {
-        "nome": "leite integral|leite de vaca|leite",
-        "un": "Leite Integral (1L)",
-        "preco": "L",
-        "marca": 4.99
-      },
-      {
-        "nome": "queijo prato",
-        "un": "Queijo Prato Fatiado (kg)",
-        "preco": "kg",
-        "marca": 48.9
-      },
-      {
-        "nome": "queijo minas|minas frescal|queijo branco",
-        "un": "Queijo Minas Frescal (un)",
-        "preco": "un",
-        "marca": 19.9
-      },
-      {
-        "nome": "queijo ralado|parmesao ralado|queijo parmesao",
-        "un": "Queijo Parmesão Ralado (50g)",
-        "preco": "pct",
-        "marca": 5.49
-      },
-      {
-        "nome": "queijo mussarela|mussarela fatiada|mucarela|mussarela|queijo",
-        "un": "Queijo Mussarela Fatiado (kg)",
-        "preco": "kg",
-        "marca": 44.9
-      },
-      {
-        "nome": "requeijao|requeijão|requeijao cremoso",
-        "un": "Requeijão Cremoso (200g)",
-        "preco": "copo",
-        "marca": 7.99
-      },
-      {
-        "nome": "manteiga sem sal",
-        "un": "Manteiga sem Sal (200g)",
-        "preco": "pote",
-        "marca": 12.5
-      },
-      {
-        "nome": "manteiga com sal|manteiga",
-        "un": "Manteiga com Sal (200g)",
-        "preco": "pote",
-        "marca": 11.9
-      },
-      {
-        "nome": "margarina|qualy|doriana",
-        "un": "Margarina com Sal (500g)",
-        "preco": "pote",
-        "marca": 6.99
-      },
-      {
-        "nome": "iogurte natural|iogurte de morango|iogurte grego|iogurte",
-        "un": "Iogurte (170g)",
-        "preco": "un",
-        "marca": 3.49
-      }
-    ],
-    "Congelados": [
-      {
-        "nome": "batata congelada|batata frita|batata palito",
-        "un": "Batata Frita / Congelada (1kg)",
-        "preco": "pct",
-        "marca": 18.9
-      },
-      {
-        "nome": "pao de queijo|pão de queijo",
-        "un": "Pão de Queijo Congelado (1kg)",
-        "preco": "pct",
-        "marca": 19.9
-      }
-    ],
-    "Açougue": [
-      {
-        "nome": "carne moida|carne moída|patinho moido|patinho moído",
-        "un": "Carne Moída / Patinho (kg)",
-        "preco": "kg",
-        "marca": 38.9
-      },
-      {
-        "nome": "picanha",
-        "un": "Picanha Bovina (kg)",
-        "preco": "kg",
-        "marca": 69.9
-      },
-      {
-        "nome": "alcatra",
-        "un": "Alcatra Bovina (kg)",
-        "preco": "kg",
-        "marca": 44.9
-      },
-      {
-        "nome": "contrafile|contrafilé|contra file",
-        "un": "Contrafilé (kg)",
-        "preco": "kg",
-        "marca": 46.9
-      },
-      {
-        "nome": "costela bovina|costela de boi|costela",
-        "un": "Costela Bovina (kg)",
-        "preco": "kg",
-        "marca": 28.9
-      },
-      {
-        "nome": "carne de panela|acem|acém|musculo|músculo|carne bovina|carne de boi|carne",
-        "un": "Carne de Panela / Acém (kg)",
-        "preco": "kg",
-        "marca": 29.9
-      },
-      {
-        "nome": "peito de frango|file de frango|filé de frango|file de peito",
-        "un": "Filé de Peito de Frango (kg)",
-        "preco": "kg",
-        "marca": 21.9
-      },
-      {
-        "nome": "coxa e sobrecoxa|sobrecoxa|coxa de frango",
-        "un": "Coxa e Sobrecoxa de Frango (kg)",
-        "preco": "kg",
-        "marca": 13.9
-      },
-      {
-        "nome": "asa de frango|tulipa de frango|meio da asa",
-        "un": "Asa de Frango (kg)",
-        "preco": "kg",
-        "marca": 19.9
-      },
-      {
-        "nome": "frango a passarinho",
-        "un": "Frango a Passarinho (kg)",
-        "preco": "kg",
-        "marca": 15.9
-      },
-      {
-        "nome": "frango inteiro|frango resfriado|frango congelado|frango",
-        "un": "Frango Inteiro (kg)",
-        "preco": "kg",
-        "marca": 10.9
-      },
-      {
-        "nome": "linguica toscana|linguiça toscana|linguica de churrasco|linguica|linguiça",
-        "un": "Linguiça Toscana (kg)",
-        "preco": "kg",
-        "marca": 22.9
-      },
-      {
-        "nome": "linguica calabresa|linguiça calabresa|calabresa",
-        "un": "Linguiça Calabresa (kg)",
-        "preco": "kg",
-        "marca": 26.9
-      },
-      {
-        "nome": "bacon fatiado|bacon em pedaco|bacon em cubos|bacon",
-        "un": "Bacon em Pedaço / Fatiado (kg)",
-        "preco": "kg",
-        "marca": 34.9
-      },
-      {
-        "nome": "costelinha de porco|costela de porco|lombo de porco|carne de porco",
-        "un": "Costelinha de Porco (kg)",
-        "preco": "kg",
-        "marca": 27.9
-      },
-      {
-        "nome": "ovo caipira|ovos caipiras",
-        "un": "Ovos Caipiras (Dúzia)",
-        "preco": "dz",
-        "marca": 15.9
-      },
-      {
-        "nome": "ovo branco|ovos brancos|ovo|ovos",
-        "un": "Ovos Brancos (Dúzia)",
-        "preco": "dz",
-        "marca": 12.5
-      }
-    ],
-    "Peixaria": [
-      {
-        "nome": "tilapia|tilápia|file de tilapia|filé de tilápia",
-        "un": "Filé de Tilápia (kg)",
-        "preco": "kg",
-        "marca": 39.9
-      },
-      {
-        "nome": "salmao|salmão|file de salmao",
-        "un": "Salmão Fresco (kg)",
-        "preco": "kg",
-        "marca": 89.9
-      },
-      {
-        "nome": "camarao|camarão|camarao limpo",
-        "un": "Camarão Limpo (400g)",
-        "preco": "pct",
-        "marca": 36.9
-      },
-      {
-        "nome": "sardinha|sardinhas",
-        "un": "Sardinha Fresca (kg)",
-        "preco": "kg",
-        "marca": 15.9
-      }
-    ],
-    "Padaria": [
-      {
-        "nome": "pao de forma integral|pão de forma integral",
-        "un": "Pão de Forma Integral",
-        "preco": "pct",
-        "marca": 10.9
-      },
-      {
-        "nome": "pao de forma|pão de forma|pao pullman|pao de sanduiche",
-        "un": "Pão de Forma Tradicional",
-        "preco": "pct",
-        "marca": 8.5
-      },
-      {
-        "nome": "pao frances|pão francês|pao de sal|pão de sal|paozinho|pão",
-        "un": "Pão Francês / Sal (kg)",
-        "preco": "kg",
-        "marca": 16.9
-      },
-      {
-        "nome": "torrada|torradas",
-        "un": "Torrada Salgada (140g)",
-        "preco": "pct",
-        "marca": 5.9
-      }
-    ],
-    "Frios": [
-      {
-        "nome": "presunto cozido|presunto fatiado|presunto",
-        "un": "Presunto Cozido Fatiado (kg)",
-        "preco": "kg",
-        "marca": 29.9
-      },
-      {
-        "nome": "peito de peru|blanquet de peru",
-        "un": "Peito de Peru Fatiado (kg)",
-        "preco": "kg",
-        "marca": 54.9
-      },
-      {
-        "nome": "mortadela|mortadela defumada",
-        "un": "Mortadela Fatiada (kg)",
-        "preco": "kg",
-        "marca": 19.9
-      }
-    ],
-    "Bebidas": [
-      {
-        "nome": "coca cola 2l|coca-cola|coca cola|coca zero|coca",
-        "un": "Refrigerante Coca-Cola (2L)",
-        "preco": "2L",
-        "marca": 9.99
-      },
-      {
-        "nome": "guarana antarctica|guaraná antarctica|guarana 2l|guarana|guaraná",
-        "un": "Guaraná Antarctica (2L)",
-        "preco": "2L",
-        "marca": 8.99
-      },
-      {
-        "nome": "refrigerante|refri",
-        "un": "Refrigerante (2L)",
-        "preco": "2L",
-        "marca": 7.99
-      },
-      {
-        "nome": "agua com gas|água com gás",
-        "un": "Água Mineral com Gás (500ml)",
-        "preco": "pet",
-        "marca": 2.79
-      },
-      {
-        "nome": "agua sem gas|água sem gás|agua mineral|água mineral|agua|água",
-        "un": "Água Mineral sem Gás (1,5L)",
-        "preco": "pet",
-        "marca": 2.99
-      },
-      {
-        "nome": "suco de uva integral|suco de uva|suco integral",
-        "un": "Suco de Uva Integral (1,5L)",
-        "preco": "vd",
-        "marca": 16.9
-      },
-      {
-        "nome": "cerveja lata|cerveja heineken|cerveja amstel|cerveja brahma|cerveja",
-        "un": "Cerveja Lata (350ml)",
-        "preco": "lata",
-        "marca": 3.89
-      }
-    ],
-    "Limpeza": [
-      {
-        "nome": "detergente liquido|detergente ype|detergente ypê|detergente",
-        "un": "Detergente Líquido (500ml)",
-        "preco": "un",
-        "marca": 2.59
-      },
-      {
-        "nome": "sabao liquido|sabão líquido|omo liquido|ariel liquido",
-        "un": "Sabão Líquido para Roupas (3L)",
-        "preco": "gl",
-        "marca": 34.9
-      },
-      {
-        "nome": "sabao em barra|sabão em barra|sabao de coco",
-        "un": "Sabão em Barra (pct 5un)",
-        "preco": "pct",
-        "marca": 9.9
-      },
-      {
-        "nome": "sabao em po|sabão em pó|omo em po|sabao omo|sabao|sabão",
-        "un": "Sabão em Pó (1,6kg)",
-        "preco": "cx",
-        "marca": 19.9
-      },
-      {
-        "nome": "amaciante concentrado|amaciante comfort|amaciante downy|amaciante",
-        "un": "Amaciante Concentrado (1,5L)",
-        "preco": "fr",
-        "marca": 18.9
-      },
-      {
-        "nome": "agua sanitaria|água sanitária|qboa|cloro",
-        "un": "Água Sanitária (2L)",
-        "preco": "fr",
-        "marca": 6.99
-      },
-      {
-        "nome": "desinfetante perfumado|desinfetante pinho sol|desinfetante",
-        "un": "Desinfetante Perfumado (2L)",
-        "preco": "fr",
-        "marca": 8.9
-      },
-      {
-        "nome": "esponja dupla face|esponja de pia|esponja",
-        "un": "Esponja Dupla Face (pct 3un)",
-        "preco": "pct",
-        "marca": 4.99
-      },
-      {
-        "nome": "saco de lixo 50l|saco de lixo",
-        "un": "Saco de Lixo (pct)",
-        "preco": "pct",
-        "marca": 7.99
-      }
-    ],
-    "Higiene": [
-      {
-        "nome": "papel higienico folha dupla|papel higiênico folha dupla|papel higienico|papel higiênico",
-        "un": "Papel Higiênico Folha Dupla (12un)",
-        "preco": "pct",
-        "marca": 18.9
-      },
-      {
-        "nome": "sabonete liquido|sabonete líquido",
-        "un": "Sabonete Líquido (250ml)",
-        "preco": "fr",
-        "marca": 8.9
-      },
-      {
-        "nome": "sabonete em barra|sabonete dove|sabonete lux|sabonete",
-        "un": "Sabonete em Barra (85g)",
-        "preco": "un",
-        "marca": 2.99
-      },
-      {
-        "nome": "pasta de dente|creme dental|colgate",
-        "un": "Creme Dental (90g)",
-        "preco": "un",
-        "marca": 4.99
-      },
-      {
-        "nome": "escova de dentes|escova de dente|escova dental",
-        "un": "Escova de Dentes",
-        "preco": "un",
-        "marca": 8.9
-      },
-      {
-        "nome": "shampoo|xampu|pantene",
-        "un": "Shampoo (350ml)",
-        "preco": "fr",
-        "marca": 16.9
-      },
-      {
-        "nome": "condicionador",
-        "un": "Condicionador (350ml)",
-        "preco": "fr",
-        "marca": 18.9
-      },
-      {
-        "nome": "desodorante aerosol|desodorante rexona|desodorante",
-        "un": "Desodorante Aerosol (150ml)",
-        "preco": "fr",
-        "marca": 14.9
-      }
-    ]
-  }
+  "schema_version": 2,
+  "atualizado_em": "2026-10-23",
+  "total_produtos": 327,
+  "fontes": [
+    {
+      "id": "carrefour",
+      "nome": "Mercado Carrefour",
+      "regiao": "Brasil - preço online sem CEP",
+      "consultas": 24,
+      "produtos": 181,
+      "erros": []
+    }
+  ],
+  "produtos": [
+    {
+      "id": "product_mercearia_arroz_parboilizado_5kg",
+      "name": "Arroz Parboilizado (5kg)",
+      "aliases": [
+        "Arroz Parboilizado (5kg)",
+        "arroz parboilizado",
+        "arroz parbolizado",
+        "parboilizado",
+        "parbolizado"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "5kg",
+      "price": 29.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_arroz_integral_1kg",
+      "name": "Arroz Integral (1kg)",
+      "aliases": [
+        "Arroz Integral (1kg)",
+        "arroz integral",
+        "integral"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_arroz_arboreo_1kg",
+      "name": "Arroz Arbóreo (1kg)",
+      "aliases": [
+        "Arroz Arbóreo (1kg)",
+        "arboreo",
+        "arroz arboreo",
+        "arroz arbóreo",
+        "arroz carnaroli",
+        "arroz para risoto"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 16.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_arroz_especial_basmati_1kg",
+      "name": "Arroz Especial / Basmati (1kg)",
+      "aliases": [
+        "Arroz Especial / Basmati (1kg)",
+        "arroz basmati",
+        "arroz japones",
+        "arroz japonês",
+        "arroz jasmine",
+        "arroz sushi"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_arroz_negro_vermelho_500g",
+      "name": "Arroz Negro / Vermelho (500g)",
+      "aliases": [
+        "Arroz Negro / Vermelho (500g)",
+        "arroz negro",
+        "arroz preto",
+        "arroz vermelho"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 19.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_arroz_branco_tipo_1_5kg",
+      "name": "Arroz Branco / Tipo 1 (5kg)",
+      "aliases": [
+        "Arroz Branco / Tipo 1 (5kg)",
+        "arroz",
+        "arroz 5kg",
+        "arroz agulhinha",
+        "arroz branco",
+        "arroz normal",
+        "arroz tipo 1"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "5kg",
+      "price": 28.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_extrato_de_tomate_340g",
+      "name": "Extrato de Tomate (340g)",
+      "aliases": [
+        "Extrato de Tomate (340g)",
+        "extrato",
+        "extrato de tomate",
+        "extrato tomate"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "340g",
+      "price": 3.89,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_molho_de_tomate_300g",
+      "name": "Molho de Tomate (300g)",
+      "aliases": [
+        "Molho de Tomate (300g)",
+        "molho de tomate",
+        "molho tomate",
+        "passata",
+        "passata de tomate",
+        "polpa de tomate"
+      ],
+      "category": "Mercearia",
+      "unit": "sachê",
+      "package": "300g",
+      "price": 2.59,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_tomate_pelado_lata",
+      "name": "Tomate Pelado (lata)",
+      "aliases": [
+        "Tomate Pelado (lata)",
+        "tomate pelado",
+        "tomates pelados"
+      ],
+      "category": "Mercearia",
+      "unit": "lata",
+      "package": "",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_tomate_seco_200g",
+      "name": "Tomate Seco (200g)",
+      "aliases": [
+        "Tomate Seco (200g)",
+        "tomate seco"
+      ],
+      "category": "Mercearia",
+      "unit": "pote",
+      "package": "200g",
+      "price": 16.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_feijao_preto_1kg",
+      "name": "Feijão Preto (1kg)",
+      "aliases": [
+        "Feijão Preto (1kg)",
+        "feijao preto",
+        "feijão preto"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 8.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_feijao_fradinho_1kg",
+      "name": "Feijão Fradinho (1kg)",
+      "aliases": [
+        "Feijão Fradinho (1kg)",
+        "feijao fradinho",
+        "feijão fradinho"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 9.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_feijao_branco_1kg",
+      "name": "Feijão Branco (1kg)",
+      "aliases": [
+        "Feijão Branco (1kg)",
+        "feijao branco",
+        "feijão branco"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 12.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_feijao_vermelho_1kg",
+      "name": "Feijão Vermelho (1kg)",
+      "aliases": [
+        "Feijão Vermelho (1kg)",
+        "feijao vermelho",
+        "feijão vermelho"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 11.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_feijao_carioca_1kg",
+      "name": "Feijão Carioca (1kg)",
+      "aliases": [
+        "Feijão Carioca (1kg)",
+        "feijao",
+        "feijao carioca",
+        "feijão",
+        "feijão carioca"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 7.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_leite_condensado_395g",
+      "name": "Leite Condensado (395g)",
+      "aliases": [
+        "Leite Condensado (395g)",
+        "leite condensado",
+        "leite moca",
+        "leite moça"
+      ],
+      "category": "Mercearia",
+      "unit": "cx",
+      "package": "395g",
+      "price": 5.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_doce_de_leite_400g",
+      "name": "Doce de Leite (400g)",
+      "aliases": [
+        "Doce de Leite (400g)",
+        "doce de leite"
+      ],
+      "category": "Mercearia",
+      "unit": "pote",
+      "package": "400g",
+      "price": 12.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_leite_de_coco_200ml",
+      "name": "Leite de Coco (200ml)",
+      "aliases": [
+        "Leite de Coco (200ml)",
+        "leite de coco"
+      ],
+      "category": "Mercearia",
+      "unit": "vd",
+      "package": "200ml",
+      "price": 4.79,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_batata_palha_120g",
+      "name": "Batata Palha (120g)",
+      "aliases": [
+        "Batata Palha (120g)",
+        "batata palha"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "120g",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_alho_triturado_200g",
+      "name": "Alho Triturado (200g)",
+      "aliases": [
+        "Alho Triturado (200g)",
+        "alho picado",
+        "alho triturado",
+        "pasta de alho"
+      ],
+      "category": "Mercearia",
+      "unit": "pote",
+      "package": "200g",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_cafe_extraforte_500g",
+      "name": "Café Extraforte (500g)",
+      "aliases": [
+        "Café Extraforte (500g)",
+        "cafe extra forte",
+        "cafe extraforte",
+        "café extra forte"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_cafe_em_graos_1kg",
+      "name": "Café em Grãos (1kg)",
+      "aliases": [
+        "Café em Grãos (1kg)",
+        "cafe em grao",
+        "cafe em graos",
+        "café em grãos"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "1kg",
+      "price": 49.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_cafe_soluvel_100g",
+      "name": "Café Solúvel (100g)",
+      "aliases": [
+        "Café Solúvel (100g)",
+        "cafe soluvel",
+        "café solúvel",
+        "nescafe",
+        "nescafé"
+      ],
+      "category": "Mercearia",
+      "unit": "vd",
+      "package": "100g",
+      "price": 12.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_capsulas_de_cafe_cx_10un",
+      "name": "Cápsulas de Café (cx 10un)",
+      "aliases": [
+        "Cápsulas de Café (cx 10un)",
+        "capsula de cafe",
+        "capsula nespresso",
+        "capsulas de cafe",
+        "cápsulas de café"
+      ],
+      "category": "Mercearia",
+      "unit": "cx",
+      "package": "10un",
+      "price": 24.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_cafe_tradicional_500g",
+      "name": "Café Tradicional (500g)",
+      "aliases": [
+        "Café Tradicional (500g)",
+        "cafe",
+        "cafe em po",
+        "cafe pilao",
+        "cafe tradicional",
+        "café",
+        "café em pó"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_acucar_cristal_1kg",
+      "name": "Açúcar Cristal (1kg)",
+      "aliases": [
+        "Açúcar Cristal (1kg)",
+        "acucar cristal",
+        "açúcar cristal"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 4.59,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_acucar_mascavo_500g",
+      "name": "Açúcar Mascavo (500g)",
+      "aliases": [
+        "Açúcar Mascavo (500g)",
+        "acucar mascavo",
+        "açúcar mascavo"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_acucar_demerara_1kg",
+      "name": "Açúcar Demerara (1kg)",
+      "aliases": [
+        "Açúcar Demerara (1kg)",
+        "acucar demerara",
+        "açúcar demerara"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_adocante_liquido_100ml",
+      "name": "Adoçante Líquido (100ml)",
+      "aliases": [
+        "Adoçante Líquido (100ml)",
+        "adocante",
+        "adocante stevia",
+        "adocante sucralose",
+        "adoçante"
+      ],
+      "category": "Mercearia",
+      "unit": "fr",
+      "package": "100ml",
+      "price": 8.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_acucar_refinado_1kg",
+      "name": "Açúcar Refinado (1kg)",
+      "aliases": [
+        "Açúcar Refinado (1kg)",
+        "acucar",
+        "acucar refinado",
+        "acucar uniao",
+        "açúcar",
+        "açúcar refinado"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_farinha_de_trigo_com_fermento_1kg",
+      "name": "Farinha de Trigo com Fermento (1kg)",
+      "aliases": [
+        "Farinha de Trigo com Fermento (1kg)",
+        "farinha de trigo com fermento"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_farinha_de_trigo_1kg",
+      "name": "Farinha de Trigo (1kg)",
+      "aliases": [
+        "Farinha de Trigo (1kg)",
+        "farinha de trigo",
+        "trigo"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 5.29,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_farinha_de_mandioca_1kg",
+      "name": "Farinha de Mandioca (1kg)",
+      "aliases": [
+        "Farinha de Mandioca (1kg)",
+        "farinha de mandioca"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_farinha_de_rosca_500g",
+      "name": "Farinha de Rosca (500g)",
+      "aliases": [
+        "Farinha de Rosca (500g)",
+        "farinha de rosca"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 5.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_aveia_em_flocos_200g",
+      "name": "Aveia em Flocos (200g)",
+      "aliases": [
+        "Aveia em Flocos (200g)",
+        "aveia",
+        "aveia em flocos"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "200g",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_fuba_mimoso_1kg",
+      "name": "Fubá Mimoso (1kg)",
+      "aliases": [
+        "Fubá Mimoso (1kg)",
+        "fuba",
+        "fubá",
+        "milharina"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 4.29,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_polvilho_500g",
+      "name": "Polvilho (500g)",
+      "aliases": [
+        "Polvilho (500g)",
+        "polvilho",
+        "polvilho azedo",
+        "polvilho doce"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_sardinha_em_lata_125g",
+      "name": "Sardinha em Lata (125g)",
+      "aliases": [
+        "Sardinha em Lata (125g)",
+        "sardinha em lata",
+        "sardinha lata"
+      ],
+      "category": "Mercearia",
+      "unit": "lata",
+      "package": "125g",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_atum_em_lata_170g",
+      "name": "Atum em Lata (170g)",
+      "aliases": [
+        "Atum em Lata (170g)",
+        "atum",
+        "atum em lata",
+        "atum ralado",
+        "atum sólido"
+      ],
+      "category": "Mercearia",
+      "unit": "lata",
+      "package": "170g",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_macarrao_espaguete_500g",
+      "name": "Macarrão Espaguete (500g)",
+      "aliases": [
+        "Macarrão Espaguete (500g)",
+        "espaguete",
+        "macarrao espaguete",
+        "macarrão espaguete",
+        "spaghetti"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 4.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_macarrao_parafuso_500g",
+      "name": "Macarrão Parafuso (500g)",
+      "aliases": [
+        "Macarrão Parafuso (500g)",
+        "fusilli",
+        "macarrao parafuso",
+        "macarrão parafuso"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 4.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_macarrao_penne_500g",
+      "name": "Macarrão Penne (500g)",
+      "aliases": [
+        "Macarrão Penne (500g)",
+        "macarrao penne",
+        "penne"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 4.79,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_massa_para_lasanha_500g",
+      "name": "Massa para Lasanha (500g)",
+      "aliases": [
+        "Massa para Lasanha (500g)",
+        "lasanha",
+        "massa de lasanha",
+        "massa para lasanha"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_macarrao_instantaneo_85g",
+      "name": "Macarrão Instantâneo (85g)",
+      "aliases": [
+        "Macarrão Instantâneo (85g)",
+        "macarrao instantaneo",
+        "macarrão instantâneo",
+        "miojo"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "85g",
+      "price": 2.29,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_macarrao_500g",
+      "name": "Macarrão (500g)",
+      "aliases": [
+        "Macarrão (500g)",
+        "macarrao",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "pct",
+      "package": "500g",
+      "price": 4.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_oleo_de_girassol_milho_900ml",
+      "name": "Óleo de Girassol / Milho (900ml)",
+      "aliases": [
+        "oleo de girassol",
+        "oleo de milho",
+        "Óleo de Girassol / Milho (900ml)",
+        "óleo de girassol"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 9.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_oleo_de_soja_900ml",
+      "name": "Óleo de Soja (900ml)",
+      "aliases": [
+        "oleo",
+        "oleo de soja",
+        "Óleo de Soja (900ml)",
+        "óleo",
+        "óleo de soja"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_azeite_extravirgem_500ml",
+      "name": "Azeite Extravirgem (500ml)",
+      "aliases": [
+        "Azeite Extravirgem (500ml)",
+        "azeite",
+        "azeite de oliva",
+        "azeite extra virgem",
+        "azeite extravirgem"
+      ],
+      "category": "Mercearia",
+      "unit": "vd",
+      "package": "500ml",
+      "price": 39.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_vinagre_de_maca_750ml",
+      "name": "Vinagre de Maçã (750ml)",
+      "aliases": [
+        "Vinagre de Maçã (750ml)",
+        "vinagre de maca",
+        "vinagre de maçã"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "750ml",
+      "price": 5.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_vinagre_de_alcool_750ml",
+      "name": "Vinagre de Álcool (750ml)",
+      "aliases": [
+        "Vinagre de Álcool (750ml)",
+        "vinagre",
+        "vinagre de alcool",
+        "vinagre de álcool"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "750ml",
+      "price": 2.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_sal_grosso_1kg",
+      "name": "Sal Grosso (1kg)",
+      "aliases": [
+        "Sal Grosso (1kg)",
+        "sal grosso",
+        "sal para churrasco"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 4.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_sal_refinado_1kg",
+      "name": "Sal Refinado (1kg)",
+      "aliases": [
+        "Sal Refinado (1kg)",
+        "sal",
+        "sal de cozinha",
+        "sal refinado"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 2.79,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_maionese_tradicional_500g",
+      "name": "Maionese Tradicional (500g)",
+      "aliases": [
+        "Maionese Tradicional (500g)",
+        "hellmanns",
+        "helmans",
+        "maionese"
+      ],
+      "category": "Mercearia",
+      "unit": "pote",
+      "package": "500g",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_ketchup_tradicional_400g",
+      "name": "Ketchup Tradicional (400g)",
+      "aliases": [
+        "Ketchup Tradicional (400g)",
+        "catchup",
+        "ketchup"
+      ],
+      "category": "Mercearia",
+      "unit": "fr",
+      "package": "400g",
+      "price": 7.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_mercearia_mostarda_amarela_200g",
+      "name": "Mostarda Amarela (200g)",
+      "aliases": [
+        "Mostarda Amarela (200g)",
+        "mostarda"
+      ],
+      "category": "Mercearia",
+      "unit": "fr",
+      "package": "200g",
+      "price": 5.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_tomate_cereja_bandeja",
+      "name": "Tomate Cereja (bandeja)",
+      "aliases": [
+        "Tomate Cereja (bandeja)",
+        "tomate cereja",
+        "tomate grape",
+        "tomatinho"
+      ],
+      "category": "Hortifrúti",
+      "unit": "bdj",
+      "package": "",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_tomate_italiano_kg",
+      "name": "Tomate Italiano (kg)",
+      "aliases": [
+        "Tomate Italiano (kg)",
+        "tomate italiano"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 8.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_tomate_kg",
+      "name": "Tomate (kg)",
+      "aliases": [
+        "Tomate (kg)",
+        "tomate",
+        "tomates"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_batata_doce_kg",
+      "name": "Batata Doce (kg)",
+      "aliases": [
+        "Batata Doce (kg)",
+        "batata doce",
+        "batatas doces"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 5.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_batata_baroa_kg",
+      "name": "Batata Baroa (kg)",
+      "aliases": [
+        "Batata Baroa (kg)",
+        "baroa",
+        "batata baroa",
+        "mandioquinha"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 14.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_batata_inglesa_kg",
+      "name": "Batata Inglesa (kg)",
+      "aliases": [
+        "Batata Inglesa (kg)",
+        "batata",
+        "batata inglesa",
+        "batata lavada",
+        "batata normal",
+        "batatas"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_cebola_roxa_kg",
+      "name": "Cebola Roxa (kg)",
+      "aliases": [
+        "Cebola Roxa (kg)",
+        "cebola roxa"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 8.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_cebolinha_cheiro_verde_mc",
+      "name": "Cebolinha / Cheiro Verde (mç)",
+      "aliases": [
+        "Cebolinha / Cheiro Verde (mç)",
+        "cebolinha",
+        "cheiro verde",
+        "coentro",
+        "salsa",
+        "salsinha"
+      ],
+      "category": "Hortifrúti",
+      "unit": "mç",
+      "package": "",
+      "price": 2.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_cebola_kg",
+      "name": "Cebola (kg)",
+      "aliases": [
+        "Cebola (kg)",
+        "cebola",
+        "cebola amarela",
+        "cebola comum",
+        "cebolas"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 5.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_alho_kg",
+      "name": "Alho (kg)",
+      "aliases": [
+        "Alho (kg)",
+        "alho",
+        "alho a granel"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 32.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_banana_prata_kg",
+      "name": "Banana Prata (kg)",
+      "aliases": [
+        "Banana Prata (kg)",
+        "banana prata"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_banana_nanica_kg",
+      "name": "Banana Nanica (kg)",
+      "aliases": [
+        "Banana Nanica (kg)",
+        "banana d'agua",
+        "banana nanica"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 5.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_banana_kg",
+      "name": "Banana (kg)",
+      "aliases": [
+        "Banana (kg)",
+        "banana",
+        "bananas"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_maca_gala_kg",
+      "name": "Maçã Gala (kg)",
+      "aliases": [
+        "Maçã Gala (kg)",
+        "maca",
+        "maca gala",
+        "macas",
+        "maçã",
+        "maçã gala"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 10.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_laranja_pera_kg",
+      "name": "Laranja Pera (kg)",
+      "aliases": [
+        "Laranja Pera (kg)",
+        "laranja",
+        "laranja para suco",
+        "laranja pera",
+        "laranjas"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_limao_taiti_kg",
+      "name": "Limão Taiti (kg)",
+      "aliases": [
+        "Limão Taiti (kg)",
+        "limao",
+        "limao taiti",
+        "limão",
+        "limão taiti"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 5.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_abacaxi_perola_un",
+      "name": "Abacaxi Pérola (un)",
+      "aliases": [
+        "Abacaxi Pérola (un)",
+        "abacaxi",
+        "abacaxi perola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_mamao_kg",
+      "name": "Mamão (kg)",
+      "aliases": [
+        "Mamão (kg)",
+        "mamao",
+        "mamao formosa",
+        "mamao papaya",
+        "mamão"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 8.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_melancia_kg",
+      "name": "Melancia (kg)",
+      "aliases": [
+        "Melancia (kg)",
+        "melancia"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 3.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_cenoura_kg",
+      "name": "Cenoura (kg)",
+      "aliases": [
+        "Cenoura (kg)",
+        "cenoura",
+        "cenouras"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "",
+      "price": 5.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_hortifruti_alface_un",
+      "name": "Alface (un)",
+      "aliases": [
+        "Alface (un)",
+        "alface",
+        "alface americana",
+        "alface crespa"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "",
+      "price": 3.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_creme_de_leite_200g",
+      "name": "Creme de Leite (200g)",
+      "aliases": [
+        "Creme de Leite (200g)",
+        "creme de leite"
+      ],
+      "category": "Laticínios",
+      "unit": "cx",
+      "package": "200g",
+      "price": 3.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_leite_vegetal_1l",
+      "name": "Leite Vegetal (1L)",
+      "aliases": [
+        "Leite Vegetal (1L)",
+        "leite de amendoas",
+        "leite de amêndoas",
+        "leite de aveia",
+        "leite de soja",
+        "leite vegetal"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 14.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_leite_em_po_400g",
+      "name": "Leite em Pó (400g)",
+      "aliases": [
+        "Leite em Pó (400g)",
+        "leite em po",
+        "leite em pó",
+        "leite ninho"
+      ],
+      "category": "Laticínios",
+      "unit": "pct",
+      "package": "400g",
+      "price": 16.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_leite_desnatado_1l",
+      "name": "Leite Desnatado (1L)",
+      "aliases": [
+        "Leite Desnatado (1L)",
+        "leite desnatado"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 5.29,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_leite_semidesnatado_1l",
+      "name": "Leite Semidesnatado (1L)",
+      "aliases": [
+        "Leite Semidesnatado (1L)",
+        "leite semi desnatado",
+        "leite semidesnatado"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 5.19,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_leite_zero_lactose_1l",
+      "name": "Leite Zero Lactose (1L)",
+      "aliases": [
+        "Leite Zero Lactose (1L)",
+        "leite lactose",
+        "leite sem lactose",
+        "leite zero lactose"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 6.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_leite_integral_1l",
+      "name": "Leite Integral (1L)",
+      "aliases": [
+        "Leite Integral (1L)",
+        "leite",
+        "leite de vaca",
+        "leite integral"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_queijo_prato_fatiado_kg",
+      "name": "Queijo Prato Fatiado (kg)",
+      "aliases": [
+        "Queijo Prato Fatiado (kg)",
+        "queijo prato"
+      ],
+      "category": "Laticínios",
+      "unit": "kg",
+      "package": "",
+      "price": 48.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_queijo_minas_frescal_un",
+      "name": "Queijo Minas Frescal (un)",
+      "aliases": [
+        "Queijo Minas Frescal (un)",
+        "minas frescal",
+        "queijo branco",
+        "queijo minas"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "",
+      "price": 19.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_queijo_parmesao_ralado_50g",
+      "name": "Queijo Parmesão Ralado (50g)",
+      "aliases": [
+        "Queijo Parmesão Ralado (50g)",
+        "parmesao ralado",
+        "queijo parmesao",
+        "queijo ralado"
+      ],
+      "category": "Laticínios",
+      "unit": "pct",
+      "package": "50g",
+      "price": 5.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_queijo_mussarela_fatiado_kg",
+      "name": "Queijo Mussarela Fatiado (kg)",
+      "aliases": [
+        "Queijo Mussarela Fatiado (kg)",
+        "mucarela",
+        "mussarela",
+        "mussarela fatiada",
+        "queijo",
+        "queijo mussarela"
+      ],
+      "category": "Laticínios",
+      "unit": "kg",
+      "package": "",
+      "price": 44.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_requeijao_cremoso_200g",
+      "name": "Requeijão Cremoso (200g)",
+      "aliases": [
+        "Requeijão Cremoso (200g)",
+        "requeijao",
+        "requeijao cremoso",
+        "requeijão"
+      ],
+      "category": "Laticínios",
+      "unit": "copo",
+      "package": "200g",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_manteiga_sem_sal_200g",
+      "name": "Manteiga sem Sal (200g)",
+      "aliases": [
+        "Manteiga sem Sal (200g)",
+        "manteiga sem sal"
+      ],
+      "category": "Laticínios",
+      "unit": "pote",
+      "package": "200g",
+      "price": 12.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_manteiga_com_sal_200g",
+      "name": "Manteiga com Sal (200g)",
+      "aliases": [
+        "Manteiga com Sal (200g)",
+        "manteiga",
+        "manteiga com sal"
+      ],
+      "category": "Laticínios",
+      "unit": "pote",
+      "package": "200g",
+      "price": 11.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_margarina_com_sal_500g",
+      "name": "Margarina com Sal (500g)",
+      "aliases": [
+        "Margarina com Sal (500g)",
+        "doriana",
+        "margarina",
+        "qualy"
+      ],
+      "category": "Laticínios",
+      "unit": "pote",
+      "package": "500g",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_laticinios_iogurte_170g",
+      "name": "Iogurte (170g)",
+      "aliases": [
+        "Iogurte (170g)",
+        "iogurte",
+        "iogurte de morango",
+        "iogurte grego",
+        "iogurte natural"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "170g",
+      "price": 3.49,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_congelados_batata_frita_congelada_1kg",
+      "name": "Batata Frita / Congelada (1kg)",
+      "aliases": [
+        "Batata Frita / Congelada (1kg)",
+        "batata congelada",
+        "batata frita",
+        "batata palito"
+      ],
+      "category": "Congelados",
+      "unit": "pct",
+      "package": "1kg",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_congelados_pao_de_queijo_congelado_1kg",
+      "name": "Pão de Queijo Congelado (1kg)",
+      "aliases": [
+        "Pão de Queijo Congelado (1kg)",
+        "pao de queijo",
+        "pão de queijo"
+      ],
+      "category": "Congelados",
+      "unit": "pct",
+      "package": "1kg",
+      "price": 19.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_carne_moida_patinho_kg",
+      "name": "Carne Moída / Patinho (kg)",
+      "aliases": [
+        "Carne Moída / Patinho (kg)",
+        "carne moida",
+        "carne moída",
+        "patinho moido",
+        "patinho moído"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 38.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_picanha_bovina_kg",
+      "name": "Picanha Bovina (kg)",
+      "aliases": [
+        "Picanha Bovina (kg)",
+        "picanha"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 69.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_alcatra_bovina_kg",
+      "name": "Alcatra Bovina (kg)",
+      "aliases": [
+        "Alcatra Bovina (kg)",
+        "alcatra"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 44.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_contrafile_kg",
+      "name": "Contrafilé (kg)",
+      "aliases": [
+        "Contrafilé (kg)",
+        "contra file",
+        "contrafile",
+        "contrafilé"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 46.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_costela_bovina_kg",
+      "name": "Costela Bovina (kg)",
+      "aliases": [
+        "Costela Bovina (kg)",
+        "costela",
+        "costela bovina",
+        "costela de boi"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 28.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_carne_de_panela_acem_kg",
+      "name": "Carne de Panela / Acém (kg)",
+      "aliases": [
+        "Carne de Panela / Acém (kg)",
+        "acem",
+        "acém",
+        "carne",
+        "carne bovina",
+        "carne de boi",
+        "carne de panela",
+        "musculo",
+        "músculo"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 29.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_file_de_peito_de_frango_kg",
+      "name": "Filé de Peito de Frango (kg)",
+      "aliases": [
+        "Filé de Peito de Frango (kg)",
+        "file de frango",
+        "file de peito",
+        "filé de frango",
+        "peito de frango"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 21.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_coxa_e_sobrecoxa_de_frango_kg",
+      "name": "Coxa e Sobrecoxa de Frango (kg)",
+      "aliases": [
+        "Coxa e Sobrecoxa de Frango (kg)",
+        "coxa de frango",
+        "coxa e sobrecoxa",
+        "sobrecoxa"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 13.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_asa_de_frango_kg",
+      "name": "Asa de Frango (kg)",
+      "aliases": [
+        "Asa de Frango (kg)",
+        "asa de frango",
+        "meio da asa",
+        "tulipa de frango"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 19.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_frango_a_passarinho_kg",
+      "name": "Frango a Passarinho (kg)",
+      "aliases": [
+        "Frango a Passarinho (kg)",
+        "frango a passarinho"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 15.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_frango_inteiro_kg",
+      "name": "Frango Inteiro (kg)",
+      "aliases": [
+        "Frango Inteiro (kg)",
+        "frango",
+        "frango congelado",
+        "frango inteiro",
+        "frango resfriado"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 10.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_linguica_toscana_kg",
+      "name": "Linguiça Toscana (kg)",
+      "aliases": [
+        "Linguiça Toscana (kg)",
+        "linguica",
+        "linguica de churrasco",
+        "linguica toscana",
+        "linguiça",
+        "linguiça toscana"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 22.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_linguica_calabresa_kg",
+      "name": "Linguiça Calabresa (kg)",
+      "aliases": [
+        "Linguiça Calabresa (kg)",
+        "calabresa",
+        "linguica calabresa",
+        "linguiça calabresa"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 26.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_bacon_em_pedaco_fatiado_kg",
+      "name": "Bacon em Pedaço / Fatiado (kg)",
+      "aliases": [
+        "Bacon em Pedaço / Fatiado (kg)",
+        "bacon",
+        "bacon em cubos",
+        "bacon em pedaco",
+        "bacon fatiado"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 34.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_costelinha_de_porco_kg",
+      "name": "Costelinha de Porco (kg)",
+      "aliases": [
+        "Costelinha de Porco (kg)",
+        "carne de porco",
+        "costela de porco",
+        "costelinha de porco",
+        "lombo de porco"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "",
+      "price": 27.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_ovos_caipiras_duzia",
+      "name": "Ovos Caipiras (Dúzia)",
+      "aliases": [
+        "Ovos Caipiras (Dúzia)",
+        "ovo caipira",
+        "ovos caipiras"
+      ],
+      "category": "Açougue",
+      "unit": "dz",
+      "package": "",
+      "price": 15.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_acougue_ovos_brancos_duzia",
+      "name": "Ovos Brancos (Dúzia)",
+      "aliases": [
+        "Ovos Brancos (Dúzia)",
+        "ovo",
+        "ovo branco",
+        "ovos",
+        "ovos brancos"
+      ],
+      "category": "Açougue",
+      "unit": "dz",
+      "package": "",
+      "price": 12.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_peixaria_file_de_tilapia_kg",
+      "name": "Filé de Tilápia (kg)",
+      "aliases": [
+        "Filé de Tilápia (kg)",
+        "file de tilapia",
+        "filé de tilápia",
+        "tilapia",
+        "tilápia"
+      ],
+      "category": "Peixaria",
+      "unit": "kg",
+      "package": "",
+      "price": 39.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_peixaria_salmao_fresco_kg",
+      "name": "Salmão Fresco (kg)",
+      "aliases": [
+        "Salmão Fresco (kg)",
+        "file de salmao",
+        "salmao",
+        "salmão"
+      ],
+      "category": "Peixaria",
+      "unit": "kg",
+      "package": "",
+      "price": 89.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_peixaria_camarao_limpo_400g",
+      "name": "Camarão Limpo (400g)",
+      "aliases": [
+        "Camarão Limpo (400g)",
+        "camarao",
+        "camarao limpo",
+        "camarão"
+      ],
+      "category": "Peixaria",
+      "unit": "pct",
+      "package": "400g",
+      "price": 36.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_peixaria_sardinha_fresca_kg",
+      "name": "Sardinha Fresca (kg)",
+      "aliases": [
+        "Sardinha Fresca (kg)",
+        "sardinha",
+        "sardinhas"
+      ],
+      "category": "Peixaria",
+      "unit": "kg",
+      "package": "",
+      "price": 15.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_padaria_pao_de_forma_integral",
+      "name": "Pão de Forma Integral",
+      "aliases": [
+        "Pão de Forma Integral",
+        "pao de forma integral",
+        "pão de forma integral"
+      ],
+      "category": "Padaria",
+      "unit": "pct",
+      "package": "",
+      "price": 10.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_padaria_pao_de_forma_tradicional",
+      "name": "Pão de Forma Tradicional",
+      "aliases": [
+        "Pão de Forma Tradicional",
+        "pao de forma",
+        "pao de sanduiche",
+        "pao pullman",
+        "pão de forma"
+      ],
+      "category": "Padaria",
+      "unit": "pct",
+      "package": "",
+      "price": 8.5,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_padaria_pao_frances_sal_kg",
+      "name": "Pão Francês / Sal (kg)",
+      "aliases": [
+        "Pão Francês / Sal (kg)",
+        "pao de sal",
+        "pao frances",
+        "paozinho",
+        "pão",
+        "pão de sal",
+        "pão francês"
+      ],
+      "category": "Padaria",
+      "unit": "kg",
+      "package": "",
+      "price": 16.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_padaria_torrada_salgada_140g",
+      "name": "Torrada Salgada (140g)",
+      "aliases": [
+        "Torrada Salgada (140g)",
+        "torrada",
+        "torradas"
+      ],
+      "category": "Padaria",
+      "unit": "pct",
+      "package": "140g",
+      "price": 5.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_frios_presunto_cozido_fatiado_kg",
+      "name": "Presunto Cozido Fatiado (kg)",
+      "aliases": [
+        "Presunto Cozido Fatiado (kg)",
+        "presunto",
+        "presunto cozido",
+        "presunto fatiado"
+      ],
+      "category": "Frios",
+      "unit": "kg",
+      "package": "",
+      "price": 29.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_frios_peito_de_peru_fatiado_kg",
+      "name": "Peito de Peru Fatiado (kg)",
+      "aliases": [
+        "Peito de Peru Fatiado (kg)",
+        "blanquet de peru",
+        "peito de peru"
+      ],
+      "category": "Frios",
+      "unit": "kg",
+      "package": "",
+      "price": 54.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_frios_mortadela_fatiada_kg",
+      "name": "Mortadela Fatiada (kg)",
+      "aliases": [
+        "Mortadela Fatiada (kg)",
+        "mortadela",
+        "mortadela defumada"
+      ],
+      "category": "Frios",
+      "unit": "kg",
+      "package": "",
+      "price": 19.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_refrigerante_coca_cola_2l",
+      "name": "Refrigerante Coca-Cola (2L)",
+      "aliases": [
+        "Refrigerante Coca-Cola (2L)",
+        "coca",
+        "coca cola",
+        "coca cola 2l",
+        "coca zero",
+        "coca-cola"
+      ],
+      "category": "Bebidas",
+      "unit": "2L",
+      "package": "2l",
+      "price": 9.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_guarana_antarctica_2l",
+      "name": "Guaraná Antarctica (2L)",
+      "aliases": [
+        "Guaraná Antarctica (2L)",
+        "guarana",
+        "guarana 2l",
+        "guarana antarctica",
+        "guaraná",
+        "guaraná antarctica"
+      ],
+      "category": "Bebidas",
+      "unit": "2L",
+      "package": "2l",
+      "price": 8.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_refrigerante_2l",
+      "name": "Refrigerante (2L)",
+      "aliases": [
+        "Refrigerante (2L)",
+        "refri",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "2L",
+      "package": "2l",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_agua_mineral_com_gas_500ml",
+      "name": "Água Mineral com Gás (500ml)",
+      "aliases": [
+        "agua com gas",
+        "Água Mineral com Gás (500ml)",
+        "água com gás"
+      ],
+      "category": "Bebidas",
+      "unit": "pet",
+      "package": "500ml",
+      "price": 2.79,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_agua_mineral_sem_gas_1_5l",
+      "name": "Água Mineral sem Gás (1,5L)",
+      "aliases": [
+        "agua",
+        "agua mineral",
+        "agua sem gas",
+        "Água Mineral sem Gás (1,5L)",
+        "água",
+        "água mineral",
+        "água sem gás"
+      ],
+      "category": "Bebidas",
+      "unit": "pet",
+      "package": "1,5l",
+      "price": 2.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_suco_de_uva_integral_1_5l",
+      "name": "Suco de Uva Integral (1,5L)",
+      "aliases": [
+        "Suco de Uva Integral (1,5L)",
+        "suco de uva",
+        "suco de uva integral",
+        "suco integral"
+      ],
+      "category": "Bebidas",
+      "unit": "vd",
+      "package": "1,5l",
+      "price": 16.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_bebidas_cerveja_lata_350ml",
+      "name": "Cerveja Lata (350ml)",
+      "aliases": [
+        "Cerveja Lata (350ml)",
+        "cerveja",
+        "cerveja amstel",
+        "cerveja brahma",
+        "cerveja heineken",
+        "cerveja lata"
+      ],
+      "category": "Bebidas",
+      "unit": "lata",
+      "package": "350ml",
+      "price": 3.89,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_detergente_liquido_500ml",
+      "name": "Detergente Líquido (500ml)",
+      "aliases": [
+        "Detergente Líquido (500ml)",
+        "detergente",
+        "detergente liquido",
+        "detergente ype",
+        "detergente ypê"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.59,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_sabao_liquido_para_roupas_3l",
+      "name": "Sabão Líquido para Roupas (3L)",
+      "aliases": [
+        "Sabão Líquido para Roupas (3L)",
+        "ariel liquido",
+        "omo liquido",
+        "sabao liquido",
+        "sabão líquido"
+      ],
+      "category": "Limpeza",
+      "unit": "gl",
+      "package": "3l",
+      "price": 34.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_sabao_em_barra_pct_5un",
+      "name": "Sabão em Barra (pct 5un)",
+      "aliases": [
+        "Sabão em Barra (pct 5un)",
+        "sabao de coco",
+        "sabao em barra",
+        "sabão em barra"
+      ],
+      "category": "Limpeza",
+      "unit": "pct",
+      "package": "5un",
+      "price": 9.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_sabao_em_po_1_6kg",
+      "name": "Sabão em Pó (1,6kg)",
+      "aliases": [
+        "Sabão em Pó (1,6kg)",
+        "omo em po",
+        "sabao",
+        "sabao em po",
+        "sabao omo",
+        "sabão",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "cx",
+      "package": "1,6kg",
+      "price": 19.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_amaciante_concentrado_1_5l",
+      "name": "Amaciante Concentrado (1,5L)",
+      "aliases": [
+        "Amaciante Concentrado (1,5L)",
+        "amaciante",
+        "amaciante comfort",
+        "amaciante concentrado",
+        "amaciante downy"
+      ],
+      "category": "Limpeza",
+      "unit": "fr",
+      "package": "1,5l",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_agua_sanitaria_2l",
+      "name": "Água Sanitária (2L)",
+      "aliases": [
+        "agua sanitaria",
+        "cloro",
+        "qboa",
+        "Água Sanitária (2L)",
+        "água sanitária"
+      ],
+      "category": "Limpeza",
+      "unit": "fr",
+      "package": "2l",
+      "price": 6.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_desinfetante_perfumado_2l",
+      "name": "Desinfetante Perfumado (2L)",
+      "aliases": [
+        "Desinfetante Perfumado (2L)",
+        "desinfetante",
+        "desinfetante perfumado",
+        "desinfetante pinho sol"
+      ],
+      "category": "Limpeza",
+      "unit": "fr",
+      "package": "2l",
+      "price": 8.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_esponja_dupla_face_pct_3un",
+      "name": "Esponja Dupla Face (pct 3un)",
+      "aliases": [
+        "Esponja Dupla Face (pct 3un)",
+        "esponja",
+        "esponja de pia",
+        "esponja dupla face"
+      ],
+      "category": "Limpeza",
+      "unit": "pct",
+      "package": "3un",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_limpeza_saco_de_lixo_pct",
+      "name": "Saco de Lixo (pct)",
+      "aliases": [
+        "Saco de Lixo (pct)",
+        "saco de lixo",
+        "saco de lixo 50l"
+      ],
+      "category": "Limpeza",
+      "unit": "pct",
+      "package": "",
+      "price": 7.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_papel_higienico_folha_dupla_12un",
+      "name": "Papel Higiênico Folha Dupla (12un)",
+      "aliases": [
+        "Papel Higiênico Folha Dupla (12un)",
+        "papel higienico",
+        "papel higienico folha dupla",
+        "papel higiênico",
+        "papel higiênico folha dupla"
+      ],
+      "category": "Higiene",
+      "unit": "pct",
+      "package": "12un",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_sabonete_liquido_250ml",
+      "name": "Sabonete Líquido (250ml)",
+      "aliases": [
+        "Sabonete Líquido (250ml)",
+        "sabonete liquido",
+        "sabonete líquido"
+      ],
+      "category": "Higiene",
+      "unit": "fr",
+      "package": "250ml",
+      "price": 8.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_sabonete_em_barra_85g",
+      "name": "Sabonete em Barra (85g)",
+      "aliases": [
+        "Sabonete em Barra (85g)",
+        "sabonete",
+        "sabonete dove",
+        "sabonete em barra",
+        "sabonete lux"
+      ],
+      "category": "Higiene",
+      "unit": "un",
+      "package": "85g",
+      "price": 2.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_creme_dental_90g",
+      "name": "Creme Dental (90g)",
+      "aliases": [
+        "Creme Dental (90g)",
+        "colgate",
+        "creme dental",
+        "pasta de dente"
+      ],
+      "category": "Higiene",
+      "unit": "un",
+      "package": "90g",
+      "price": 4.99,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_escova_de_dentes",
+      "name": "Escova de Dentes",
+      "aliases": [
+        "Escova de Dentes",
+        "escova de dente",
+        "escova de dentes",
+        "escova dental"
+      ],
+      "category": "Higiene",
+      "unit": "un",
+      "package": "",
+      "price": 8.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_shampoo_350ml",
+      "name": "Shampoo (350ml)",
+      "aliases": [
+        "Shampoo (350ml)",
+        "pantene",
+        "shampoo",
+        "xampu"
+      ],
+      "category": "Higiene",
+      "unit": "fr",
+      "package": "350ml",
+      "price": 16.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_condicionador_350ml",
+      "name": "Condicionador (350ml)",
+      "aliases": [
+        "Condicionador (350ml)",
+        "condicionador"
+      ],
+      "category": "Higiene",
+      "unit": "fr",
+      "package": "350ml",
+      "price": 18.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "product_higiene_desodorante_aerosol_150ml",
+      "name": "Desodorante Aerosol (150ml)",
+      "aliases": [
+        "Desodorante Aerosol (150ml)",
+        "desodorante",
+        "desodorante aerosol",
+        "desodorante rexona"
+      ],
+      "category": "Higiene",
+      "unit": "fr",
+      "package": "150ml",
+      "price": 14.9,
+      "source": "Catálogo local",
+      "source_url": "",
+      "collected_at": ""
+    },
+    {
+      "id": "carrefour_arroz_branco_prato_fino_tipo_1_5kg",
+      "name": "Arroz Branco Prato Fino Tipo 1 - 5kg",
+      "aliases": [
+        "Arroz Branco Prato Fino Tipo 1 - 5kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "5kg",
+      "price": 27.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776526+00:00"
+    },
+    {
+      "id": "carrefour_arroz_branco_longo_fino_tipo_1_tio_joao_1_kg",
+      "name": "Arroz Branco Longo-fino Tipo 1 Tio João 1 Kg",
+      "aliases": [
+        "Arroz Branco Longo-fino Tipo 1 Tio João 1 Kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 6.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776654+00:00"
+    },
+    {
+      "id": "carrefour_arroz_branco_camil_tipo_1_5kg",
+      "name": "Arroz Branco Camil Tipo 1 5kg",
+      "aliases": [
+        "Arroz Branco Camil Tipo 1 5kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "5kg",
+      "price": 26.18,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776727+00:00"
+    },
+    {
+      "id": "carrefour_arroz_branco_longo_fino_tipo_1_tio_joao_5_kg",
+      "name": "Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg",
+      "aliases": [
+        "Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "5kg",
+      "price": 29.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776804+00:00"
+    },
+    {
+      "id": "carrefour_arroz_tipo_1_seletto_tradicional_5kg",
+      "name": "Arroz Tipo 1 Seletto Tradicional 5kg",
+      "aliases": [
+        "Arroz Tipo 1 Seletto Tradicional 5kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "5kg",
+      "price": 17.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776869+00:00"
+    },
+    {
+      "id": "carrefour_arroz_branco_camil_tipo_1_1kg",
+      "name": "Arroz Branco Camil Tipo 1 1kg",
+      "aliases": [
+        "Arroz Branco Camil Tipo 1 1kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 5.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776929+00:00"
+    },
+    {
+      "id": "carrefour_arroz_branco_longo_fino_tipo_1_namorado_5kg",
+      "name": "Arroz Branco Longo-fino Tipo 1 Namorado 5Kg",
+      "aliases": [
+        "Arroz Branco Longo-fino Tipo 1 Namorado 5Kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "5kg",
+      "price": 25.18,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.776992+00:00"
+    },
+    {
+      "id": "carrefour_arroz_integral_longo_fino_tipo_1_tio_joao_1_kg",
+      "name": "Arroz Integral Longo-fino Tipo 1 Tio João 1 Kg",
+      "aliases": [
+        "Arroz Integral Longo-fino Tipo 1 Tio João 1 Kg",
+        "arroz"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 8.38,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/arroz",
+      "collected_at": "2026-10-23T15:24:04.777062+00:00"
+    },
+    {
+      "id": "carrefour_feijao_preto_carrefour_1_kg",
+      "name": "Feijao Preto Carrefour 1 Kg",
+      "aliases": [
+        "Feijao Preto Carrefour 1 Kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 5.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.751828+00:00"
+    },
+    {
+      "id": "carrefour_feijao_carioca_confiare_1kg",
+      "name": "Feijão Carioca Confiare 1kg",
+      "aliases": [
+        "Feijão Carioca Confiare 1kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 7.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.751919+00:00"
+    },
+    {
+      "id": "carrefour_feijao_preto_carrefour_classic_1_kg",
+      "name": "Feijão Preto Carrefour Classic 1 Kg",
+      "aliases": [
+        "Feijão Preto Carrefour Classic 1 Kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 5.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.751987+00:00"
+    },
+    {
+      "id": "carrefour_feijao_carioca_bulnez_tipo_1_1kg",
+      "name": "Feijão Carioca Bulnez Tipo 1 1Kg",
+      "aliases": [
+        "Feijão Carioca Bulnez Tipo 1 1Kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 8.69,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.752041+00:00"
+    },
+    {
+      "id": "carrefour_feijao_preto_bulnez_tipo_1_1kg",
+      "name": "Feijão Preto Bulnez Tipo 1 1Kg",
+      "aliases": [
+        "Feijão Preto Bulnez Tipo 1 1Kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 7.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.752090+00:00"
+    },
+    {
+      "id": "carrefour_feijao_carioca_tipo_1_kicaldo_1kg",
+      "name": "Feijão Carioca Tipo 1 Kicaldo 1Kg",
+      "aliases": [
+        "Feijão Carioca Tipo 1 Kicaldo 1Kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 7.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.752139+00:00"
+    },
+    {
+      "id": "carrefour_feijao_carioca_camil_1kg",
+      "name": "Feijão Carioca Camil 1kg",
+      "aliases": [
+        "Feijão Carioca Camil 1kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.752183+00:00"
+    },
+    {
+      "id": "carrefour_feijao_preto_tipo_1_kicaldo_1kg",
+      "name": "Feijão Preto Tipo 1 Kicaldo 1Kg",
+      "aliases": [
+        "Feijão Preto Tipo 1 Kicaldo 1Kg",
+        "feijão"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 5.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/feij%C3%A3o",
+      "collected_at": "2026-10-23T15:24:06.752230+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_de_semola_com_ovos_espaguete_n_8_500_g",
+      "name": "Macarrão de Sêmola com Ovos Espaguete Nº 8 500 g",
+      "aliases": [
+        "Macarrão de Sêmola com Ovos Espaguete Nº 8 500 g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 3.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.490670+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_espaguete_carrefour_classic_500g",
+      "name": "Macarrão Espaguete Carrefour Classic 500g",
+      "aliases": [
+        "Macarrão Espaguete Carrefour Classic 500g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 3.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.490755+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_de_semola_com_ovos_parafuso_500_g",
+      "name": "Macarrão de Sêmola com Ovos Parafuso 500 g",
+      "aliases": [
+        "Macarrão de Sêmola com Ovos Parafuso 500 g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 3.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.490815+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_com_ovos_fettuccine_barilla_500g",
+      "name": "Macarrão com Ovos Fettuccine Barilla 500g",
+      "aliases": [
+        "Macarrão com Ovos Fettuccine Barilla 500g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 6.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.490869+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_linguine_com_ovos_barilla_500g",
+      "name": "Macarrão Linguine com Ovos Barilla 500g",
+      "aliases": [
+        "Macarrão Linguine com Ovos Barilla 500g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 6.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.490919+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_penne_dona_benta_com_ovos_500g",
+      "name": "Macarrão Penne Dona Benta com Ovos 500g",
+      "aliases": [
+        "Macarrão Penne Dona Benta com Ovos 500g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 4.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.490969+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_instantaneo_nissin_sabor_galinha_caipira_85g",
+      "name": "Macarrão Instantâneo Nissin Sabor Galinha Caipira 85g",
+      "aliases": [
+        "Macarrão Instantâneo Nissin Sabor Galinha Caipira 85g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "85g",
+      "price": 3.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.491024+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_ave_maria_renata_com_ovos_500g",
+      "name": "Macarrão Ave Maria Renata com Ovos 500g",
+      "aliases": [
+        "Macarrão Ave Maria Renata com Ovos 500g",
+        "macarrão"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 4.18,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/macarr%C3%A3o",
+      "collected_at": "2026-10-23T15:24:08.491074+00:00"
+    },
+    {
+      "id": "carrefour_farinha_de_aveia_integral_quaker_165g",
+      "name": "Farinha de Aveia Integral Quaker 165g",
+      "aliases": [
+        "Farinha de Aveia Integral Quaker 165g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "165g",
+      "price": 6.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603425+00:00"
+    },
+    {
+      "id": "carrefour_farinha_lactea_nestle_tradicional_360g",
+      "name": "Farinha Láctea Nestle Tradicional 360g",
+      "aliases": [
+        "Farinha Láctea Nestle Tradicional 360g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "360g",
+      "price": 25.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603496+00:00"
+    },
+    {
+      "id": "carrefour_farinha_de_aveia_vitalin_200g",
+      "name": "Farinha de Aveia Vitalin 200g",
+      "aliases": [
+        "Farinha de Aveia Vitalin 200g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "200g",
+      "price": 17.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603558+00:00"
+    },
+    {
+      "id": "carrefour_farinha_de_linhaca_marrom_integral_vitalin_150_g",
+      "name": "Farinha de Linhaça Marrom Integral Vitalin 150 g",
+      "aliases": [
+        "Farinha de Linhaça Marrom Integral Vitalin 150 g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "150g",
+      "price": 12.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603618+00:00"
+    },
+    {
+      "id": "carrefour_farinha_de_quinoa_real_organica_vitalin_150g",
+      "name": "Farinha de Quinoa Real Orgânica Vitalin 150g",
+      "aliases": [
+        "Farinha de Quinoa Real Orgânica Vitalin 150g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "150g",
+      "price": 11.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603672+00:00"
+    },
+    {
+      "id": "carrefour_macarrao_com_farinha_de_quinoa_minielbow_papapa_papapasta_caixa_200g",
+      "name": "Macarrão com Farinha de Quinoa Minielbow Papapá PapaPasta Caixa 200g",
+      "aliases": [
+        "Macarrão com Farinha de Quinoa Minielbow Papapá PapaPasta Caixa 200g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "200g",
+      "price": 13.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603736+00:00"
+    },
+    {
+      "id": "carrefour_melhorador_de_farinha_para_panificacao_fleischmann_mais_macio_10g",
+      "name": "Melhorador de Farinha para Panificação Fleischmann Mais Macio 10g",
+      "aliases": [
+        "Melhorador de Farinha para Panificação Fleischmann Mais Macio 10g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "10g",
+      "price": 1.58,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603798+00:00"
+    },
+    {
+      "id": "carrefour_mix_de_farinhas_multiuso_integral_sem_gluten_vitalin_500g",
+      "name": "Mix de Farinhas Multiuso Integral sem Glúten Vitalin 500g",
+      "aliases": [
+        "Mix de Farinhas Multiuso Integral sem Glúten Vitalin 500g",
+        "farinha"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 22.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/farinha",
+      "collected_at": "2026-10-23T15:24:10.603858+00:00"
+    },
+    {
+      "id": "carrefour_acucar_refinado_uniao_1kg",
+      "name": "Açúcar Refinado União 1kg",
+      "aliases": [
+        "Açúcar Refinado União 1kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 3.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.871804+00:00"
+    },
+    {
+      "id": "carrefour_acucar_refinado_caravelas_1kg",
+      "name": "Açúcar Refinado Caravelas 1kg",
+      "aliases": [
+        "Açúcar Refinado Caravelas 1kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 3.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.871888+00:00"
+    },
+    {
+      "id": "carrefour_acucar_refinado_carrefour_1kg",
+      "name": "Açúcar Refinado Carrefour 1kg",
+      "aliases": [
+        "Açúcar Refinado Carrefour 1kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 3.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.871957+00:00"
+    },
+    {
+      "id": "carrefour_kit_acucar_uniao_1kg_margarina_com_sal_qualy_500_g_feijao_carioca_kicaldo_1kg_macarrao_de_semola_com_ovos_espaguete_n_8_500g",
+      "name": "Kit Açúcar União 1kg + Margarina Com Sal Qualy 500 g + Feijão Carioca Kicaldo 1kg + Macarrão de Sêmola Com Ovos Espaguete Nº8 500g",
+      "aliases": [
+        "Kit Açúcar União 1kg + Margarina Com Sal Qualy 500 g + Feijão Carioca Kicaldo 1kg + Macarrão de Sêmola Com Ovos Espaguete Nº8 500g",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 25.64,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.872083+00:00"
+    },
+    {
+      "id": "carrefour_acucar_demerara_organico_native_1kg",
+      "name": "Açúcar Demerara Orgânico Native 1Kg",
+      "aliases": [
+        "Açúcar Demerara Orgânico Native 1Kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 8.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.872148+00:00"
+    },
+    {
+      "id": "carrefour_acucar_refinado_da_barra_1kg",
+      "name": "Açúcar Refinado Da Barra 1Kg",
+      "aliases": [
+        "Açúcar Refinado Da Barra 1Kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 3.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.872207+00:00"
+    },
+    {
+      "id": "carrefour_acucar_cristal_caravelas_pacote_5_kg",
+      "name": "Açúcar Cristal Caravelas Pacote 5 Kg",
+      "aliases": [
+        "Açúcar Cristal Caravelas Pacote 5 Kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "5kg",
+      "price": 15.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.872269+00:00"
+    },
+    {
+      "id": "carrefour_acucar_natural_e_demerara_uniao_1kg",
+      "name": "Açúcar Natural e Demerara União 1kg",
+      "aliases": [
+        "Açúcar Natural e Demerara União 1kg",
+        "açúcar"
+      ],
+      "category": "Mercearia",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 8.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/a%C3%A7%C3%BAcar",
+      "collected_at": "2026-10-23T15:24:16.872329+00:00"
+    },
+    {
+      "id": "carrefour_cafe_soluvel_nescafe_tradicao_forte_sachet_40g_2_unidades",
+      "name": "Café Solúvel Nescafé Tradição Forte Sachet 40g 2 Unidades",
+      "aliases": [
+        "Café Solúvel Nescafé Tradição Forte Sachet 40g 2 Unidades",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "40g",
+      "price": 13.96,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432170+00:00"
+    },
+    {
+      "id": "carrefour_mochaccino_em_capsula_kopenhagen_lajotinha_nescafe_dolce_gusto_caixa_170g_10_unidades",
+      "name": "Mochaccino em Cápsula Kopenhagen Lajotinha Nescafé Dolce Gusto Caixa 170g 10 Unidades",
+      "aliases": [
+        "Mochaccino em Cápsula Kopenhagen Lajotinha Nescafé Dolce Gusto Caixa 170g 10 Unidades",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "170g",
+      "price": 27.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432276+00:00"
+    },
+    {
+      "id": "carrefour_cafe_torrado_e_moido_tradicional_jardim_500_g",
+      "name": "Café Torrado e Moído Tradicional Jardim 500 g",
+      "aliases": [
+        "Café Torrado e Moído Tradicional Jardim 500 g",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 18.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432350+00:00"
+    },
+    {
+      "id": "carrefour_cafe_evolutto_extraforte_moido_500_g",
+      "name": "Café Evolutto Extraforte Moído 500 g",
+      "aliases": [
+        "Café Evolutto Extraforte Moído 500 g",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 21.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432414+00:00"
+    },
+    {
+      "id": "carrefour_cafe_tradicional_vacuo_carrefour_500_g",
+      "name": "Café Tradicional Vácuo Carrefour 500 g",
+      "aliases": [
+        "Café Tradicional Vácuo Carrefour 500 g",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500g",
+      "price": 19.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432471+00:00"
+    },
+    {
+      "id": "carrefour_cafe_melitta_soluvel_extra_forte_sache_com_40g",
+      "name": "Cafe Melitta Soluvel Extra Forte Sachê Com 40g",
+      "aliases": [
+        "Cafe Melitta Soluvel Extra Forte Sachê Com 40g",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "40g",
+      "price": 7.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432534+00:00"
+    },
+    {
+      "id": "carrefour_cafe_em_capsula_nescafe_dolce_gusto_cappuccino_10_capsulas",
+      "name": "Café em Cápsula NESCAFÉ DOLCE GUSTO Cappuccino 10 Cápsulas",
+      "aliases": [
+        "Café em Cápsula NESCAFÉ DOLCE GUSTO Cappuccino 10 Cápsulas",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "",
+      "price": 27.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432602+00:00"
+    },
+    {
+      "id": "carrefour_cafe_soluvel_em_po_espresso_l_or_vidro_100g",
+      "name": "Café Solúvel em Pó Espresso L'or Vidro 100g",
+      "aliases": [
+        "Café Solúvel em Pó Espresso L'or Vidro 100g",
+        "café"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "100g",
+      "price": 31.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/caf%C3%A9",
+      "collected_at": "2026-10-23T15:24:20.432689+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_soja_liza_900ml",
+      "name": "Óleo de Soja Liza 900ml",
+      "aliases": [
+        "Óleo de Soja Liza 900ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 7.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.876871+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_soja_confiare_900ml",
+      "name": "Óleo de Soja Confiare 900ml",
+      "aliases": [
+        "Óleo de Soja Confiare 900ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 7.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.876943+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_soja_soya_900ml",
+      "name": "Óleo de Soja Soya 900ml",
+      "aliases": [
+        "Óleo de Soja Soya 900ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 7.69,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.877015+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_soja_vitaliv_garrafa_900_ml",
+      "name": "Óleo de Soja Vitaliv Garrafa 900 ml",
+      "aliases": [
+        "Óleo de Soja Vitaliv Garrafa 900 ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 7.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.877075+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_girassol_tipo_1_liza_especiais_garrafa_500ml",
+      "name": "Óleo de Girassol Tipo 1 Liza Especiais Garrafa 500ml",
+      "aliases": [
+        "Óleo de Girassol Tipo 1 Liza Especiais Garrafa 500ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 10.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.877144+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_girassol_carrefour_900ml",
+      "name": "Óleo de Girassol Carrefour 900ml",
+      "aliases": [
+        "Óleo de Girassol Carrefour 900ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 9.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.877196+00:00"
+    },
+    {
+      "id": "carrefour_oleo_girassol_liza_pet_900_ml",
+      "name": "Oléo Girassol Liza Pet 900 ml",
+      "aliases": [
+        "Oléo Girassol Liza Pet 900 ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "900ml",
+      "price": 16.69,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.877246+00:00"
+    },
+    {
+      "id": "carrefour_oleo_de_milho_tipo_1_liza_especiais_500ml",
+      "name": "Óleo de Milho Tipo 1 Liza Especiais 500ml",
+      "aliases": [
+        "Óleo de Milho Tipo 1 Liza Especiais 500ml",
+        "óleo"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 11.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%B3leo",
+      "collected_at": "2026-10-23T15:24:22.877301+00:00"
+    },
+    {
+      "id": "carrefour_azeite_andorinha_extra_virgem_500ml",
+      "name": "Azeite Andorinha Extra Virgem 500ml",
+      "aliases": [
+        "Azeite Andorinha Extra Virgem 500ml",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 27.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452570+00:00"
+    },
+    {
+      "id": "carrefour_azeite_terras_de_camoes_extra_virgem_frutado_500ml",
+      "name": "Azeite Terras de Camões Extra Virgem Frutado 500ml",
+      "aliases": [
+        "Azeite Terras de Camões Extra Virgem Frutado 500ml",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 29.68,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452652+00:00"
+    },
+    {
+      "id": "carrefour_azeite_portugues_extra_virgem_tradicional_gallo_500ml",
+      "name": "Azeite Português Extra Virgem Tradicional Gallo 500ml",
+      "aliases": [
+        "Azeite Português Extra Virgem Tradicional Gallo 500ml",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 28.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452716+00:00"
+    },
+    {
+      "id": "carrefour_azeite_chileno_extra_virgem_santiago_premium_500ml",
+      "name": "Azeite Chileno Extra Virgem Santiago Premium 500ml",
+      "aliases": [
+        "Azeite Chileno Extra Virgem Santiago Premium 500ml",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 34.58,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452771+00:00"
+    },
+    {
+      "id": "carrefour_azeite_espanhol_extra_virgem_carrefour_500ml",
+      "name": "Azeite Espanhol Extra Virgem Carrefour 500ml",
+      "aliases": [
+        "Azeite Espanhol Extra Virgem Carrefour 500ml",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 38.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452821+00:00"
+    },
+    {
+      "id": "carrefour_azeite_andorinha_extra_virgem_500ml_2_unidades",
+      "name": "Azeite Andorinha Extra Virgem 500ml 2 Unidades",
+      "aliases": [
+        "Azeite Andorinha Extra Virgem 500ml 2 Unidades",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 55.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452873+00:00"
+    },
+    {
+      "id": "carrefour_azeite_portugues_tradicional_gallo_tipo_unico_500ml",
+      "name": "Azeite Português Tradicional Gallo Tipo Único 500ml",
+      "aliases": [
+        "Azeite Português Tradicional Gallo Tipo Único 500ml",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 27.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452930+00:00"
+    },
+    {
+      "id": "carrefour_kit_azeite_terras_de_camoes_extra_virgem_frutado_500ml_3_unidades",
+      "name": "Kit Azeite Terras de Camões Extra Virgem Frutado 500ml 3 Unidades",
+      "aliases": [
+        "Kit Azeite Terras de Camões Extra Virgem Frutado 500ml 3 Unidades",
+        "azeite"
+      ],
+      "category": "Mercearia",
+      "unit": "un",
+      "package": "500ml",
+      "price": 89.03,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/azeite",
+      "collected_at": "2026-10-23T15:24:25.452996+00:00"
+    },
+    {
+      "id": "carrefour_leite_fermentado_yakult_40_light_80g_6_unidades",
+      "name": "Leite Fermentado Yakult 40 light 80g 6 Unidades",
+      "aliases": [
+        "Leite Fermentado Yakult 40 light 80g 6 Unidades",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "80g",
+      "price": 14.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.086900+00:00"
+    },
+    {
+      "id": "carrefour_leite_integral_uht_parmalat_1_litro",
+      "name": "Leite Integral UHT Parmalat 1 Litro",
+      "aliases": [
+        "Leite Integral UHT Parmalat 1 Litro",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1litro",
+      "price": 5.08,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.086972+00:00"
+    },
+    {
+      "id": "carrefour_leite_semidesnatado_piracanjuba_1_litro",
+      "name": "Leite Semidesnatado Piracanjuba 1 Litro",
+      "aliases": [
+        "Leite Semidesnatado Piracanjuba 1 Litro",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1litro",
+      "price": 4.75,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.087043+00:00"
+    },
+    {
+      "id": "carrefour_leite_desnatado_piracanjuba_1_litro",
+      "name": "Leite Desnatado Piracanjuba 1 Litro",
+      "aliases": [
+        "Leite Desnatado Piracanjuba 1 Litro",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1litro",
+      "price": 4.75,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.087096+00:00"
+    },
+    {
+      "id": "carrefour_leite_integral_piracanjuba_1_litro",
+      "name": "Leite Integral Piracanjuba 1 Litro",
+      "aliases": [
+        "Leite Integral Piracanjuba 1 Litro",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1litro",
+      "price": 4.92,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.087146+00:00"
+    },
+    {
+      "id": "carrefour_leite_semidesnatado_uht_ninho_levinho_vitaminado_1_l",
+      "name": "Leite Semidesnatado UHT Ninho Levinho Vitaminado 1 L",
+      "aliases": [
+        "Leite Semidesnatado UHT Ninho Levinho Vitaminado 1 L",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 5.77,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.087204+00:00"
+    },
+    {
+      "id": "carrefour_leite_desnatado_uht_molico_1_l",
+      "name": "Leite Desnatado UHT Molico 1 L",
+      "aliases": [
+        "Leite Desnatado UHT Molico 1 L",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 5.77,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.087252+00:00"
+    },
+    {
+      "id": "carrefour_leite_integral_uht_ninho_forti_vitaminado_1_l",
+      "name": "Leite Integral UHT Ninho Forti+ Vitaminado 1 L",
+      "aliases": [
+        "Leite Integral UHT Ninho Forti+ Vitaminado 1 L",
+        "leite"
+      ],
+      "category": "Laticínios",
+      "unit": "L",
+      "package": "1l",
+      "price": 5.77,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/leite",
+      "collected_at": "2026-10-23T15:24:28.087309+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_fatiado_president_150g",
+      "name": "Queijo Mussarela Fatiado Président 150g",
+      "aliases": [
+        "Queijo Mussarela Fatiado Président 150g",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "150g",
+      "price": 12.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711073+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_fatiado_mandaka_com_150_g",
+      "name": "Queijo Mussarela Fatiado Mandaká com 150 g",
+      "aliases": [
+        "Queijo Mussarela Fatiado Mandaká com 150 g",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "150g",
+      "price": 9.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711157+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_fatiado_president_300g",
+      "name": "Queijo Mussarela Fatiado President 300g",
+      "aliases": [
+        "Queijo Mussarela Fatiado President 300g",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "300g",
+      "price": 21.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711214+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_importado_pedaco_carrefour_aprox_400g",
+      "name": "Queijo Mussarela Importado Pedaço Carrefour Aprox. 400g",
+      "aliases": [
+        "Queijo Mussarela Importado Pedaço Carrefour Aprox. 400g",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "400g",
+      "price": 18.75,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711277+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_fatiada_mandaka_400_g",
+      "name": "Queijo Mussarela Fatiada Mandaká 400 g",
+      "aliases": [
+        "Queijo Mussarela Fatiada Mandaká 400 g",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "400g",
+      "price": 23.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711358+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_bulnez_aprox_1kg",
+      "name": "Queijo Mussarela Bulnez Aprox. 1kg",
+      "aliases": [
+        "Queijo Mussarela Bulnez Aprox. 1kg",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 41.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711406+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_fatiado_president_1kg",
+      "name": "Queijo Mussarela Fatiado President 1kg",
+      "aliases": [
+        "Queijo Mussarela Fatiado President 1kg",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 69.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711453+00:00"
+    },
+    {
+      "id": "carrefour_queijo_mussarela_tirolez_aprox_380g",
+      "name": "Queijo Mussarela Tirolez Aprox. 380g",
+      "aliases": [
+        "Queijo Mussarela Tirolez Aprox. 380g",
+        "queijo"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "380g",
+      "price": 37.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/queijo",
+      "collected_at": "2026-10-23T15:24:31.711501+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_com_sal_president_tablete_200g",
+      "name": "Manteiga com Sal Président Tablete 200g",
+      "aliases": [
+        "Manteiga com Sal Président Tablete 200g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "200g",
+      "price": 12.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.555712+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_extra_com_sal_tourinho_pote_200_g",
+      "name": "Manteiga Extra com Sal Tourinho Pote 200 g",
+      "aliases": [
+        "Manteiga Extra com Sal Tourinho Pote 200 g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "200g",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.555815+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_extra_com_sal_president_gastronomique_pote_200_g",
+      "name": "Manteiga Extra com Sal Président Gastronomique Pote 200 g",
+      "aliases": [
+        "Manteiga Extra com Sal Président Gastronomique Pote 200 g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "200g",
+      "price": 15.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.555921+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_com_sal_carrefour_pote_500_g",
+      "name": "Manteiga com Sal Carrefour Pote 500 g",
+      "aliases": [
+        "Manteiga com Sal Carrefour Pote 500 g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "500g",
+      "price": 20.91,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.556055+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_com_sal_danone_extra_200g",
+      "name": "Manteiga com Sal Danone Extra 200g",
+      "aliases": [
+        "Manteiga com Sal Danone Extra 200g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "200g",
+      "price": 10.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.556154+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_com_sal_itambe_pote_500g",
+      "name": "Manteiga com Sal Itambé Pote 500g",
+      "aliases": [
+        "Manteiga com Sal Itambé Pote 500g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "500g",
+      "price": 28.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.556218+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_de_primeira_qualidade_com_sal_italac_500g",
+      "name": "Manteiga de Primeira Qualidade com Sal Italac 500g",
+      "aliases": [
+        "Manteiga de Primeira Qualidade com Sal Italac 500g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "500g",
+      "price": 24.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.556295+00:00"
+    },
+    {
+      "id": "carrefour_manteiga_extra_com_sal_carrefour_pote_200_g",
+      "name": "Manteiga Extra com Sal Carrefour Pote 200 g",
+      "aliases": [
+        "Manteiga Extra com Sal Carrefour Pote 200 g",
+        "manteiga"
+      ],
+      "category": "Laticínios",
+      "unit": "un",
+      "package": "200g",
+      "price": 11.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/manteiga",
+      "collected_at": "2026-10-23T15:24:33.556350+00:00"
+    },
+    {
+      "id": "carrefour_ovos_vermelhos_carrefour_20_unidades",
+      "name": "Ovos Vermelhos Carrefour 20 Unidades",
+      "aliases": [
+        "Ovos Vermelhos Carrefour 20 Unidades",
+        "ovos"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "20unidades",
+      "price": 16.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/ovos",
+      "collected_at": "2026-10-23T15:24:36.256451+00:00"
+    },
+    {
+      "id": "carrefour_ovos_caipira_ito_country_com_10_unidades",
+      "name": "Ovos Caipira Ito Country com 10 Unidades",
+      "aliases": [
+        "Ovos Caipira Ito Country com 10 Unidades",
+        "ovos"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "10unidades",
+      "price": 14.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/ovos",
+      "collected_at": "2026-10-23T15:24:36.256733+00:00"
+    },
+    {
+      "id": "carrefour_ovos_tipo_grande_vermelho_caipira_categoria_a_carrefour_10_unidades",
+      "name": "Ovos Tipo Grande Vermelho Caipira Categoria A Carrefour 10 Unidades",
+      "aliases": [
+        "Ovos Tipo Grande Vermelho Caipira Categoria A Carrefour 10 Unidades",
+        "ovos"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "10unidades",
+      "price": 12.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/ovos",
+      "collected_at": "2026-10-23T15:24:36.256799+00:00"
+    },
+    {
+      "id": "carrefour_ovos_brancos_extra_graciana_estojo_com_10_unidades",
+      "name": "Ovos Brancos Extra Graciana Estojo com 10 Unidades",
+      "aliases": [
+        "Ovos Brancos Extra Graciana Estojo com 10 Unidades",
+        "ovos"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "10unidades",
+      "price": 9.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/ovos",
+      "collected_at": "2026-10-23T15:24:36.256855+00:00"
+    },
+    {
+      "id": "carrefour_ovos_brancos_carrefour_com_12_unidades",
+      "name": "Ovos Brancos Carrefour com 12 Unidades",
+      "aliases": [
+        "Ovos Brancos Carrefour com 12 Unidades",
+        "ovos"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "12unidades",
+      "price": 9.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/ovos",
+      "collected_at": "2026-10-23T15:24:36.256955+00:00"
+    },
+    {
+      "id": "carrefour_ovos_caipira_o_show_da_luna_10_unidades",
+      "name": "Ovos Caipira O Show da Luna 10 Unidades",
+      "aliases": [
+        "Ovos Caipira O Show da Luna 10 Unidades",
+        "ovos"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "10unidades",
+      "price": 19.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/ovos",
+      "collected_at": "2026-10-23T15:24:36.257027+00:00"
+    },
+    {
+      "id": "carrefour_file_de_peito_de_frango_iqf_lar_700g",
+      "name": "Filé de Peito de Frango IQF Lar 700g",
+      "aliases": [
+        "Filé de Peito de Frango IQF Lar 700g",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "700g",
+      "price": 17.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.703871+00:00"
+    },
+    {
+      "id": "carrefour_filezinho_de_frango_sassami_seara_iqf_1kg",
+      "name": "Filezinho de frango sassami Seara IQF 1Kg",
+      "aliases": [
+        "Filezinho de frango sassami Seara IQF 1Kg",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 19.69,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.703939+00:00"
+    },
+    {
+      "id": "carrefour_file_de_frango_a_milanesa_crocante_seara_400g",
+      "name": "Filé de Frango à Milanesa crocante Seara 400g",
+      "aliases": [
+        "Filé de Frango à Milanesa crocante Seara 400g",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "400g",
+      "price": 20.69,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.704024+00:00"
+    },
+    {
+      "id": "carrefour_file_de_frango_sadia_assa_facil_700_g",
+      "name": "Filé de Frango Sadia Assa Fácil 700 g",
+      "aliases": [
+        "Filé de Frango Sadia Assa Fácil 700 g",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "700g",
+      "price": 22.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.704155+00:00"
+    },
+    {
+      "id": "carrefour_file_sassami_frango_empanados_noronha_500g",
+      "name": "Filé Sassami Frango Empanados Noronha 500g",
+      "aliases": [
+        "Filé Sassami Frango Empanados Noronha 500g",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 22.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.704209+00:00"
+    },
+    {
+      "id": "carrefour_file_de_frango_a_parmegiana_sadia_500g",
+      "name": "Filé de Frango à parmegiana Sadia 500g",
+      "aliases": [
+        "Filé de Frango à parmegiana Sadia 500g",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 26.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.704261+00:00"
+    },
+    {
+      "id": "carrefour_file_de_peito_de_frango_em_bifes_levemente_temperado_sadia_pcte_1kg",
+      "name": "Filé de Peito de Frango em Bifes Levemente Temperado Sadia Pcte 1kg",
+      "aliases": [
+        "Filé de Peito de Frango em Bifes Levemente Temperado Sadia Pcte 1kg",
+        "frango"
+      ],
+      "category": "Açougue",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 20.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/frango",
+      "collected_at": "2026-10-23T15:24:39.704350+00:00"
+    },
+    {
+      "id": "carrefour_carne_moida_de_patinho_swift_500g",
+      "name": "Carne Moída de Patinho Swift 500g",
+      "aliases": [
+        "Carne Moída de Patinho Swift 500g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 29.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.662759+00:00"
+    },
+    {
+      "id": "carrefour_carne_moida_swift_500g",
+      "name": "Carne Moída Swift 500g",
+      "aliases": [
+        "Carne Moída Swift 500g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 27.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.662830+00:00"
+    },
+    {
+      "id": "carrefour_carne_moida_congelada_friboi_500g",
+      "name": "Carne Moída Congelada Friboi 500g",
+      "aliases": [
+        "Carne Moída Congelada Friboi 500g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 17.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.662895+00:00"
+    },
+    {
+      "id": "carrefour_carne_moida_resfriada_de_dianteiro_do_chef_500g",
+      "name": "Carne Moída Resfriada de Dianteiro Do Chef 500g",
+      "aliases": [
+        "Carne Moída Resfriada de Dianteiro Do Chef 500g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 27.18,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.663048+00:00"
+    },
+    {
+      "id": "carrefour_carne_moida_dianteiro_bovino_congelado_igf_carrefour_selection_400g",
+      "name": "Carne Moida Dianteiro Bovino Congelado IGF Carrefour Selection 400g",
+      "aliases": [
+        "Carne Moida Dianteiro Bovino Congelado IGF Carrefour Selection 400g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "400g",
+      "price": 19.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.663119+00:00"
+    },
+    {
+      "id": "carrefour_carne_moida_de_paleta_swift_500g",
+      "name": "Carne Moída de Paleta Swift 500g",
+      "aliases": [
+        "Carne Moída de Paleta Swift 500g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "500g",
+      "price": 27.5,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.663201+00:00"
+    },
+    {
+      "id": "carrefour_carne_seca_bovina_jerked_beef_friboi_traseiro_pacote_400g",
+      "name": "Carne Seca Bovina Jerked Beef Friboi Traseiro Pacote 400g",
+      "aliases": [
+        "Carne Seca Bovina Jerked Beef Friboi Traseiro Pacote 400g",
+        "carne"
+      ],
+      "category": "Açougue",
+      "unit": "un",
+      "package": "400g",
+      "price": 31.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/carne",
+      "collected_at": "2026-10-23T15:24:41.663293+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_pullman_480g",
+      "name": "Pão de Forma Pullman 480g",
+      "aliases": [
+        "Pão de Forma Pullman 480g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "480g",
+      "price": 6.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215055+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_wickbold_integral_maca_canela_e_passas_450g",
+      "name": "Pão de Forma Wickbold Integral Maçã, Canela e Passas 450g",
+      "aliases": [
+        "Pão de Forma Wickbold Integral Maçã, Canela e Passas 450g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "450g",
+      "price": 13.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215157+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_artesanale_integral_panco_350g",
+      "name": "Pão de Forma Artesanale Integral Panco 350g",
+      "aliases": [
+        "Pão de Forma Artesanale Integral Panco 350g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "350g",
+      "price": 8.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215233+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_de_graos_wickbold_grao_sabor_500g",
+      "name": "Pão de Forma de Grãos Wickbold Grão Sabor 500g",
+      "aliases": [
+        "Pão de Forma de Grãos Wickbold Grão Sabor 500g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "500g",
+      "price": 13.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215306+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_artesanale_original_panco_350g",
+      "name": "Pão de Forma Artesanale Original Panco 350g",
+      "aliases": [
+        "Pão de Forma Artesanale Original Panco 350g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "350g",
+      "price": 8.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215374+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_integral_panutri_450_g",
+      "name": "Pão de Forma Integral Panutri 450 g",
+      "aliases": [
+        "Pão de Forma Integral Panutri 450 g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "450g",
+      "price": 5.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215438+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_multigraos_wickbold_350g",
+      "name": "Pão de Forma Multigrãos Wickbold 350g",
+      "aliases": [
+        "Pão de Forma Multigrãos Wickbold 350g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "350g",
+      "price": 12.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215504+00:00"
+    },
+    {
+      "id": "carrefour_pao_de_forma_integral_panutrir_500_g",
+      "name": "Pão de Forma Integral Panutrir 500 g",
+      "aliases": [
+        "Pão de Forma Integral Panutrir 500 g",
+        "pão"
+      ],
+      "category": "Padaria",
+      "unit": "un",
+      "package": "500g",
+      "price": 6.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/p%C3%A3o",
+      "collected_at": "2026-10-23T15:24:44.215568+00:00"
+    },
+    {
+      "id": "carrefour_banana_prata_carrefour_600g",
+      "name": "Banana Prata Carrefour 600g",
+      "aliases": [
+        "Banana Prata Carrefour 600g",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "600g",
+      "price": 6.83,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.684399+00:00"
+    },
+    {
+      "id": "carrefour_banana_terra_mercado_carrefour_aprox_600_g",
+      "name": "Banana Terra Mercado Carrefour Aprox 600 g",
+      "aliases": [
+        "Banana Terra Mercado Carrefour Aprox 600 g",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "600g",
+      "price": 7.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.684700+00:00"
+    },
+    {
+      "id": "carrefour_banana_prata_fischer_turma_da_monica_750g",
+      "name": "Banana Prata Fischer Turma da Mônica 750g",
+      "aliases": [
+        "Banana Prata Fischer Turma da Mônica 750g",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "750g",
+      "price": 13.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.684968+00:00"
+    },
+    {
+      "id": "carrefour_sorbet_acai_com_guarana_e_banana_maresia_pote_1l",
+      "name": "Sorbet Açaí com Guaraná e Banana Maresia Pote 1l",
+      "aliases": [
+        "Sorbet Açaí com Guaraná e Banana Maresia Pote 1l",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "L",
+      "package": "1l",
+      "price": 25.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.685192+00:00"
+    },
+    {
+      "id": "carrefour_mariola_de_banana_guimaraes_300g",
+      "name": "Mariola de Banana Guimarães 300g",
+      "aliases": [
+        "Mariola de Banana Guimarães 300g",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "300g",
+      "price": 13.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.685410+00:00"
+    },
+    {
+      "id": "carrefour_acai_com_polpa_de_banana_e_guarana_frooty_pote_1_5l",
+      "name": "Açaí com Polpa de Banana e Guaraná Frooty Pote 1,5L",
+      "aliases": [
+        "Açaí com Polpa de Banana e Guaraná Frooty Pote 1,5L",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "L",
+      "package": "1,5l",
+      "price": 46.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.685629+00:00"
+    },
+    {
+      "id": "carrefour_sorbet_acai_e_banana_frooty_700_ml",
+      "name": "Sorbet Açaí e Banana Frooty 700 ml",
+      "aliases": [
+        "Sorbet Açaí e Banana Frooty 700 ml",
+        "banana"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "700ml",
+      "price": 28.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/banana",
+      "collected_at": "2026-10-23T15:24:46.685800+00:00"
+    },
+    {
+      "id": "carrefour_tomate_pelado_carrefour_original_400g",
+      "name": "Tomate Pelado Carrefour Original 400g",
+      "aliases": [
+        "Tomate Pelado Carrefour Original 400g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "400g",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.753364+00:00"
+    },
+    {
+      "id": "carrefour_tomate_mini_especial_fresco_inteiro_carrefour_aproximadamente_300_g",
+      "name": "Tomate Mini Especial Fresco Inteiro Carrefour Aproximadamente 300 g",
+      "aliases": [
+        "Tomate Mini Especial Fresco Inteiro Carrefour Aproximadamente 300 g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "300g",
+      "price": 10.34,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.753553+00:00"
+    },
+    {
+      "id": "carrefour_tomate_carmem_carrefour_aprox_200g",
+      "name": "Tomate Carmem Carrefour Aprox. 200g",
+      "aliases": [
+        "Tomate Carmem Carrefour Aprox. 200g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "200g",
+      "price": 2.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.753686+00:00"
+    },
+    {
+      "id": "carrefour_tomate_pelado_sacciali_240_g",
+      "name": "Tomate Pelado Sacciali 240 g",
+      "aliases": [
+        "Tomate Pelado Sacciali 240 g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "240g",
+      "price": 9.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.753806+00:00"
+    },
+    {
+      "id": "carrefour_tomate_picado_carrefour_original_400g",
+      "name": "Tomate Picado Carrefour Original 400g",
+      "aliases": [
+        "Tomate Picado Carrefour Original 400g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "400g",
+      "price": 7.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.753932+00:00"
+    },
+    {
+      "id": "carrefour_tomate_italiano_mallmann_1kg",
+      "name": "Tomate Italiano Mallmann 1Kg",
+      "aliases": [
+        "Tomate Italiano Mallmann 1Kg",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 19.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.754045+00:00"
+    },
+    {
+      "id": "carrefour_tomate_italiano_mallmann_600g",
+      "name": "Tomate Italiano Mallmann 600g",
+      "aliases": [
+        "Tomate Italiano Mallmann 600g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "600g",
+      "price": 16.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.754160+00:00"
+    },
+    {
+      "id": "carrefour_tomate_grape_ferrara_180_g",
+      "name": "Tomate Grape Ferrara 180 g",
+      "aliases": [
+        "Tomate Grape Ferrara 180 g",
+        "tomate"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "180g",
+      "price": 6.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/tomate",
+      "collected_at": "2026-10-23T15:24:48.754270+00:00"
+    },
+    {
+      "id": "carrefour_batata_lavada_unico_carrefour_1kg",
+      "name": "Batata Lavada Único Carrefour 1Kg",
+      "aliases": [
+        "Batata Lavada Único Carrefour 1Kg",
+        "batata"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 6.0,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/batata",
+      "collected_at": "2026-10-23T15:24:51.163280+00:00"
+    },
+    {
+      "id": "carrefour_batata_doce_roxa_carrefour_aprox_600g",
+      "name": "Batata Doce Roxa Carrefour Aprox. 600g",
+      "aliases": [
+        "Batata Doce Roxa Carrefour Aprox. 600g",
+        "batata"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "600g",
+      "price": 3.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/batata",
+      "collected_at": "2026-10-23T15:24:51.163374+00:00"
+    },
+    {
+      "id": "carrefour_cebola_unico_carrefour_1kg",
+      "name": "Cebola Único Carrefour 1Kg",
+      "aliases": [
+        "Cebola Único Carrefour 1Kg",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "kg",
+      "package": "1kg",
+      "price": 7.0,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.030454+00:00"
+    },
+    {
+      "id": "carrefour_cebola_roxa_carrefour_aprox_400g",
+      "name": "Cebola Roxa Carrefour Aprox. 400g",
+      "aliases": [
+        "Cebola Roxa Carrefour Aprox. 400g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "400g",
+      "price": 4.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.030606+00:00"
+    },
+    {
+      "id": "carrefour_cebola_tostada_flip_top_garlic_40g",
+      "name": "Cebola Tostada Flip Top Garlic 40g",
+      "aliases": [
+        "Cebola Tostada Flip Top Garlic 40g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "40g",
+      "price": 9.39,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.030739+00:00"
+    },
+    {
+      "id": "carrefour_cebola_dulciana_fugita_400_g",
+      "name": "Cebola Dulciana Fugita 400 g",
+      "aliases": [
+        "Cebola Dulciana Fugita 400 g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "400g",
+      "price": 7.98,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.030860+00:00"
+    },
+    {
+      "id": "carrefour_linguica_toscana_sabor_cerveja_e_cebola_aurora_premium_500g",
+      "name": "Linguiça Toscana Sabor Cerveja e Cebola Aurora Premium 500g",
+      "aliases": [
+        "Linguiça Toscana Sabor Cerveja e Cebola Aurora Premium 500g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "500g",
+      "price": 30.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.031022+00:00"
+    },
+    {
+      "id": "carrefour_creme_de_castanha_de_caju_cebola_caramelizada_vida_veg_180g",
+      "name": "Creme de Castanha de Caju Cebola Caramelizada Vida Veg 180g",
+      "aliases": [
+        "Creme de Castanha de Caju Cebola Caramelizada Vida Veg 180g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "180g",
+      "price": 19.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.031172+00:00"
+    },
+    {
+      "id": "carrefour_4_latas_de_smirnoff_ice_269ml_tropical_2_club_snacks_cebola_e_salsa_68g",
+      "name": "4 Latas de Smirnoff Ice 269ml Tropical + 2 Club Snacks Cebola e Salsa 68g",
+      "aliases": [
+        "4 Latas de Smirnoff Ice 269ml Tropical + 2 Club Snacks Cebola e Salsa 68g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "269ml",
+      "price": 40.32,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.031387+00:00"
+    },
+    {
+      "id": "carrefour_4_latas_de_smirnoff_ice_269ml_tradicional_2_club_snacks_cebola_e_salsa_68g",
+      "name": "4 Latas de Smirnoff Ice 269ml Tradicional + 2 Club Snacks Cebola e Salsa 68g",
+      "aliases": [
+        "4 Latas de Smirnoff Ice 269ml Tradicional + 2 Club Snacks Cebola e Salsa 68g",
+        "cebola"
+      ],
+      "category": "Hortifrúti",
+      "unit": "un",
+      "package": "269ml",
+      "price": 38.9,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/cebola",
+      "collected_at": "2026-10-23T15:24:55.031568+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_guarana_da_amazonia_fys_lata_350ml",
+      "name": "Refrigerante Guaraná da Amazônia FYs Lata 350ml",
+      "aliases": [
+        "Refrigerante Guaraná da Amazônia FYs Lata 350ml",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "350ml",
+      "price": 2.78,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692292+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_coca_cola_sem_acucar_1_5l",
+      "name": "Refrigerante Coca-Cola Sem Açúcar 1,5L",
+      "aliases": [
+        "Refrigerante Coca-Cola Sem Açúcar 1,5L",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1,5l",
+      "price": 8.29,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692377+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_pepsi_black_garrafa_2l",
+      "name": "Refrigerante Pepsi Black Garrafa 2L",
+      "aliases": [
+        "Refrigerante Pepsi Black Garrafa 2L",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "2l",
+      "price": 7.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692440+00:00"
+    },
+    {
+      "id": "carrefour_kit_refrigerante_coca_cola_original_fanta_laranja_2_l_cada",
+      "name": "Kit Refrigerante Coca-Cola Original + Fanta Laranja 2 L Cada",
+      "aliases": [
+        "Kit Refrigerante Coca-Cola Original + Fanta Laranja 2 L Cada",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "2l",
+      "price": 15.79,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692528+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_guarana_antarctica_sem_acucar_lata_350ml",
+      "name": "Refrigerante Guaraná Antarctica Sem Açúcar Lata 350ML",
+      "aliases": [
+        "Refrigerante Guaraná Antarctica Sem Açúcar Lata 350ML",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "350ml",
+      "price": 3.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692602+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_guarana_antarctica_sem_acucar_garrafa_2l",
+      "name": "Refrigerante Guaraná Antarctica Sem Açúcar Garrafa 2L",
+      "aliases": [
+        "Refrigerante Guaraná Antarctica Sem Açúcar Garrafa 2L",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "2l",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692671+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_guarana_antarctica_garrafa_2l",
+      "name": "Refrigerante Guaraná Antarctica Garrafa 2L",
+      "aliases": [
+        "Refrigerante Guaraná Antarctica Garrafa 2L",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "2l",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692734+00:00"
+    },
+    {
+      "id": "carrefour_refrigerante_antarctica_guarana_lata_350ml",
+      "name": "Refrigerante ANTARCTICA Guaraná Lata 350ML",
+      "aliases": [
+        "Refrigerante ANTARCTICA Guaraná Lata 350ML",
+        "refrigerante"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "350ml",
+      "price": 3.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/refrigerante",
+      "collected_at": "2026-10-23T15:24:57.692796+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_com_gas_frutas_vermelhas_crystal_sparkling_pet_510_ml",
+      "name": "Água Mineral com Gás Frutas Vermelhas Crystal Sparkling Pet 510 ml",
+      "aliases": [
+        "Água Mineral com Gás Frutas Vermelhas Crystal Sparkling Pet 510 ml",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "510ml",
+      "price": 2.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584211+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_com_gas_carrefour_classic_510ml",
+      "name": "Água Mineral Com Gás Carrefour Classic 510ml",
+      "aliases": [
+        "Água Mineral Com Gás Carrefour Classic 510ml",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "510ml",
+      "price": 1.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584296+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_com_gas_carrefour_classic_1500ml",
+      "name": "Agua Mineral Com Gás Carrefour Classic 1500ml",
+      "aliases": [
+        "Agua Mineral Com Gás Carrefour Classic 1500ml",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "1500ml",
+      "price": 2.69,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584364+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_com_gas_crystal_500_ml",
+      "name": "Água Mineral com Gás Crystal 500 ml",
+      "aliases": [
+        "Água Mineral com Gás Crystal 500 ml",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584426+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_sem_gas_carrefour_classic_1500ml",
+      "name": "Agua Mineral Sem Gás Carrefour Classic 1500ml",
+      "aliases": [
+        "Agua Mineral Sem Gás Carrefour Classic 1500ml",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "1500ml",
+      "price": 2.48,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584489+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_crystal_com_gas_1_5l",
+      "name": "Água Mineral Crystal Com Gás 1,5L",
+      "aliases": [
+        "Água Mineral Crystal Com Gás 1,5L",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1,5l",
+      "price": 4.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584547+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_sem_gas_minalba_1_5_litros",
+      "name": "Água Mineral sem Gás Minalba 1,5 Litros",
+      "aliases": [
+        "Água Mineral sem Gás Minalba 1,5 Litros",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1,5litros",
+      "price": 2.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584607+00:00"
+    },
+    {
+      "id": "carrefour_agua_mineral_sem_gas_minalba_1_5_litros_6_unidades",
+      "name": "Água Mineral sem Gás Minalba 1,5 Litros - 6 Unidades",
+      "aliases": [
+        "Água Mineral sem Gás Minalba 1,5 Litros - 6 Unidades",
+        "água"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1,5litros",
+      "price": 17.94,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/%C3%A1gua",
+      "collected_at": "2026-10-23T15:25:00.584673+00:00"
+    },
+    {
+      "id": "carrefour_suco_del_valle_nectar_uva_1l",
+      "name": "Suco Del Valle Néctar Uva 1L",
+      "aliases": [
+        "Suco Del Valle Néctar Uva 1L",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1l",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.501191+00:00"
+    },
+    {
+      "id": "carrefour_suco_del_valle_nectar_uva_sem_acucar_1l",
+      "name": "Suco Del Valle Néctar Uva Sem Açúcar 1L",
+      "aliases": [
+        "Suco Del Valle Néctar Uva Sem Açúcar 1L",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1l",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.501985+00:00"
+    },
+    {
+      "id": "carrefour_suco_del_valle_nectar_laranja_1l",
+      "name": "Suco Del Valle Néctar Laranja 1L",
+      "aliases": [
+        "Suco Del Valle Néctar Laranja 1L",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1l",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.502608+00:00"
+    },
+    {
+      "id": "carrefour_suco_del_valle_nectar_pessego_1l",
+      "name": "Suco Del Valle Néctar Pêssego 1L",
+      "aliases": [
+        "Suco Del Valle Néctar Pêssego 1L",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1l",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.503262+00:00"
+    },
+    {
+      "id": "carrefour_suco_refrigerado_integral_laranja_xando_1_5l",
+      "name": "Suco Refrigerado Integral Laranja Xandô 1,5L",
+      "aliases": [
+        "Suco Refrigerado Integral Laranja Xandô 1,5L",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1,5l",
+      "price": 15.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.504013+00:00"
+    },
+    {
+      "id": "carrefour_suco_del_valle_manga_e_morango_caixa_tetra_brik_1_litro",
+      "name": "Suco Del Valle Manga e Morango Caixa Tetra Brik 1 Litro",
+      "aliases": [
+        "Suco Del Valle Manga e Morango Caixa Tetra Brik 1 Litro",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1litro",
+      "price": 8.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.505568+00:00"
+    },
+    {
+      "id": "carrefour_suco_integral_laranja_natural_one_refrigerado_garrafa_1_3l",
+      "name": "Suco Integral Laranja Natural One Refrigerado Garrafa 1,3L",
+      "aliases": [
+        "Suco Integral Laranja Natural One Refrigerado Garrafa 1,3L",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "L",
+      "package": "1,3l",
+      "price": 18.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.506049+00:00"
+    },
+    {
+      "id": "carrefour_suco_de_uva_e_maca_integral_refrigerado_natural_one_100_suco_900ml",
+      "name": "Suco de Uva e Maçã Integral Refrigerado Natural One 100% Suco 900ml",
+      "aliases": [
+        "Suco de Uva e Maçã Integral Refrigerado Natural One 100% Suco 900ml",
+        "suco"
+      ],
+      "category": "Bebidas",
+      "unit": "un",
+      "package": "900ml",
+      "price": 10.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/suco",
+      "collected_at": "2026-10-23T15:25:02.506721+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_com_glicerina_coco_limpol_squeeze_500ml",
+      "name": "Detergente Líquido com Glicerina Coco Limpol Squeeze 500ml",
+      "aliases": [
+        "Detergente Líquido com Glicerina Coco Limpol Squeeze 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.78,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891246+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_com_glicerina_neutro_limpol_squeeze_500ml",
+      "name": "Detergente Líquido com Glicerina Neutro Limpol Squeeze 500ml",
+      "aliases": [
+        "Detergente Líquido com Glicerina Neutro Limpol Squeeze 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.78,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891317+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_com_glicerina_cristal_limpol_squeeze_500ml",
+      "name": "Detergente Líquido com Glicerina Cristal Limpol Squeeze 500ml",
+      "aliases": [
+        "Detergente Líquido com Glicerina Cristal Limpol Squeeze 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.78,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891373+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_carrefour_clear_500ml",
+      "name": "Detergente Líquido Carrefour Clear 500ml",
+      "aliases": [
+        "Detergente Líquido Carrefour Clear 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.19,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891419+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_ype_clear_500ml_6_unidades",
+      "name": "Detergente Líquido Ypê Clear 500ml - 6 Unidades",
+      "aliases": [
+        "Detergente Líquido Ypê Clear 500ml - 6 Unidades",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 17.34,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891469+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_carrefour_neutro_500ml",
+      "name": "Detergente Líquido Carrefour Neutro 500ml",
+      "aliases": [
+        "Detergente Líquido Carrefour Neutro 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891514+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_com_glicerina_limao_limpol_squeeze_500ml",
+      "name": "Detergente Líquido com Glicerina Limão Limpol Squeeze 500ml",
+      "aliases": [
+        "Detergente Líquido com Glicerina Limão Limpol Squeeze 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.89,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891566+00:00"
+    },
+    {
+      "id": "carrefour_detergente_liquido_carrefour_coco_500ml",
+      "name": "Detergente Líquido Carrefour Coco 500ml",
+      "aliases": [
+        "Detergente Líquido Carrefour Coco 500ml",
+        "detergente"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "500ml",
+      "price": 2.09,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/detergente",
+      "collected_at": "2026-10-23T15:25:04.891610+00:00"
+    },
+    {
+      "id": "carrefour_sabao_em_po_tixan_ype_primavera_2_2kg",
+      "name": "Sabão em Pó Tixan Ypê Primavera 2,2Kg",
+      "aliases": [
+        "Sabão em Pó Tixan Ypê Primavera 2,2Kg",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "kg",
+      "package": "2,2kg",
+      "price": 19.04,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.711811+00:00"
+    },
+    {
+      "id": "carrefour_sabao_liquido_tixan_ype_primavera_3l",
+      "name": "Sabão Líquido Tixan Ypê Primavera 3L",
+      "aliases": [
+        "Sabão Líquido Tixan Ypê Primavera 3L",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "L",
+      "package": "3l",
+      "price": 22.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.711893+00:00"
+    },
+    {
+      "id": "carrefour_sabao_em_po_tixan_ype_primavera_800g",
+      "name": "Sabão em Pó Tixan Ypê Primavera 800g",
+      "aliases": [
+        "Sabão em Pó Tixan Ypê Primavera 800g",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "un",
+      "package": "800g",
+      "price": 8.72,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.711952+00:00"
+    },
+    {
+      "id": "carrefour_sabao_em_po_tixan_ype_maciez_1_6kg",
+      "name": "Sabão em Pó Tixan Ypê Maciez 1,6Kg",
+      "aliases": [
+        "Sabão em Pó Tixan Ypê Maciez 1,6Kg",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "kg",
+      "package": "1,6kg",
+      "price": 14.96,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.712004+00:00"
+    },
+    {
+      "id": "carrefour_sabao_liquido_tixan_ype_maciez_3l",
+      "name": "Sabão Líquido Tixan Ypê Maciez 3L",
+      "aliases": [
+        "Sabão Líquido Tixan Ypê Maciez 3L",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "L",
+      "package": "3l",
+      "price": 22.49,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.712055+00:00"
+    },
+    {
+      "id": "carrefour_sabao_em_po_tixan_ype_primavera_1_6kg",
+      "name": "Sabão em Pó Tixan Ypê Primavera 1,6Kg",
+      "aliases": [
+        "Sabão em Pó Tixan Ypê Primavera 1,6Kg",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "kg",
+      "package": "1,6kg",
+      "price": 14.94,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.712111+00:00"
+    },
+    {
+      "id": "carrefour_sabao_liquido_coala_cha_branco_3l",
+      "name": "Sabão Líquido Coala Chá Branco 3L",
+      "aliases": [
+        "Sabão Líquido Coala Chá Branco 3L",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "L",
+      "package": "3l",
+      "price": 24.99,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.712157+00:00"
+    },
+    {
+      "id": "carrefour_sabao_liquido_brilhante_roupas_brancas_e_coloridas_limpeza_total_1_8l",
+      "name": "Sabão Líquido Brilhante Roupas Brancas e Coloridas Limpeza Total 1,8L",
+      "aliases": [
+        "Sabão Líquido Brilhante Roupas Brancas e Coloridas Limpeza Total 1,8L",
+        "sabão em pó"
+      ],
+      "category": "Limpeza",
+      "unit": "L",
+      "package": "1,8l",
+      "price": 21.59,
+      "source": "Mercado Carrefour",
+      "source_url": "https://mercado.carrefour.com.br/busca/sab%C3%A3o%20em%20p%C3%B3",
+      "collected_at": "2026-10-23T15:25:06.712225+00:00"
+    }
+  ]
 }

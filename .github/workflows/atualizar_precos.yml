@@ -21,10 +21,15 @@ jobs:
       - name: Executar script de atualização
         run: python scripts/atualizar_precos.py
 
+      - name: Validar catálogo gerado
+        run: |
+          python scripts/atualizar_precos.py --check
+          python -m json.tool precos.json > /dev/null
+
       - name: Commit e Push das alterações
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add precos.json index.html
+          git add precos.json
           git status
           git diff --quiet && git diff --staged --quiet || (git commit -m "bot: atualização semanal de preços" && git push)

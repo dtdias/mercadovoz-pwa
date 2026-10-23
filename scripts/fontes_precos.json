@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "id": "carrefour",
+      "name": "Mercado Carrefour",
+      "region": "Brasil - preço online sem CEP",
+      "url": "https://mercado.carrefour.com.br/busca/{query}",
+      "queries": [
+        {"term": "arroz", "category": "Mercearia"},
+        {"term": "feijão", "category": "Mercearia"},
+        {"term": "macarrão", "category": "Mercearia"},
+        {"term": "farinha", "category": "Mercearia"},
+        {"term": "açúcar", "category": "Mercearia"},
+        {"term": "café", "category": "Mercearia"},
+        {"term": "óleo", "category": "Mercearia"},
+        {"term": "azeite", "category": "Mercearia"},
+        {"term": "leite", "category": "Laticínios"},
+        {"term": "queijo", "category": "Laticínios"},
+        {"term": "manteiga", "category": "Laticínios"},
+        {"term": "ovos", "category": "Açougue"},
+        {"term": "frango", "category": "Açougue"},
+        {"term": "carne", "category": "Açougue"},
+        {"term": "pão", "category": "Padaria"},
+        {"term": "banana", "category": "Hortifrúti"},
+        {"term": "tomate", "category": "Hortifrúti"},
+        {"term": "batata", "category": "Hortifrúti"},
+        {"term": "cebola", "category": "Hortifrúti"},
+        {"term": "refrigerante", "category": "Bebidas"},
+        {"term": "água", "category": "Bebidas"},
+        {"term": "suco", "category": "Bebidas"},
+        {"term": "detergente", "category": "Limpeza"},
+        {"term": "sabão em pó", "category": "Limpeza"},
+        {"term": "papel higiênico", "category": "Higiene"},
+        {"term": "sabonete", "category": "Higiene"},
+        {"term": "shampoo", "category": "Higiene"},
+        {"term": "pasta de dente", "category": "Higiene"},
+        {"term": "ração", "category": "Pet"
+        }
+      ]
+    }
+  ]
+}
