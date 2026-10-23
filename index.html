@@ -32,6 +32,10 @@
     .install-btn{background:#facc15;color:#0f172a}
     main{padding:14px 12px}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 3px rgba(15,23,42,.03);padding:14px;margin-bottom:12px;overflow:visible}
+    .install-suggestion{display:none;align-items:center;justify-content:space-between;gap:14px;border-color:#a7f3d0;background:linear-gradient(115deg,#ecfdf5,#f0fdfa);padding:12px 14px}
+    .install-suggestion.visible{display:flex}
+    .install-suggestion-copy{min-width:0}.install-suggestion-title{display:block;font-size:14px;margin:3px 0}.install-suggestion-desc{font-size:12px;color:var(--muted);line-height:1.4}
+    .install-suggestion-actions{display:flex;gap:6px;flex-shrink:0}.install-suggestion-actions .btn{padding:8px 10px}
     .card-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
     .eyebrow{color:var(--primary-dark);font-size:11px;font-weight:800;letter-spacing:.04em}
     .muted{color:var(--muted)}
@@ -93,7 +97,7 @@
     .field-label{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}.modal-box textarea{resize:vertical}
     .toast{position:fixed;left:50%;bottom:102px;z-index:80;transform:translate(-50%,12px);opacity:0;pointer-events:none;max-width:min(92vw,430px);background:#0f172a;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;text-align:center;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.toast.error{background:#991b1b}.toast.warn{background:#92400e}
     @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}main{padding:18px 16px}.card{padding:16px}}
-    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}}
+    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.install-suggestion{align-items:flex-start;flex-direction:column;gap:10px}.install-suggestion-actions{width:100%}.install-suggestion-actions .btn{flex:1}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}}
   </style>
 </head>
 <body>
@@ -111,6 +115,18 @@
   </header>
 
   <main class="wrap">
+    <section id="installSuggestion" class="card install-suggestion" role="status" aria-labelledby="installSuggestionTitle">
+      <div class="install-suggestion-copy">
+        <span class="eyebrow">📲 ACESSO RÁPIDO</span>
+        <strong id="installSuggestionTitle" class="install-suggestion-title">Instale o MercadoVoz</strong>
+        <p id="installSuggestionDesc" class="install-suggestion-desc">Abra sua lista de compras diretamente pela tela inicial.</p>
+      </div>
+      <div class="install-suggestion-actions">
+        <button id="bInstallSuggest" class="btn btn-primary" type="button">Instalar</button>
+        <button id="bInstallDismiss" class="btn btn-soft" type="button">Agora não</button>
+      </div>
+    </section>
+
     <section class="card">
       <div class="card-title"><span class="eyebrow">🗂️ LISTA ATIVA</span><button id="bClr" class="btn btn-soft" type="button">Limpar itens</button></div>
       <select id="selL" aria-label="Lista ativa"></select>
@@ -217,6 +233,7 @@
     const SOUND_KEY = 'mercadovoz_sound_v1';
     const CATALOG_CACHE_KEY = 'mercadovoz_catalog_v3';
     const PRICE_MODE_KEY = 'mercadovoz_price_mode_v1';
+    const INSTALL_DISMISS_KEY = 'mercadovoz_install_dismissed_v1';
     const PRICE_MODES = new Set(['min', 'median', 'max']);
     const normalizeText = (value) => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
     const slugify = (value) => normalizeText(value).replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '') || 'item';
@@ -750,11 +767,27 @@
     function isIOS() { return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; }
 
     async function triggerNativeInstall() {
-      if (isStandalone()) { $('mPwaTitle').textContent = 'Aplicativo já instalado'; $('mPwaDesc').textContent = 'O MercadoVoz já está aberto no modo aplicativo.'; $('mPwa').classList.add('open'); return; }
-      if (installPrompt) { const prompt = installPrompt; installPrompt = null; await prompt.prompt(); const choice = await prompt.userChoice; if (choice.outcome === 'accepted') showToast('Instalação iniciada.'); return; }
+      if (isStandalone()) { hideInstallSuggestion(); $('mPwaTitle').textContent = 'Aplicativo já instalado'; $('mPwaDesc').textContent = 'O MercadoVoz já está aberto no modo aplicativo.'; $('mPwa').classList.add('open'); return; }
+      if (installPrompt) { const prompt = installPrompt; installPrompt = null; await prompt.prompt(); const choice = await prompt.userChoice; hideInstallSuggestion(); if (choice.outcome === 'accepted') showToast('Instalação iniciada.'); return; }
       $('mPwaTitle').textContent = isIOS() ? 'Instalar no iPhone / iPad' : 'Instalar MercadoVoz';
       $('mPwaDesc').textContent = isIOS() ? 'No Safari, toque em Compartilhar e escolha Adicionar à Tela de Início.' : 'Use o menu do navegador e escolha Instalar aplicativo ou Criar atalho. A opção depende do navegador e do sistema.';
       $('mPwa').classList.add('open');
+    }
+
+    function hideInstallSuggestion() {
+      $('installSuggestion')?.classList.remove('visible');
+    }
+
+    function showInstallSuggestion() {
+      if (isStandalone()) { hideInstallSuggestion(); return; }
+      try { if (sessionStorage.getItem(INSTALL_DISMISS_KEY) === '1') return; } catch (error) { /* Session storage may be unavailable. */ }
+      $('installSuggestionDesc').textContent = isIOS() ? 'No Safari: toque em Compartilhar e escolha Adicionar à Tela de Início.' : 'Abra sua lista de compras diretamente pela tela inicial.';
+      $('installSuggestion')?.classList.add('visible');
+    }
+
+    function dismissInstallSuggestion() {
+      try { sessionStorage.setItem(INSTALL_DISMISS_KEY, '1'); } catch (error) { /* Dismissal remains in memory. */ }
+      hideInstallSuggestion();
     }
 
     function registerServiceWorker() {
@@ -771,6 +804,7 @@
 
     function bindEvents() {
       $('bMic').onclick = toggleMic; $('bMic2').onclick = toggleMic;
+      $('bInstallSuggest').onclick = triggerNativeInstall; $('bInstallDismiss').onclick = dismissInstallSuggestion;
       document.querySelectorAll('[data-price-mode]').forEach((button) => { button.onclick = () => setPriceMode(button.dataset.priceMode); });
       $('bSnd').onclick = () => { soundEnabled = !soundEnabled; localStorage.setItem(SOUND_KEY, soundEnabled ? '1' : '0'); $('bSnd').textContent = soundEnabled ? '🔊' : '🔇'; showToast(soundEnabled ? 'Sons ativados.' : 'Sons silenciados.'); };
       $('fAdd').onsubmit = (event) => { event.preventDefault(); const input = $('iTxt'); if (input.value.trim()) { addText(input.value); input.value = ''; updateSuggestions(''); } };
@@ -796,8 +830,8 @@
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape') document.querySelectorAll('.modal.open').forEach((modal) => modal.classList.remove('open')); });
     }
 
-    window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); installPrompt = event; });
-    window.addEventListener('appinstalled', () => { installPrompt = null; $('bInst').style.display = 'none'; showToast('MercadoVoz instalado.'); });
+    window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); installPrompt = event; showInstallSuggestion(); });
+    window.addEventListener('appinstalled', () => { installPrompt = null; dismissInstallSuggestion(); $('bInst').style.display = 'none'; showToast('MercadoVoz instalado.'); });
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveState(); });
     window.addEventListener('pagehide', saveState);
 
@@ -808,7 +842,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       $('bSnd').textContent = soundEnabled ? '🔊' : '🔇';
-      loadState(); bindEvents(); recognition = createRecognition(); updateVoiceUI(); render(); loadCatalog(); registerServiceWorker(); requestPersistentStorage(); applyShortcutAction();
+      loadState(); bindEvents(); recognition = createRecognition(); updateVoiceUI(); render(); showInstallSuggestion(); loadCatalog(); registerServiceWorker(); requestPersistentStorage(); applyShortcutAction();
     });
   </script>
 </body>
