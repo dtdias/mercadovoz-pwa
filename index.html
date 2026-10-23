@@ -1,374 +1,849 @@
-<!DOCTYPE html>
-<meta name="description" content="Acesso rápido e experiência com maior praticidade para suas listas de compras por voz e WhatsApp.">
-<meta name="theme-color" content="#047857">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="MercadoVoz">
-<link rel="manifest" href="/manifest.json">
-<link rel="icon" type="image/png" href="/api/icon?size=192">
-<link rel="apple-touch-icon" href="/api/icon?size=192">
-<style>
-:root{--b6:#059669;--b7:#047857;--bg:#f1f5f9;--txt:#1e293b;--mut:#64748b}
-*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif}
-html,body{background:var(--bg);color:var(--txt);min-height:100vh;overflow-x:hidden;width:100%}
-body{padding-bottom:88px}
-.pwa-banner{display:none;background:#eab308;color:#0f172a;padding:14px 16px;border-bottom:1px solid #ca8a04;box-shadow:0 2px 8px rgba(0,0,0,.12);position:relative;z-index:40}
-.pwa-title{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#0f172a;margin-bottom:3px}
-.pwa-sub{font-size:13px;font-weight:500;color:#1e293b;margin-bottom:12px}
-.pwa-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.pwa-btn-ok{background:#0f172a;color:#facc15;border:none;border-radius:9999px;padding:10px 16px;font-size:13px;font-weight:700;cursor:pointer;text-align:center}
-.pwa-btn-ok:active{transform:scale(.98)}
-.pwa-btn-no{background:transparent;color:#0f172a;border:1px solid rgba(15,23,42,.35);border-radius:9999px;padding:10px 16px;font-size:13px;font-weight:600;cursor:pointer;text-align:center}
-header{background:linear-gradient(90deg,#047857,#059669,#075E54);color:#fff;padding:12px 16px;position:sticky;top:0;z-index:30;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-.wrap{max-width:780px;margin:0 auto;width:100%}
-.hdr{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.hdr-btns{display:flex;align-items:center;gap:6px;flex-shrink:0}
-main{padding:14px 12px}
-.card{background:#fff;border-radius:16px;padding:14px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(0,0,0,.03);margin-bottom:12px;width:100%;overflow:hidden}
-button,select,input,textarea{font:inherit;border-radius:10px;border:1px solid #cbd5e1;padding:9px 12px;font-size:13px;min-width:0}
-button{cursor:pointer;font-weight:700;border:none;display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;transition:.15s}
-.btn-p{background:var(--b6);color:#fff}.btn-p:hover{background:var(--b7)}
-.btn-wa{background:#25D366;color:#fff;padding:10px 16px;font-size:14px}
-.btn-g{background:#f1f5f9;color:#334155}
-.btn-m{background:#ecfdf5;color:#047857;border:1px solid #a7f3d0}
-.btn-d{background:#fee2e2;color:#b91c1c}
-.list-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
-.voice-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.mic{width:64px;height:64px;border-radius:50%;background:var(--b6);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;box-shadow:0 4px 12px rgba(5,150,105,.3)}
-.mic.on{background:#dc2626}
-.add-form{display:flex;gap:8px;margin-top:12px;width:100%}
-.add-form input{flex:1;min-width:0;width:100%}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.chip{background:#f1f5f9;color:#334155;font-size:12px;padding:6px 10px;border-radius:99px;font-weight:600}
-.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px}
-@media(min-width:640px){.grid4{grid-template-columns:repeat(4,1fr)}main{padding:18px 16px}.card{padding:16px}}
-.stat{background:#fff;padding:12px;border-radius:14px;border:1px solid #e2e8f0}
-.stat small{color:var(--mut);font-size:11px;font-weight:600;display:block;margin-bottom:2px}
-.stat b{font-size:17px;color:var(--b7)}
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
-.item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f1f5f9;gap:8px}
-.item:last-child{border:none}
-.done{text-decoration:line-through;color:#94a3b8}
-.bbar{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.98);border-top:1px solid #e2e8f0;padding:10px 14px;z-index:30}
-.modal{position:fixed;inset:0;background:rgba(15,23,42,.65);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
-.modal.open{display:flex}
-.mbox{background:#fff;border-radius:18px;max-width:420px;width:100%;padding:18px}
-</style>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Lista de compras por voz, preços e WhatsApp.">
+  <meta name="theme-color" content="#047857">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MercadoVoz">
+  <title>MercadoVoz - Lista de Compras</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/api/icon?size=192">
+  <link rel="apple-touch-icon" href="/api/icon?size=192">
+  <style>
+    :root{--primary:#059669;--primary-dark:#047857;--bg:#f1f5f9;--surface:#fff;--text:#1e293b;--muted:#64748b;--line:#e2e8f0;--danger:#b91c1c;--warning:#b45309;--shadow:0 2px 10px rgba(15,23,42,.08)}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    html,body{background:var(--bg);color:var(--text);min-height:100%;overflow-x:hidden}
+    body{padding-bottom:92px}
+    button,input,select,textarea{font:inherit}
+    button{border:0;cursor:pointer}
+    button:disabled{cursor:not-allowed;opacity:.55}
+    .wrap{width:min(100%,780px);margin:0 auto}
+    header{position:sticky;top:0;z-index:30;background:linear-gradient(100deg,#047857,#059669,#075e54);color:#fff;box-shadow:var(--shadow);padding:12px 16px}
+    .hdr{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .hdr-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+    .brand{font-size:18px;font-weight:800;letter-spacing:-.3px}
+    .subtitle{font-size:11px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .icon-btn,.install-btn{border-radius:999px;padding:8px 11px;font-weight:800;white-space:nowrap}
+    .icon-btn{background:rgba(255,255,255,.2);color:#fff}
+    .install-btn{background:#facc15;color:#0f172a}
+    main{padding:14px 12px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 3px rgba(15,23,42,.03);padding:14px;margin-bottom:12px;overflow:visible}
+    .install-suggestion{display:none;align-items:center;justify-content:space-between;gap:14px;border-color:#a7f3d0;background:linear-gradient(115deg,#ecfdf5,#f0fdfa);padding:12px 14px}
+    .install-suggestion.visible{display:flex}
+    .install-suggestion-copy{min-width:0}.install-suggestion-title{display:block;font-size:14px;margin:3px 0}.install-suggestion-desc{font-size:12px;color:var(--muted);line-height:1.4}
+    .install-suggestion-actions{display:flex;gap:6px;flex-shrink:0}.install-suggestion-actions .btn{padding:8px 10px}
+    .card-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+    .eyebrow{color:var(--primary-dark);font-size:11px;font-weight:800;letter-spacing:.04em}
+    .muted{color:var(--muted)}
+    .small{font-size:11px}
+    .hint{font-size:12px;color:var(--muted);line-height:1.45}
+    .status-line{display:flex;align-items:center;gap:8px;min-height:20px;font-size:12px;color:var(--muted)}
+    .catalog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;flex-wrap:wrap}
+    .catalog-status{flex:1;min-width:190px}
+    .price-control{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;font-weight:800;white-space:nowrap}
+    .segmented{display:inline-flex;padding:3px;gap:2px;background:#f1f5f9;border:1px solid var(--line);border-radius:10px}
+    .segmented button{border-radius:7px;padding:6px 9px;background:transparent;color:#475569;font-size:11px;font-weight:800}
+    .segmented button.selected{background:#fff;color:var(--primary-dark);box-shadow:0 1px 3px rgba(15,23,42,.12)}
+    .status-line.ok{color:var(--primary-dark)}
+    .status-line.error{color:var(--danger)}
+    .status-line.warn{color:var(--warning)}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:#94a3b8;flex-shrink:0}
+    .status-dot.live{background:#ef4444;box-shadow:0 0 0 5px rgba(239,68,68,.14)}
+    .status-dot.ready{background:var(--primary)}
+    select,input,textarea{width:100%;border:1px solid #cbd5e1;border-radius:10px;background:#fff;color:var(--text);padding:10px 12px;font-size:13px;outline:none}
+    select:focus,input:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(5,150,105,.15)}
+    .list-actions,.form-actions,.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+    .form-actions{grid-template-columns:1fr 1fr}
+    .tabs{margin:0 0 8px}
+    .btn{border-radius:10px;padding:10px 12px;font-weight:800;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}
+    .btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark)}
+    .btn-soft{background:#f1f5f9;color:#334155}.btn-soft:hover{background:#e2e8f0}
+    .btn-success{background:#ecfdf5;color:var(--primary-dark);border:1px solid #a7f3d0}
+    .btn-danger{background:#fee2e2;color:var(--danger)}
+    .voice-box{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .voice-copy{min-width:0}
+    .voice-badge{display:inline-flex;align-items:center;gap:5px;background:#ecfdf5;color:var(--primary-dark);border-radius:99px;padding:4px 9px;font-size:11px;font-weight:800}
+    .mic-btn{width:68px;height:68px;flex-shrink:0;border-radius:50%;background:var(--primary);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:800;box-shadow:0 5px 14px rgba(5,150,105,.3)}
+    .mic-btn.listening{background:#dc2626;box-shadow:0 5px 14px rgba(220,38,38,.3);animation:pulse 1.4s infinite}
+    .mic-btn.starting{background:#d97706}
+    .mic-label{font-size:9px}
+    @keyframes pulse{50%{transform:scale(1.05)}}
+    .transcript{display:none;margin-top:9px;background:#0f172a;color:#a7f3d0;border-radius:9px;padding:9px 10px;font-size:12px;line-height:1.4}
+    .transcript.visible{display:block}
+    .add-form{position:relative;display:flex;gap:8px;margin-top:12px}
+    .add-form input{flex:1;min-width:0}
+    .suggestions{position:absolute;left:0;right:94px;top:calc(100% + 5px);z-index:20;display:none;background:#fff;border:1px solid #cbd5e1;border-radius:11px;box-shadow:var(--shadow);overflow:hidden}
+    .suggestions.visible{display:block}
+    .suggestion{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:#fff;text-align:left;border-bottom:1px solid #f1f5f9;color:var(--text)}
+    .suggestion:last-child{border-bottom:0}.suggestion:hover,.suggestion.active{background:#ecfdf5}
+    .suggestion-name{font-weight:700;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .suggestion-meta{font-size:11px;color:var(--primary-dark);white-space:nowrap}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+    .stat small{display:block;color:var(--muted);font-size:11px;font-weight:700;margin-bottom:3px}.stat strong{font-size:17px;color:var(--primary-dark)}
+    .items-empty{text-align:center;color:var(--muted);padding:22px 14px;font-size:13px}
+    .category-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:7px;margin-bottom:2px;font-size:13px}
+    .item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #f1f5f9}
+    .item:last-child{border-bottom:0}.item-main{display:flex;align-items:flex-start;gap:8px;min-width:0;flex:1}.item-main input{width:18px;height:18px;margin-top:2px;flex-shrink:0}.item-name{font-weight:800;font-size:14px;overflow:hidden;text-overflow:ellipsis}.item-name.done{text-decoration:line-through;color:#94a3b8}.item-meta{font-size:11px;color:var(--muted);margin-top:2px}.item-actions{display:flex;gap:4px;flex-shrink:0}.item-actions button{min-width:30px;border-radius:8px;padding:7px 8px;background:#f1f5f9;color:#334155;font-weight:800}.item-actions .remove{color:#dc2626}.item-actions .price{color:var(--warning)}
+    .bottom-bar{position:fixed;z-index:25;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+    .bottom-total small{display:block;color:var(--muted);font-size:10px;font-weight:800}.bottom-total strong{font-size:17px;color:var(--primary-dark)}
+    .modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(15,23,42,.65)}
+    .modal.open{display:flex}.modal-box{width:min(100%,430px);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 20px 60px rgba(15,23,42,.25)}
+    .modal-title{font-size:16px}.modal-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.modal-close{border-radius:9px;padding:7px 9px;background:#f1f5f9;color:#334155;font-weight:800}
+    .field-label{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}.modal-box textarea{resize:vertical}
+    .toast{position:fixed;left:50%;bottom:102px;z-index:80;transform:translate(-50%,12px);opacity:0;pointer-events:none;max-width:min(92vw,430px);background:#0f172a;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;text-align:center;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.toast.error{background:#991b1b}.toast.warn{background:#92400e}
+    @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}main{padding:18px 16px}.card{padding:16px}}
+    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.install-suggestion{align-items:flex-start;flex-direction:column;gap:10px}.install-suggestion-actions{width:100%}.install-suggestion-actions .btn{flex:1}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}}
+  </style>
 </head>
 <body>
-<div id="pwaBanner" class="pwa-banner">
-<div class="wrap">
-<div class="pwa-title">INSTALE O MERCADOVOZ</div>
-<div class="pwa-sub">Acesso rápido e experiência com maior praticidade.</div>
-<div class="pwa-actions">
-<button type="button" id="bBannerInst" class="pwa-btn-ok">Instalar app</button>
-<button type="button" id="bBannerNo" class="pwa-btn-no">Agora não</button>
-</div>
-</div>
-</div>
-<header>
-<div class="wrap hdr">
-<div style="min-width:0">
-<div style="display:flex;align-items:center;gap:6px">
-<span style="font-size:18px;font-weight:800;letter-spacing:-.3px">🛒 MercadoVoz</span>
-<span style="font-size:10px;font-weight:700;background:rgba(255,255,255,.22);padding:2px 6px;border-radius:6px">PWA</span>
-</div>
-<p style="font-size:11px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lista por Voz • Preços • WhatsApp</p>
-</div>
-<div class="hdr-btns">
-<button id="bInst" type="button" style="background:#facc15;color:#0f172a;font-size:12px;padding:7px 12px;border-radius:9999px">📲 Instalar app</button>
-<button id="bSnd" type="button" style="background:rgba(255,255,255,.2);color:#fff;padding:7px 10px">🔊</button>
-</div>
-</div>
-</header>
-<main class="wrap">
-<div class="card">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-<b style="font-size:12px;color:#047857">🗂️ LISTA DE COMPRAS ATIVA</b>
-<button id="bClr" type="button" class="btn-g" style="font-size:11px;padding:4px 8px">Limpar Itens</button>
-</div>
-<select id="selL" aria-label="Lista ativa" style="width:100%;font-weight:700;background:#f8fafc"></select>
-<div class="list-bar">
-<button id="bNew" type="button" class="btn-p" style="font-size:12px;padding:8px 6px">+ Nova Lista</button>
-<button id="bMir" type="button" class="btn-m" style="font-size:12px;padding:8px 6px">📋 Espelhar</button>
-<button id="bDel" type="button" class="btn-d" style="font-size:12px;padding:8px 6px">🗑️ Excluir</button>
-</div>
-</div>
-<div class="card">
-<div class="voice-top">
-<div style="flex:1;min-width:0">
-<span style="font-size:11px;font-weight:700;background:#ecfdf5;color:#047857;padding:3px 8px;border-radius:99px;display:inline-block">🎙️ Voz ativa (pt-BR)</span>
-<h2 style="font-size:15px;margin:6px 0 2px">Fale ou digite os itens</h2>
-<p style="font-size:12px;color:var(--mut)">Ex: "2 pacotes de arroz, 3 litros de leite e 1 kg de café"</p>
-</div>
-<button id="bMic" type="button" class="mic"><span>🎤</span><small style="font-size:9px;margin-top:2px" id="mLbl">FALAR</small></button>
-</div>
-<div id="tBox" style="display:none;margin-top:8px;padding:8px 10px;background:#0f172a;color:#6ee7b7;border-radius:8px;font-size:12px">Ouvindo: <span id="tTxt">...</span></div>
-<form id="fAdd" class="add-form">
-<input id="iTxt" placeholder="Ex: 2 kg de frango, leite, pão...">
-<button type="submit" class="btn-p" style="padding:9px 14px;flex-shrink:0">+ Adicionar</button>
-</form>
-<div id="sugBox" style="display:none;margin-top:6px;background:#fff;border:1px solid #cbd5e1;border-radius:10px;max-height:200px;overflow-y:auto"></div>
-</div>
-<div class="grid4">
-<div class="stat"><small>Total da Lista</small><b id="sTot">R$ 0,00</b></div>
-<div class="stat"><small>Itens</small><b id="sCnt" style="color:#1e293b">0</b></div>
-<div class="stat"><small>No Carrinho</small><b id="sChk" style="color:#10b981">R$ 0,00</b></div>
-<div class="stat"><small>Falta Comprar</small><b id="sPen" style="color:#d97706">R$ 0,00</b></div>
-</div>
-<div class="card" style="padding:12px">
-<div class="tabs">
-<button type="button" class="btn-p" id="tAll" style="font-size:12px">Todos</button>
-<button type="button" class="btn-g" id="tPen" style="font-size:12px">A Comprar</button>
-<button type="button" class="btn-g" id="tChk" style="font-size:12px">No Carrinho</button>
-</div>
-<input id="iSch" placeholder="🔍 Buscar item na lista..." style="width:100%;background:#f8fafc">
-</div>
-<div id="lWrap"></div>
-</main>
-<div class="bbar">
-<div class="wrap hdr">
-<div style="min-width:0">
-<small id="bLName" style="font-size:10px;color:var(--mut);font-weight:700;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">MINHA LISTA</small>
-<b id="bTot" style="font-size:17px;color:var(--b7)">R$ 0,00</b>
-</div>
-<div class="hdr-btns">
-<button id="bMic2" type="button" class="btn-g">🎤 Falar</button>
-<button id="bWa" type="button" class="btn-wa">📲 WhatsApp</button>
-</div>
-</div>
-</div>
-<div id="mList" class="modal">
-<form id="fList" class="mbox">
-<div class="hdr" style="margin-bottom:12px">
-<h3 id="mLTit" style="font-size:16px">🗂️ Nova Lista</h3>
-<button type="button" id="bLCls" class="btn-g">✕</button>
-</div>
-<label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px">Nome da lista:</label>
-<input id="iLName" required placeholder="Ex: Compras do Mês, Feira..." style="width:100%;margin-bottom:12px">
-<label style="font-size:12px;font-weight:700;display:block;margin-bottom:4px">📋 Espelhar de lista existente (opcional):</label>
-<select id="selMir" style="width:100%;margin-bottom:14px"></select>
-<div class="hdr">
-<button type="button" id="bLCnc" class="btn-g" style="flex:1">Cancelar</button>
-<button type="submit" class="btn-p" style="flex:1">Salvar Lista</button>
-</div>
-</form>
-</div>
-<div id="mWa" class="modal">
-<div class="mbox">
-<div class="hdr" style="margin-bottom:10px">
-<h3 style="font-size:16px">📲 Enviar no WhatsApp</h3>
-<button type="button" id="bWaCls" class="btn-g">✕</button>
-</div>
-<input id="iPh" placeholder="DDD + Número (opcional, ex: 21999999999)" style="width:100%;margin-bottom:8px">
-<textarea id="waPrv" rows="7" readonly style="width:100%;font-size:12px;margin-bottom:10px;background:#f8fafc"></textarea>
-<div class="hdr">
-<button type="button" id="bCpy" class="btn-g" style="flex:1">📋 Copiar</button>
-<button type="button" id="bWaGo" class="btn-wa" style="flex:1">Abrir WhatsApp</button>
-</div>
-</div>
-</div>
-<div id="mPwa" class="modal">
-<div class="mbox" style="text-align:center">
-<div style="font-size:34px">📲</div>
-<h3 id="mPwaTitle" style="margin:6px 0;font-size:16px">Instalar o Aplicativo MercadoVoz</h3>
-<p id="mPwaDesc" style="font-size:12px;color:var(--mut);margin-bottom:12px">No iPhone/iPad (Safari), toque em <b>Compartilhar (⬆️)</b> na barra do navegador e selecione <b>Adicionar à Tela de Início</b>.</p>
-<div class="hdr">
-<button type="button" id="bPwaNo" class="btn-g" style="flex:1">Fechar</button>
-<button type="button" id="bPwaOk" class="btn-p" style="flex:1">Entendi</button>
-</div>
-</div>
-</div>
-<script>
-let dPrompt = null;
-function isStandalone() {
-return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-}
-function isIOS() {
-return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-}
-if ('serviceWorker' in navigator) {
-navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(() => {});
-}
-window.addEventListener('beforeinstallprompt', (e) => {
-e.preventDefault();
-dPrompt = e;
-if (!isStandalone()) {
-const banner = document.getElementById('pwaBanner');
-const bInst = document.getElementById('bInst');
-if (banner && !sessionStorage.getItem('pwa_banner_dismissed')) {
-banner.style.display = 'block';
-}
-if (bInst) bInst.style.display = 'inline-flex';
-}
-});
-window.addEventListener('appinstalled', () => {
-dPrompt = null;
-const banner = document.getElementById('pwaBanner');
-const bInst = document.getElementById('bInst');
-if (banner) banner.style.display = 'none';
-if (bInst) bInst.style.display = 'none';
-});
-async function triggerNativeInstall() {
-if (dPrompt) {
-dPrompt.prompt();
-const { outcome } = await dPrompt.userChoice;
-if (outcome === 'accepted') {
-dPrompt = null;
-document.getElementById('pwaBanner').style.display = 'none';
-document.getElementById('bInst').style.display = 'none';
-}
-return;
-}
-if (isIOS() && !isStandalone()) {
-document.getElementById('mPwaTitle').textContent = 'Instalar no iPhone / iPad';
-document.getElementById('mPwaDesc').innerHTML = 'No Safari do iOS, toque no ícone <b>Compartilhar (⬆️)</b> e depois em <b>"Adicionar à Tela de Início"</b> para instalar o app.';
-document.getElementById('mPwa').classList.add('open');
-return;
-}
-if (isStandalone()) {
-document.getElementById('mPwaTitle').textContent = 'Aplicativo já instalado';
-document.getElementById('mPwaDesc').textContent = 'Você já está utilizando o MercadoVoz instalado como aplicativo!';
-document.getElementById('mPwa').classList.add('open');
-return;
-}
-document.getElementById('mPwaTitle').textContent = 'Instalar Aplicativo MercadoVoz';
-document.getElementById('mPwaDesc').innerHTML = 'Se a janela de instalação não abriu automaticamente, verifique se o app já não está instalado no seu aparelho ou toque no menu <b>⋮ → Instalar aplicativo</b>.';
-document.getElementById('mPwa').classList.add('open');
-}
-const DB=[['arroz','Arroz Tipo 1 (5kg)','Mercearia','pct',28.9],['feijao|feijão','Feijão (1kg)','Mercearia','kg',8.5],['acucar|açúcar','Açúcar (1kg)','Mercearia','kg',4.99],['cafe|café','Café (500g)','Mercearia','pct',18.9],['oleo|óleo','Óleo de Soja','Mercearia','un',6.49],['azeite','Azeite (500ml)','Mercearia','un',39.9],['macarrao|macarrão','Macarrão (500g)','Mercearia','pct',4.5],['leite','Leite Integral (1L)','Laticínios','L',4.99],['manteiga','Manteiga (200g)','Laticínios','un',11.9],['queijo|mussarela','Queijo Mussarela (kg)','Laticínios','kg',44.9],['ovo|ovos','Ovos (Dúzia)','Açougue','dz',12.5],['frango','Peito de Frango (kg)','Açougue','kg',21.9],['carne','Carne Bovina (kg)','Açougue','kg',36.9],['pao|pão','Pão de Forma','Padaria','pct',8.5],['banana','Banana (kg)','Hortifrúti','kg',6.99],['tomate','Tomate (kg)','Hortifrúti','kg',7.99],['batata','Batata (kg)','Hortifrúti','kg',6.49],['cebola','Cebola (kg)','Hortifrúti','kg',5.99],['refrigerante','Refrigerante (2L)','Bebidas','2L',9.99],['detergente','Detergente (500ml)','Limpeza','un',2.59],['sabao|sabão','Sabão em Pó (1,6kg)','Limpeza','cx',19.9],['papel higienico|papel higiênico','Papel Higiênico','Higiene','pct',18.9],['sabonete','Sabonete','Higiene','un',2.99]].map(([k,name,cat,unit,price])=>({kw:k.split('|'),name,cat,unit,price}));
-const KEY='mercadovoz_clean_v4';
-let lists=[],aid='',tab='all',snd=true,rec=null,on=false;
-const brl=v=>(Number(v)||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-const cur=()=>lists.find(l=>l.id===aid)||lists[0];
-function beep(){if(!snd)return;try{const c=new(window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=660;g.gain.value=.08;o.start();o.stop(c.currentTime+.12)}catch(e){}}
-function save(){try{localStorage.setItem(KEY,JSON.stringify({lists,aid}))}catch(e){}render()}
-function addTxt(raw){
-const nums={um:1,uma:1,dois:2,duas:2,tres:3,três:3,quatro:4,cinco:5};
-const cl=cur();if(!raw||!cl)return;
-raw.toLowerCase().replace(/\s+e\s+/g,',').split(/[,;\n]+/).map(s=>s.trim()).filter(Boolean).forEach(p=>{
-let q=1,u='un',t=p.split(/\s+/);
-if(t.length>1){const n=parseFloat(t[0].replace(',','.'));if(!isNaN(n)){q=n;t.shift()}else if(nums[t[0]]){q=nums[t[0]];t.shift()}}
-if(t.length>1&&/^(kg|litros?|l|pct|pacotes?|caixas?|duzia|dúzia|un)$/i.test(t[0])){u=t.shift();if(t[0]==='de')t.shift()}else if(t[0]==='de')t.shift();
-const clean=t.join(' ')||p;let m=null,ml=0;
-DB.forEach(d=>d.kw.forEach(k=>{if(clean.includes(k)&&k.length>ml){m=d;ml=k.length}}));
-const name=m?m.name:clean.charAt(0).toUpperCase()+clean.slice(1);
-const ex=cl.items.find(x=>x.name.toLowerCase()===name.toLowerCase());
-if(ex)ex.qty+=q;else cl.items.unshift({id:'i'+Date.now()+Math.random().toString(36).slice(2,5),name,qty:q,unit:m?m.unit:u,price:m?m.price:8.9,cat:m?m.cat:'Outros',done:false});
-});
-beep();save();
-}
-function render(){
-const cl=cur();if(!cl)return;
-document.getElementById('selL').innerHTML=lists.map(l=>`<option value="${l.id}" ${l.id===cl.id?'selected':''}>📋 ${l.name} (${l.items.length} itens • ${brl(l.items.reduce((s,i)=>s+i.qty*i.price,0))})</option>`).join('');
-const it=cl.items,tot=it.reduce((s,i)=>s+i.qty*i.price,0),chk=it.filter(i=>i.done).reduce((s,i)=>s+i.qty*i.price,0);
-document.getElementById('sTot').textContent=brl(tot);
-document.getElementById('bTot').textContent=brl(tot);
-document.getElementById('bLName').textContent=cl.name.toUpperCase();
-document.getElementById('sCnt').textContent=it.length;
-document.getElementById('sChk').textContent=brl(chk);
-document.getElementById('sPen').textContent=brl(tot-chk);
-const q=document.getElementById('iSch').value.toLowerCase();
-const flt=it.filter(i=>(tab==='all'||(tab==='pen'&&!i.done)||(tab==='chk'&&i.done))&&(!q||i.name.toLowerCase().includes(q)));
-const w=document.getElementById('lWrap');
-if(!flt.length){w.innerHTML='<div class="card" style="text-align:center;color:#64748b;font-size:13px;padding:22px 14px">Sua lista está vazia. Fale no microfone ou digite acima para adicionar itens!</div>';return}
-const g={};flt.forEach(i=>(g[i.cat]=g[i.cat]||[]).push(i));
-w.innerHTML=Object.entries(g).map(([c,arr])=>`<div class="card"><div class="hdr" style="border-bottom:1px solid #e2e8f0;padding-bottom:6px;margin-bottom:6px;font-size:13px"><b>📦 ${c} (${arr.length})</b><b style="color:#047857">${brl(arr.reduce((s,x)=>s+x.qty*x.price,0))}</b></div>${arr.map(i=>`<div class="item"><label style="display:flex;align-items:center;gap:8px;flex:1;min-width:0;cursor:pointer"><input type="checkbox" data-a="tg" data-id="${i.id}" ${i.done?'checked':''}><div style="min-width:0"><div class="${i.done?'done':''}" style="font-weight:700;font-size:14px;overflow:hidden;text-overflow:ellipsis">${i.name}</div><small style="color:#64748b">${i.qty} ${i.unit} × ${brl(i.price)} = <b>${brl(i.qty*i.price)}</b></small></div></label><div class="hdr-btns"><button type="button" class="btn-g" style="padding:6px 9px" data-a="dec" data-id="${i.id}">-</button><button type="button" class="btn-g" style="padding:6px 9px" data-a="inc" data-id="${i.id}">+</button><button type="button" class="btn-g" style="padding:6px 9px" data-a="pr" data-id="${i.id}">💲</button><button type="button" class="btn-g" style="padding:6px 9px;color:#dc2626" data-a="del" data-id="${i.id}">✕</button></div></div>`).join('')}</div>`).join('');
-}
-function openModal(pre=''){
-document.getElementById('selMir').innerHTML='<option value="">✨ Começar lista vazia</option>'+lists.map(l=>`<option value="${l.id}" ${l.id===pre?'selected':''}>📋 Espelhar: ${l.name} (${l.items.length} itens)</option>`).join('');
-const s=lists.find(l=>l.id===pre);
-document.getElementById('iLName').value=s?s.name+' (Cópia)':'';
-document.getElementById('mList').classList.add('open');
-}
-function toggleMic(){
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-if(!SR)return;
-if(!rec){
-rec=new SR();rec.lang='pt-BR';rec.interimResults=true;
-rec.onstart=()=>{on=true;document.getElementById('bMic').classList.add('on');document.getElementById('mLbl').textContent='OUVINDO';document.getElementById('tBox').style.display='block'};
-rec.onresult=e=>{let f='',it='';for(let i=e.resultIndex;i<e.results.length;i++){if(e.results[i].isFinal)f+=e.results[i][0].transcript;else it+=e.results[i][0].transcript}document.getElementById('tTxt').textContent=f||it||'...';if(f)addTxt(f)};
-rec.onend=()=>{on=false;document.getElementById('bMic').classList.remove('on');document.getElementById('mLbl').textContent='FALAR'};
-}
-if(on)rec.stop();else rec.start();
-}
-const isStandalone=()=>window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;const isIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent);let DB=[];fetch('/precos.json').then(r=>r.json()).then(d=>{if(d&&d.categorias){Object.entries(d.categorias).forEach(([c,l])=>l.forEach(p=>DB.push({kw:(p.nome||'').split('|'),name:p.un||p.nome,price:Number(p.marca)||Number(p.preco)||0,unit:typeof p.preco==='string'?p.preco:(p.un||'un')})));}}).catch(()=>{});window.onload=()=>{;max-height:200px;overflow-y:auto"></div>
-try{
-localStorage.removeItem('mercadovoz_cart_v2');
-localStorage.removeItem('mercadovoz_lists_v3');
-const s=JSON.parse(localStorage.getItem(KEY)||'null');
-if(s&&s.lists&&s.lists.length){lists=s.lists;aid=s.aid||lists[0].id}
-}catch(e){}
-if(!lists.length){lists=[{id:'l1',name:'Minha Lista de Compras',items:[]}];aid='l1'}
-render();
-if (isStandalone()) {
-document.getElementById('pwaBanner').style.display = 'none';
-document.getElementById('bInst').style.display = 'none';
-} else if ((dPrompt || isIOS()) && !sessionStorage.getItem('pwa_banner_dismissed')) {
-document.getElementById('pwaBanner').style.display = 'block';
-}
-document.getElementById('bBannerInst').onclick = triggerNativeInstall;
-document.getElementById('bInst').onclick = triggerNativeInstall;
-document.getElementById('bBannerNo').onclick = () => {
-try { sessionStorage.setItem('pwa_banner_dismissed', '1'); } catch (e) {}
-document.getElementById('pwaBanner').style.display = 'none';
-};
-document.getElementById('bPwaNo').onclick = () => document.getElementById('mPwa').classList.remove('open');
-document.getElementById('bPwaOk').onclick = () => document.getElementById('mPwa').classList.remove('open');
-document.getElementById('selL').onchange=e=>{aid=e.target.value;save()};
-document.getElementById('bNew').onclick=()=>openModal('');
-document.getElementById('bMir').onclick=()=>openModal(cur().id);
-document.getElementById('iTxt').oninput=e=>{const v=e.target.value.trim().toLowerCase(),sb=document.getElementById('sugBox');if(!v){sb.style.display='none';sb.innerHTML='';return;}const m=DB.filter(d=>d.name.toLowerCase().includes(v)||d.kw.some(k=>k.includes(v))).slice(0,5);if(!m.length){sb.style.display='none';sb.innerHTML='';return;}sb.style.display='block';sb.innerHTML=m.map((d,idx)=>`<div data-si="${idx}" style="padding:8px 12px;border-bottom:1px solid #f1f5f9;cursor:pointer;display:flex;justify-content:space-between;font-size:13px"><b>${d.name}</b><span style="color:#047857;font-weight:700">${brl(d.price)}</span></div>`).join('');sb.querySelectorAll('[data-si]').forEach(el=>el.onclick=()=>{const d=m[el.dataset.si];addTxt('1 '+d.unit+' '+d.name);document.getElementById('iTxt').value='';sb.style.display='none';});};/i.test(navigator.userAgent);let DB=[];fetch('/precos.json').then(r=>r.json()).then(d=>{if(d&&d.categorias){Object.entries(d.categorias).forEach(([c,l])=>l.forEach(p=>DB.push({kw:(p.nome||'').split('|'),name:p.un||p.nome,price:Number(p.marca)||Number(p.preco)||0,unit:typeof p.preco==='string'?p.preco:(p.un||'un')})));}}).catch(()=>{});window.onload=()=>{;max-height:200px;overflow-y:auto"></div>
-document.getElementById('bLCnc').onclick=()=>document.getElementById('mList').classList.remove('open');
-document.getElementById('fList').onsubmit=e=>{
-e.preventDefault();
-const n=document.getElementById('iLName').value.trim();if(!n)return;
-const mid=document.getElementById('selMir').value,src=lists.find(l=>l.id===mid);
-const items=src?src.items.map(i=>({...i,id:'i'+Date.now()+Math.random().toString(36).slice(2,5),done:false})):[];
-const id='l'+Date.now();lists.unshift({id,name:n,items});aid=id;
-document.getElementById('mList').classList.remove('open');beep();save();
-};
-document.getElementById('bDel').onclick=()=>{
-const cl=cur();lists=lists.filter(l=>l.id!==cl.id);
-if(!lists.length)lists=[{id:'l'+Date.now(),name:'Minha Lista de Compras',items:[]}];
-aid=lists[0].id;save();
-};
-document.getElementById('bClr').onclick=()=>{cur().items=[];save()};
-document.getElementById('bMic').onclick=toggleMic;
-document.getElementById('bMic2').onclick=toggleMic;
-document.getElementById('bSnd').onclick=e=>{snd=!snd;e.target.textContent=snd?'🔊':'🔇'};
-document.getElementById('fAdd').onsubmit=e=>{e.preventDefault();const i=document.getElementById('iTxt');if(i.value.trim()){addTxt(i.value);i.value=''}};
-document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>addTxt(b.dataset.q));
-[['tAll','all'],['tPen','pen'],['tChk','chk']].forEach(([id,v])=>document.getElementById(id).onclick=()=>{tab=v;['tAll','tPen','tChk'].forEach(k=>document.getElementById(k).className=k===id?'btn-p':'btn-g');render()});
-document.getElementById('iSch').oninput=render;
-document.getElementById('lWrap').onclick=e=>{
-const b=e.target.closest('[data-a]'),cl=cur();if(!b||!cl)return;
-const it=cl.items.find(x=>x.id===b.dataset.id);if(!it)return;
-const a=b.dataset.a;
-if(a==='tg')it.done=!it.done;
-else if(a==='inc')it.qty++;
-else if(a==='dec')it.qty=Math.max(1,it.qty-1);
-else if(a==='del')cl.items=cl.items.filter(x=>x.id!==it.id);
-else if(a==='pr'){it.price=Number((it.price+1).toFixed(2))}
-save();
-};
-document.getElementById('bWa').onclick=()=>{
-const cl=cur();let t='🛒 *'+cl.name.toUpperCase()+' - MERCADOVOZ*\n\n';
-cl.items.forEach(i=>{t+=`${i.done?'✅':'⬜'} ${i.qty} ${i.unit} - ${i.name} (${brl(i.qty*i.price)})\n`});
-t+=`\n💰 *Total: ${brl(cl.items.reduce((s,i)=>s+i.qty*i.price,0))}*`;
-document.getElementById('waPrv').value=t;document.getElementById('mWa').classList.add('open');
-};
-document.getElementById('bWaCls').onclick=()=>document.getElementById('mWa').classList.remove('open');
-document.getElementById('bCpy').onclick=()=>{
-const v=document.getElementById('waPrv').value;
-try{if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(v);else{const ta=document.getElementById('waPrv');ta.select();document.execCommand('copy')}}catch(e){}
-};
-document.getElementById('bWaGo').onclick=()=>{
-const p=document.getElementById('iPh').value.replace(/\D/g,'');
-window.open('https:'+'//wa.me/'+(p?(p.startsWith('55')?p:'55'+p):'')+'?text='+encodeURIComponent(document.getElementById('waPrv').value),'_blank');
-};
-};
-</script>
+  <header>
+    <div class="wrap hdr">
+      <div style="min-width:0">
+        <div class="brand">🛒 MercadoVoz <span style="font-size:10px;background:rgba(255,255,255,.2);padding:3px 6px;border-radius:6px">PWA</span></div>
+        <p class="subtitle">Lista por voz • preços • WhatsApp</p>
+      </div>
+      <div class="hdr-actions">
+        <button id="bInst" class="install-btn" type="button">📲 Instalar</button>
+        <button id="bSnd" class="icon-btn" type="button" aria-label="Alternar sons">🔊</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="installSuggestion" class="card install-suggestion" role="status" aria-labelledby="installSuggestionTitle">
+      <div class="install-suggestion-copy">
+        <span class="eyebrow">📲 ACESSO RÁPIDO</span>
+        <strong id="installSuggestionTitle" class="install-suggestion-title">Instale o MercadoVoz</strong>
+        <p id="installSuggestionDesc" class="install-suggestion-desc">Abra sua lista de compras diretamente pela tela inicial.</p>
+      </div>
+      <div class="install-suggestion-actions">
+        <button id="bInstallSuggest" class="btn btn-primary" type="button">Instalar</button>
+        <button id="bInstallDismiss" class="btn btn-soft" type="button">Agora não</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-title"><span class="eyebrow">🗂️ LISTA ATIVA</span><button id="bClr" class="btn btn-soft" type="button">Limpar itens</button></div>
+      <select id="selL" aria-label="Lista ativa"></select>
+      <div class="list-actions">
+        <button id="bNew" class="btn btn-primary" type="button">+ Nova lista</button>
+        <button id="bMir" class="btn btn-success" type="button">📋 Espelhar</button>
+        <button id="bDel" class="btn btn-danger" type="button">🗑️ Excluir</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="voice-box">
+        <div class="voice-copy">
+          <span class="voice-badge"><span id="voiceDot" class="status-dot"></span><span id="voiceBadge">Voz pronta</span></span>
+          <h1 style="font-size:16px;margin:7px 0 3px">Fale ou digite os itens</h1>
+          <p class="hint">Ex.: “2 pacotes de arroz, 3 litros de leite e 1 kg de café”.</p>
+        </div>
+        <button id="bMic" class="mic-btn" type="button" aria-label="Falar itens" aria-pressed="false"><span style="font-size:22px">🎤</span><span id="mLbl" class="mic-label">FALAR</span></button>
+      </div>
+      <div id="voiceTranscript" class="transcript" aria-live="polite">Ouvindo: <span id="tTxt">...</span></div>
+      <form id="fAdd" class="add-form" autocomplete="off">
+        <input id="iTxt" aria-label="Adicionar item" placeholder="Ex.: 2 kg de frango, leite, pão...">
+        <button class="btn btn-primary" type="submit">+ Adicionar</button>
+        <div id="sugBox" class="suggestions" role="listbox" aria-label="Sugestões de produtos"></div>
+      </form>
+      <div class="catalog-toolbar">
+        <div class="status-line catalog-status"><span id="catalogDot" class="status-dot"></span><span id="catalogStatus">Carregando catálogo...</span></div>
+        <div class="price-control"><span>Preço</span><div id="priceModeSelector" class="segmented" role="radiogroup" aria-label="Critério de preço"><button type="button" data-price-mode="min" role="radio">Mínimo</button><button type="button" data-price-mode="median" role="radio">Mediana</button><button type="button" data-price-mode="max" role="radio">Máximo</button></div></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><small>Total da lista</small><strong id="sTot">R$ 0,00</strong></div>
+      <div class="stat"><small>Itens</small><strong id="sCnt" style="color:#1e293b">0</strong></div>
+      <div class="stat"><small>No carrinho</small><strong id="sChk" style="color:#10b981">R$ 0,00</strong></div>
+      <div class="stat"><small>Falta comprar</small><strong id="sPen" style="color:#d97706">R$ 0,00</strong></div>
+    </section>
+
+    <section class="card" style="padding:12px">
+      <div class="tabs">
+        <button id="tAll" class="btn btn-primary" type="button">Todos</button>
+        <button id="tPen" class="btn btn-soft" type="button">A comprar</button>
+        <button id="tChk" class="btn btn-soft" type="button">No carrinho</button>
+      </div>
+      <input id="iSch" aria-label="Buscar item na lista" placeholder="🔍 Buscar item na lista...">
+    </section>
+    <section id="lWrap" aria-live="polite"></section>
+  </main>
+
+  <div class="bottom-bar">
+    <div class="wrap hdr">
+      <div class="bottom-total"><small id="bLName">MINHA LISTA</small><strong id="bTot">R$ 0,00</strong></div>
+      <div class="hdr-actions"><button id="bMic2" class="btn btn-soft" type="button">🎤 Falar</button><button id="bWa" class="btn" style="background:#25d366;color:#fff" type="button">📲 WhatsApp</button></div>
+    </div>
+  </div>
+
+  <div id="mList" class="modal" role="dialog" aria-modal="true" aria-labelledby="mLTit">
+    <form id="fList" class="modal-box">
+      <div class="modal-header"><h2 id="mLTit" class="modal-title">🗂️ Nova lista</h2><button id="bLCls" class="modal-close" type="button" aria-label="Fechar">✕</button></div>
+      <label class="field-label" for="iLName">Nome da lista</label>
+      <input id="iLName" required placeholder="Ex.: Compras do mês, Feira...">
+      <label class="field-label" for="selMir">Espelhar lista existente (opcional)</label>
+      <select id="selMir"></select>
+      <div class="form-actions"><button id="bLCnc" class="btn btn-soft" type="button">Cancelar</button><button class="btn btn-primary" type="submit">Salvar lista</button></div>
+    </form>
+  </div>
+
+  <div id="mPrice" class="modal" role="dialog" aria-modal="true" aria-labelledby="mPriceTitle">
+    <form id="fPrice" class="modal-box">
+      <div class="modal-header"><h2 id="mPriceTitle" class="modal-title">💲 Editar preço</h2><button id="bPriceCls" class="modal-close" type="button" aria-label="Fechar">✕</button></div>
+      <p id="priceName" class="hint"></p>
+      <label class="field-label" for="iPrice">Preço unitário (R$)</label>
+      <input id="iPrice" inputmode="decimal" type="number" min="0" step="0.01" required>
+      <div class="form-actions"><button id="bPriceCnc" class="btn btn-soft" type="button">Cancelar</button><button class="btn btn-primary" type="submit">Salvar preço</button></div>
+    </form>
+  </div>
+
+  <div id="mWa" class="modal" role="dialog" aria-modal="true" aria-labelledby="mWaTitle">
+    <div class="modal-box">
+      <div class="modal-header"><h2 id="mWaTitle" class="modal-title">📲 Enviar no WhatsApp</h2><button id="bWaCls" class="modal-close" type="button" aria-label="Fechar">✕</button></div>
+      <label class="field-label" for="iPh">DDD + número (opcional)</label>
+      <input id="iPh" inputmode="tel" placeholder="Ex.: 21999999999">
+      <label class="field-label" for="waPrv">Prévia</label>
+      <textarea id="waPrv" rows="8" readonly></textarea>
+      <div class="form-actions"><button id="bCpy" class="btn btn-soft" type="button">📋 Copiar</button><button id="bWaGo" class="btn" style="background:#25d366;color:#fff" type="button">Abrir WhatsApp</button></div>
+    </div>
+  </div>
+
+  <div id="mPwa" class="modal" role="dialog" aria-modal="true" aria-labelledby="mPwaTitle">
+    <div class="modal-box" style="text-align:center">
+      <div style="font-size:34px">📲</div><h2 id="mPwaTitle" class="modal-title" style="margin:7px 0">Instalar MercadoVoz</h2><p id="mPwaDesc" class="hint" style="margin-bottom:12px">Use o menu do navegador e escolha “Instalar aplicativo” ou “Adicionar à tela inicial”.</p>
+      <button id="bPwaOk" class="btn btn-primary" type="button" style="width:100%">Entendi</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    'use strict';
+
+    const STORAGE_KEY = 'mercadovoz_clean_v4';
+    const STORAGE_VERSION = 2;
+    const CORRUPT_STORAGE_KEY = 'mercadovoz_clean_v4_corrupt';
+    const SOUND_KEY = 'mercadovoz_sound_v1';
+    const CATALOG_CACHE_KEY = 'mercadovoz_catalog_v3';
+    const PRICE_MODE_KEY = 'mercadovoz_price_mode_v1';
+    const INSTALL_DISMISS_KEY = 'mercadovoz_install_dismissed_v1';
+    const PRICE_MODES = new Set(['min', 'median', 'max']);
+    const normalizeText = (value) => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+    const slugify = (value) => normalizeText(value).replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '') || 'item';
+    const FALLBACK_DB = [
+      ['arroz','Arroz Tipo 1 (5kg)','Mercearia','pct','5kg',28.9],['feijao|feijão','Feijão (1kg)','Mercearia','kg','1kg',8.5],['acucar|açúcar','Açúcar (1kg)','Mercearia','kg','1kg',4.99],['cafe|café','Café (500g)','Mercearia','pct','500g',18.9],['oleo|óleo','Óleo de Soja','Mercearia','un','900ml',6.49],['azeite','Azeite (500ml)','Mercearia','un','500ml',39.9],['macarrao|macarrão','Macarrão (500g)','Mercearia','pct','500g',4.5],['leite','Leite Integral (1L)','Laticínios','L','1L',4.99],['manteiga','Manteiga (200g)','Laticínios','un','200g',11.9],['queijo|mussarela','Queijo Mussarela (kg)','Laticínios','kg','1kg',44.9],['ovo|ovos','Ovos (Dúzia)','Açougue','dz','dúzia',12.5],['frango','Peito de Frango (kg)','Açougue','kg','1kg',21.9],['carne','Carne Bovina (kg)','Açougue','kg','1kg',36.9],['pao|pão','Pão de Forma','Padaria','pct','500g',8.5],['banana','Banana (kg)','Hortifrúti','kg','1kg',6.99],['tomate','Tomate (kg)','Hortifrúti','kg','1kg',7.99],['batata','Batata (kg)','Hortifrúti','kg','1kg',6.49],['cebola','Cebola (kg)','Hortifrúti','kg','1kg',5.99],['refrigerante','Refrigerante (2L)','Bebidas','un','2L',9.99],['detergente','Detergente (500ml)','Limpeza','un','500ml',2.59],['sabao|sabão','Sabão em Pó (1,6kg)','Limpeza','cx','1,6kg',19.9],['papel higienico|papel higiênico','Papel Higiênico','Higiene','pct','4 rolos',18.9],['sabonete','Sabonete','Higiene','un','90g',2.99]
+    ].map(([aliases,name,category,unit,packageSize,price]) => ({id:'fallback_'+slugify(name),aliases:aliases.split('|'),name,category,unit,package:packageSize,price,source:'Catálogo inicial'}));
+
+    let DB = FALLBACK_DB.slice();
+    let lists = [];
+    let activeListId = '';
+    let activeTab = 'all';
+    let soundEnabled = localStorage.getItem(SOUND_KEY) !== '0';
+    let recognition = null;
+    let voiceState = 'idle';
+    let voiceResultIndexes = new Set();
+    let voiceEndTimer = null;
+    let installPrompt = null;
+    let priceTarget = null;
+    let priceMode = PRICE_MODES.has(localStorage.getItem(PRICE_MODE_KEY)) ? localStorage.getItem(PRICE_MODE_KEY) : 'median';
+    let suggestionItems = [];
+    let suggestionIndex = -1;
+    let toastTimer = null;
+
+    const $ = (id) => document.getElementById(id);
+    const escapeHtml = (value) => String(value ?? '').replace(/[&<>'"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[char]));
+    const parseNumber = (value) => {
+      if (typeof value === 'number') return Number.isFinite(value) ? value : 0;
+      const clean = String(value ?? '').replace(/R\$\s*/i, '').replace(/\.(?=\d{3}(?:,|$))/g, '').replace(',', '.').replace(/[^\d.-]/g, '');
+      const number = Number(clean);
+      return Number.isFinite(number) ? number : 0;
+    };
+    const formatPrice = (value) => {
+      const number = parseNumber(value);
+      return number > 0 ? formatCurrency(number) : 'Preço não informado';
+    };
+    const formatCurrency = (value) => parseNumber(value).toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+    const formatPriceInput = (value) => parseNumber(value).toFixed(2);
+    const currentList = () => lists.find((list) => list.id === activeListId) || lists[0];
+    const activeItems = () => currentList()?.items || [];
+    const canonicalUnit = (value) => ({quilo:'kg',quilos:'kg',kg:'kg',grama:'g',gramas:'g',g:'g',litro:'l',litros:'l',l:'l',ml:'ml',mg:'mg',un:'un',unid:'un',unidade:'un',unidades:'un',pct:'pct',pacote:'pct',pacotes:'pct',caixa:'cx',caixas:'cx',cx:'cx',rolo:'rolos',rolos:'rolos',dz:'dz','dúzia':'dz','dúzias':'dz'})[normalizeText(value)] || normalizeText(value);
+    const PACKAGE_PATTERN = /(\d+(?:[.,]\d+)?)\s*(kg|g|litros?|l|ml|mg|unidades?|unid|un|pct|pacotes?|caixas?|cx|rolos?|dz|d[uú]zias?)\b/i;
+    const MEASURE_UNITS = new Set(['kg', 'g', 'l', 'ml', 'mg']);
+
+    function parsePackage(value) {
+      const text = String(value ?? '');
+      const match = text.match(PACKAGE_PATTERN);
+      if (match) {
+        const amount = parseNumber(match[1]);
+        const unit = canonicalUnit(match[2]);
+        return {amount, unit, count:1, key:`${amount % 1 ? amount : amount.toFixed(0)}${unit}`};
+      }
+      if (/d[uú]zia|\bdz\b/i.test(text)) return {amount:1, unit:'dz', count:1, key:'1dz'};
+      return {amount:0, unit:'', count:1, key:''};
+    }
+
+    function productPackage(product) {
+      const parsed = parsePackage(product.package || product.name);
+      const amount = parseNumber(product.packageAmount ?? product.package_amount) || parsed.amount;
+      const unit = canonicalUnit(product.packageUnit || product.package_unit || parsed.unit);
+      const count = parseNumber(product.packageCount ?? product.package_count) || parsed.count || 1;
+      return {amount, unit, count, key:amount && unit ? `${amount % 1 ? amount : amount.toFixed(0)}${unit}` : parsed.key};
+    }
+
+    function productComparisonKey(product) {
+      const packageData = productPackage(product);
+      const family = product.familyKey || product.family_key || String(product.name || '').replace(PACKAGE_PATTERN, ' ').trim();
+      return product.comparisonKey || product.comparison_key || `${slugify(product.category)}|${slugify(family)}|${packageData.key || 'un'}|1`;
+    }
+
+    function normalizeProduct(raw, fallbackCategory = 'Outros') {
+      const legacy = !raw.name && raw.un && raw.marca !== undefined;
+      const category = String(raw.category || raw.categoria || fallbackCategory || 'Outros');
+      const name = String(raw.name || (legacy ? raw.un : raw.nome) || 'Produto').trim();
+      const aliases = Array.isArray(raw.aliases) ? raw.aliases : String(raw.aliases || raw.nome || name).split('|');
+      const rawPackage = String(raw.package || raw.embalagem || '');
+      const parsedPackage = parsePackage(rawPackage || name);
+      const packageAmount = parseNumber(raw.package_amount ?? raw.packageAmount) || parsedPackage.amount;
+      const packageUnit = canonicalUnit(raw.package_unit || raw.packageUnit || parsedPackage.unit);
+      const packageKey = rawPackage || (packageAmount && packageUnit ? `${packageAmount % 1 ? packageAmount : packageAmount.toFixed(0)}${packageUnit}` : parsedPackage.key);
+      const brand = String(raw.brand || '').trim();
+      const family = String(raw.family || name.replace(PACKAGE_PATTERN, ' ').replace(brand, ' ')).replace(/\s+/g, ' ').trim();
+      const familyKey = String(raw.family_key || raw.familyKey || slugify(family));
+      const comparisonKey = String(raw.comparison_key || raw.comparisonKey || `${slugify(category)}|${familyKey}|${packageKey || 'un'}|${parseNumber(raw.package_count || raw.packageCount) || 1}`);
+      const skuKey = String(raw.sku_key || raw.skuKey || `${comparisonKey}|${slugify(brand || 'generic')}`);
+      const offers = Array.isArray(raw.offers) ? raw.offers.map((offer) => ({...offer, price:parseNumber(offer.price)})).filter((offer) => offer.price > 0) : [];
+      const stats = raw.price_stats || raw.priceStats || {};
+      const price = parseNumber(raw.price ?? stats.median ?? 0);
+      return {
+        id: String(raw.id || `sku_${slugify(skuKey)}`),
+        skuKey,
+        comparisonKey,
+        familyKey,
+        brand,
+        aliases: [...new Set([...aliases, name, family, ...family.split(/\s+/).filter((alias) => alias.length > 2)].map((alias) => String(alias).trim()).filter(Boolean))],
+        name,
+        category,
+        unit: String(raw.unit || raw.unidade || (packageUnit === 'kg' || packageUnit === 'g' ? 'pct' : 'un')),
+        package: packageKey,
+        packageAmount,
+        packageUnit,
+        packageCount: parseNumber(raw.package_count || raw.packageCount) || 1,
+        offers,
+        priceStats: stats,
+        price,
+        source: String(raw.source || raw.fonte || 'Catálogo'),
+        sourceUrl: raw.source_url || raw.sourceUrl || ''
+      };
+    }
+
+    function catalogFromPayload(payload) {
+      if (Array.isArray(payload?.produtos)) return payload.produtos.map((product) => normalizeProduct(product));
+      if (!payload?.categorias || typeof payload.categorias !== 'object') return [];
+      return Object.entries(payload.categorias).flatMap(([category, products]) => Array.isArray(products) ? products.map((product) => normalizeProduct({...product, category}, category)) : []);
+    }
+
+    function setCatalog(products, metadata = {}) {
+      const merged = new Map();
+      [...FALLBACK_DB, ...products].forEach((product) => {
+        const normalized = normalizeProduct(product);
+        const key = normalized.skuKey || `${normalizeText(normalized.name)}|${normalizeText(normalized.category)}|${normalizeText(normalized.package)}`;
+        const previous = merged.get(key);
+        if (!previous || normalized.price > 0 || normalized.source !== 'Catálogo inicial') merged.set(key, normalized);
+      });
+      DB = [...merged.values()];
+      const date = metadata.atualizado_em ? ` · ${metadata.atualizado_em}` : '';
+      $('catalogStatus').textContent = `${DB.length} produtos${date}`;
+      $('catalogDot').className = 'status-dot ready';
+      refreshAutoPrices();
+      updateSuggestions($('iTxt').value);
+    }
+
+    function equivalentProducts(product) {
+      const comparisonKey = productComparisonKey(product);
+      return DB.filter((candidate) => productComparisonKey(candidate) === comparisonKey);
+    }
+
+    function priceValues(product) {
+      const group = equivalentProducts(product);
+      const offers = group.flatMap((candidate) => Array.isArray(candidate.offers) ? candidate.offers : []).map((offer) => parseNumber(offer.price)).filter((price) => price > 0);
+      if (offers.length) return offers;
+      return group.map((candidate) => parseNumber(candidate.price)).filter((price) => price > 0);
+    }
+
+    function selectedPrice(product) {
+      const values = priceValues(product).sort((left, right) => left - right);
+      if (!values.length) return 0;
+      if (priceMode === 'min') return values[0];
+      if (priceMode === 'max') return values[values.length - 1];
+      const middle = Math.floor(values.length / 2);
+      return Number((values.length % 2 ? values[middle] : (values[middle - 1] + values[middle]) / 2).toFixed(2));
+    }
+
+    function findCatalogProduct(item) {
+      if (!item) return null;
+      const byId = item.productId && DB.find((product) => product.id === item.productId);
+      if (byId) return byId;
+      const bySku = item.skuKey && DB.find((product) => product.skuKey === item.skuKey);
+      if (bySku) return bySku;
+      const itemPackage = parsePackage(item.package || item.name).key;
+      const byName = DB.find((product) => normalizeText(product.name) === normalizeText(item.name) && (!itemPackage || productPackage(product).key === itemPackage));
+      if (byName) return byName;
+      return item.comparisonKey ? DB.find((product) => productComparisonKey(product) === item.comparisonKey) : null;
+    }
+
+    function refreshAutoPrices(list = currentList()) {
+      if (!list) return;
+      list.items.forEach((item) => {
+        if (!item.priceAuto) return;
+        const product = findCatalogProduct(item);
+        if (!product) return;
+        item.productId = product.id;
+        item.skuKey = product.skuKey;
+        item.comparisonKey = productComparisonKey(product);
+        item.package = product.package;
+        item.price = selectedPrice(product);
+      });
+    }
+
+    function renderPriceMode() {
+      document.querySelectorAll('[data-price-mode]').forEach((button) => {
+        const selected = button.dataset.priceMode === priceMode;
+        button.classList.toggle('selected', selected);
+        button.setAttribute('aria-checked', String(selected));
+      });
+    }
+
+    function setPriceMode(mode) {
+      if (!PRICE_MODES.has(mode)) return;
+      priceMode = mode;
+      localStorage.setItem(PRICE_MODE_KEY, priceMode);
+      refreshAutoPrices();
+      renderPriceMode();
+      render();
+    }
+
+    async function loadCatalog() {
+      try {
+        const cached = JSON.parse(localStorage.getItem(CATALOG_CACHE_KEY) || 'null');
+        if (cached?.products?.length) setCatalog(cached.products, cached.metadata || {});
+      } catch (error) {
+        localStorage.removeItem(CATALOG_CACHE_KEY);
+      }
+      try {
+        const response = await fetch('/precos.json', {cache:'no-cache'});
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const payload = await response.json();
+        const products = catalogFromPayload(payload);
+        if (!products.length) throw new Error('Catálogo vazio');
+        setCatalog(products, payload);
+        localStorage.setItem(CATALOG_CACHE_KEY, JSON.stringify({products, metadata:payload}));
+        render();
+      } catch (error) {
+        $('catalogStatus').textContent = `Catálogo local · ${DB.length} produtos · atualização indisponível`;
+        $('catalogDot').className = 'status-dot';
+      }
+    }
+
+    function normalizeItem(item) {
+      if (!item || typeof item !== 'object' || !String(item.name || '').trim()) return null;
+      const hasPriceOrigin = Object.prototype.hasOwnProperty.call(item, 'priceAuto');
+      return {
+        id: String(item.id || `item_${Date.now()}_${Math.random().toString(36).slice(2,6)}`),
+        productId: item.productId ? String(item.productId) : '',
+        skuKey: String(item.skuKey || item.sku_key || ''),
+        comparisonKey: String(item.comparisonKey || item.comparison_key || ''),
+        name: String(item.name || 'Item'),
+        qty: Math.max(0.01, parseNumber(item.qty) || 1),
+        unit: String(item.unit || 'un'),
+        package: String(item.package || ''),
+        price: Math.max(0, parseNumber(item.price)),
+        priceAuto: item.priceAuto === true,
+        manualPrice: item.manualPrice === true || !hasPriceOrigin,
+        category: String(item.category || 'Outros'),
+        done: Boolean(item.done)
+      };
+    }
+
+    function normalizeList(list, index) {
+      if (!list || typeof list !== 'object') return null;
+      return {
+        id: String(list.id || `list_${Date.now()}_${index}`),
+        name: String(list.name || 'Minha Lista').trim() || 'Minha Lista',
+        items: Array.isArray(list.items) ? list.items.map(normalizeItem).filter(Boolean) : []
+      };
+    }
+
+    function backupCorruptStorage(raw) {
+      if (!raw) return;
+      try {
+        localStorage.setItem(CORRUPT_STORAGE_KEY, raw.slice(0, 200000));
+      } catch (error) {
+        // A full storage area must not prevent a fresh list from opening.
+      }
+    }
+
+    function loadState() {
+      let raw = null;
+      try {
+        raw = localStorage.getItem(STORAGE_KEY);
+        const saved = JSON.parse(raw || 'null');
+        if (saved && !Array.isArray(saved.lists)) throw new Error('invalid list cache');
+        lists = Array.isArray(saved?.lists) ? saved.lists.map(normalizeList).filter(Boolean) : [];
+        activeListId = String(saved?.aid || lists[0]?.id || '');
+        if (saved && saved.version !== STORAGE_VERSION) saveState();
+      } catch (error) {
+        backupCorruptStorage(raw);
+        try { localStorage.removeItem(STORAGE_KEY); } catch (storageError) { /* Continue with a new in-memory list. */ }
+        showToast('Dados salvos inválidos. Nova lista criada.', 'warn');
+      }
+      if (!lists.length) {
+        lists = [{id:`list_${Date.now()}`, name:'Minha Lista de Compras', items:[]}];
+        activeListId = lists[0].id;
+        saveState();
+      }
+      if (!lists.some((list) => list.id === activeListId)) activeListId = lists[0].id;
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({version:STORAGE_VERSION, savedAt:new Date().toISOString(), lists, aid:activeListId}));
+        return true;
+      } catch (error) {
+        showToast('Não foi possível salvar. Verifique o armazenamento do navegador.', 'error');
+        return false;
+      }
+    }
+
+    function beep() {
+      if (!soundEnabled) return;
+      try {
+        const context = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = context.createOscillator();
+        const gain = context.createGain();
+        oscillator.connect(gain); gain.connect(context.destination);
+        oscillator.frequency.value = 660; gain.gain.value = .08;
+        oscillator.start(); oscillator.stop(context.currentTime + .12);
+      } catch (error) {
+        // Audio is optional; list actions must continue without it.
+      }
+    }
+
+    function showToast(message, type = '') {
+      const toast = $('toast');
+      toast.textContent = message;
+      toast.className = `toast show ${type}`;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { toast.className = 'toast'; }, 3200);
+    }
+
+    function renderSelectors() {
+      const list = currentList();
+      $('selL').innerHTML = lists.map((item) => `<option value="${escapeHtml(item.id)}" ${item.id === list.id ? 'selected' : ''}>📋 ${escapeHtml(item.name)} (${item.items.length} itens · ${formatCurrency(item.items.reduce((sum, entry) => sum + entry.qty * entry.price, 0))})</option>`).join('');
+      $('selMir').innerHTML = `<option value="">✨ Começar lista vazia</option>${lists.map((item) => `<option value="${escapeHtml(item.id)}">📋 Espelhar: ${escapeHtml(item.name)} (${item.items.length} itens)</option>`).join('')}`;
+    }
+
+    function render() {
+      const list = currentList();
+      if (!list) return;
+      renderPriceMode();
+      renderSelectors();
+      const items = list.items;
+      const total = items.reduce((sum, item) => sum + item.qty * item.price, 0);
+      const checked = items.filter((item) => item.done).reduce((sum, item) => sum + item.qty * item.price, 0);
+      $('sTot').textContent = formatCurrency(total); $('bTot').textContent = formatCurrency(total); $('bLName').textContent = list.name.toUpperCase();
+      $('sCnt').textContent = items.length; $('sChk').textContent = formatCurrency(checked); $('sPen').textContent = formatCurrency(total - checked);
+      const query = normalizeText($('iSch').value);
+      const filtered = items.filter((item) => (activeTab === 'all' || (activeTab === 'pen' && !item.done) || (activeTab === 'chk' && item.done)) && (!query || normalizeText(item.name).includes(query)));
+      if (!filtered.length) {
+        $('lWrap').innerHTML = '<div class="card items-empty">Sua lista está vazia. Fale no microfone ou digite acima para adicionar itens.</div>';
+        return;
+      }
+      const groups = filtered.reduce((result, item) => { (result[item.category] ||= []).push(item); return result; }, {});
+      $('lWrap').innerHTML = Object.entries(groups).map(([category, entries]) => `<section class="card"><div class="category-head"><b>📦 ${escapeHtml(category)} (${entries.length})</b><b style="color:var(--primary-dark)">${formatCurrency(entries.reduce((sum, item) => sum + item.qty * item.price, 0))}</b></div>${entries.map((item) => `<div class="item"><label class="item-main"><input type="checkbox" data-action="toggle" data-id="${escapeHtml(item.id)}" ${item.done ? 'checked' : ''}><span style="min-width:0"><span class="item-name ${item.done ? 'done' : ''}">${escapeHtml(item.name)}</span><span class="item-meta">${escapeHtml(item.qty)} ${escapeHtml(item.unit)} × ${formatPrice(item.price)} = <b>${formatCurrency(item.qty * item.price)}</b></span></span></label><span class="item-actions"><button type="button" data-action="dec" data-id="${escapeHtml(item.id)}" aria-label="Diminuir quantidade">−</button><button type="button" data-action="inc" data-id="${escapeHtml(item.id)}" aria-label="Aumentar quantidade">+</button><button class="price" type="button" data-action="price" data-id="${escapeHtml(item.id)}" aria-label="Editar preço">💲</button><button class="remove" type="button" data-action="delete" data-id="${escapeHtml(item.id)}" aria-label="Remover item">✕</button></span></div>`).join('')}</section>`).join('');
+    }
+
+    function getSuggestionQuery(value) {
+      return normalizeText(parseQuantity(value).text);
+    }
+
+    function updateSuggestions(value) {
+      const query = getSuggestionQuery(value);
+      if (!query) { suggestionItems = []; suggestionIndex = -1; $('sugBox').classList.remove('visible'); $('sugBox').innerHTML = ''; return; }
+      const parsed = parseQuantity(value);
+      suggestionItems = DB.map((product) => {
+        const terms = [product.name, ...product.aliases].map(normalizeText);
+        const score = terms.reduce((best, term) => {
+          if (term === query) return Math.max(best, 1000);
+          if (term.startsWith(query)) return Math.max(best, 700 + query.length);
+          if (term.includes(query)) return Math.max(best, 400 + query.length);
+          return best;
+        }, 0);
+        const packageData = productPackage(product);
+        const requested = parsed.requestedPackage;
+        const exactPackage = requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001;
+        const sameUnit = parsed.unit && MEASURE_UNITS.has(parsed.unit) && packageData.unit === parsed.unit;
+        return {product, score:score + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage};
+      }).filter((entry) => entry.score > 0 && entry.valid).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR')).slice(0, 8).map((entry) => entry.product);
+      suggestionIndex = -1;
+      $('sugBox').innerHTML = suggestionItems.map((product, index) => `<button class="suggestion" type="button" role="option" data-suggestion="${index}"><span class="suggestion-name">${escapeHtml(product.name)}</span><span class="suggestion-meta">${formatPrice(selectedPrice(product))}</span></button>`).join('');
+      $('sugBox').classList.toggle('visible', suggestionItems.length > 0);
+    }
+
+    function parseQuantity(text) {
+      let rest = text.trim(); let qty = 1; let unit = 'un';
+      let requestedPackage = null;
+      const words = {um:1,uma:1,dois:2,duas:2,tres:3,três:3,quatro:4,cinco:5,seis:6,meia:0.5};
+      const quantity = rest.match(/^(\d+(?:[.,]\d+)?|um|uma|dois|duas|tres|três|quatro|cinco|seis|meia)\b\s*/i);
+      if (quantity) { qty = Number(quantity[1].replace(',', '.')) || words[quantity[1].toLowerCase()] || 1; rest = rest.slice(quantity[0].length); }
+      const unitMatch = rest.match(/^(kg|g|litros?|l|ml|pct|pacotes?|caixas?|unidades?|un|dz|dúzias?)\b\s*/i);
+      if (unitMatch) {
+        unit = canonicalUnit(unitMatch[1]); rest = rest.slice(unitMatch[0].length);
+        const hasDe = /^de\b\s*/i.test(rest);
+        if (MEASURE_UNITS.has(unit) && !hasDe) { requestedPackage = {amount:qty, unit}; qty = 1; }
+      }
+      rest = rest.replace(/^de\s+/i, '').trim();
+      const packageMatch = rest.match(PACKAGE_PATTERN);
+      if (packageMatch) { requestedPackage = parsePackage(packageMatch[0]); rest = rest.replace(packageMatch[0], ' '); }
+      return {qty:Math.max(.01, qty), unit, requestedPackage, text:rest.replace(/\s+/g, ' ').trim()};
+    }
+
+    function splitItems(raw) {
+      const decimalSafe = String(raw).replace(/(\d),(\d)/g, '$1.$2');
+      return decimalSafe.split(/[,;\n]+/).flatMap((chunk) => {
+        const pieces = chunk.trim().split(/\s+e\s+/i);
+        if (pieces.length === 1) return pieces;
+        const result = [pieces[0]];
+        pieces.slice(1).forEach((piece) => {
+          const normalized = normalizeText(piece);
+          const startsWithQuantity = /^(?:\d|um\b|uma\b|dois\b|duas\b|tres\b|três\b|quatro\b|cinco\b)/i.test(piece.trim());
+          const isCatalogTerm = DB.some((product) => [product.name, ...product.aliases].some((alias) => normalized.includes(normalizeText(alias))));
+          if (startsWithQuantity || isCatalogTerm) result.push(piece); else result[result.length - 1] += ` e ${piece}`;
+        });
+        return result;
+      }).map((item) => item.trim()).filter(Boolean);
+    }
+
+    function findProduct(text, parsed = {}) {
+      const query = normalizeText(text);
+      const candidates = DB.map((product) => {
+        const terms = [product.name, ...product.aliases].map(normalizeText).filter(Boolean);
+        const term = terms.filter((candidate) => query.includes(candidate)).sort((a, b) => b.length - a.length)[0];
+        const packageData = productPackage(product);
+        const requested = parsed.requestedPackage;
+        const exactPackage = requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001;
+        const sameUnit = parsed.unit && MEASURE_UNITS.has(parsed.unit) && packageData.unit === parsed.unit;
+        return term ? {product, score:term.length + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage} : null;
+      }).filter((entry) => entry && entry.valid).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR'));
+      return candidates[0]?.product || null;
+    }
+
+    function addProduct(product, qty = 1, spokenUnit = '') {
+      const list = currentList(); if (!list) return;
+      const catalogProduct = product.id ? product : null;
+      const existing = list.items.find((item) => catalogProduct ? item.productId === catalogProduct.id || item.skuKey === catalogProduct.skuKey : !item.productId && normalizeText(item.name) === normalizeText(product.name));
+      if (existing) {
+        existing.qty += qty;
+        if (existing.priceAuto && catalogProduct) existing.price = selectedPrice(catalogProduct);
+      } else {
+        const priceAuto = Boolean(catalogProduct);
+        const packageData = catalogProduct ? productPackage(catalogProduct) : parsePackage(product.package || product.name);
+        list.items.unshift({id:`item_${Date.now()}_${Math.random().toString(36).slice(2,6)}`,productId:product.id || '',skuKey:product.skuKey || '',comparisonKey:productComparisonKey(product),name:product.name,qty,unit:catalogProduct ? (product.unit || 'un') : (spokenUnit || 'un'),package:product.package || packageData.key,price:priceAuto ? selectedPrice(product) : Math.max(0, product.price || 0),priceAuto,manualPrice:!priceAuto,category:product.category || 'Outros',done:false});
+      }
+    }
+
+    function addText(raw) {
+      const parts = splitItems(raw);
+      if (!parts.length) return;
+      parts.forEach((part) => {
+        const parsed = parseQuantity(part);
+        const product = findProduct(parsed.text, parsed);
+        if (product) addProduct(product, parsed.qty, product.unit || parsed.unit);
+        else {
+          const packageLabel = parsed.requestedPackage?.key ? ` (${parsed.requestedPackage.key})` : '';
+          addProduct({id:'',name:(parsed.text.charAt(0).toUpperCase() + parsed.text.slice(1)) + packageLabel,unit:parsed.unit,package:parsed.requestedPackage?.key || '',price:0,category:'Outros',aliases:[]}, parsed.qty, parsed.unit);
+        }
+      });
+      beep(); saveState(); render();
+      showToast(`${parts.length} item(ns) adicionado(s).`);
+    }
+
+    function updateVoiceUI() {
+      const listening = voiceState === 'listening'; const starting = voiceState === 'starting';
+      [$('bMic'), $('bMic2')].forEach((button) => { button.classList.toggle('listening', listening); button.classList.toggle('starting', starting); button.setAttribute('aria-pressed', String(listening)); });
+      $('mLbl').textContent = listening ? 'PARAR' : starting ? 'AGUARDE' : 'FALAR';
+      $('voiceDot').className = `status-dot ${listening ? 'live' : starting ? '' : 'ready'}`;
+      if (listening) { $('voiceBadge').textContent = 'Ouvindo...'; $('voiceTranscript').classList.add('visible'); }
+    }
+
+    function setVoiceStatus(message, type = '') {
+      $('voiceBadge').textContent = message;
+      $('voiceDot').className = `status-dot ${type === 'error' ? '' : 'ready'}`;
+      $('voiceBadge').parentElement.className = `voice-badge ${type}`;
+    }
+
+    function voiceErrorMessage(code) {
+      return ({'not-allowed':'Microfone bloqueado. Permita acesso nas configurações do navegador.','service-not-allowed':'Reconhecimento de voz não autorizado neste navegador.','audio-capture':'Nenhum microfone disponível.','network':'Reconhecimento exige conexão neste navegador.','no-speech':'Nenhuma fala detectada. Tente novamente.','aborted':'Escuta interrompida.'})[code] || 'Não foi possível reconhecer a fala.';
+    }
+
+    function createRecognition() {
+      const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Recognition) { setVoiceStatus('Voz indisponível'); return null; }
+      const instance = new Recognition();
+      instance.lang = 'pt-BR'; instance.continuous = false; instance.interimResults = true; instance.maxAlternatives = 1;
+      instance.onstart = () => { voiceState = 'listening'; $('tTxt').textContent = '...'; updateVoiceUI(); };
+      instance.onresult = (event) => {
+        let transcript = '';
+        for (let index = event.resultIndex; index < event.results.length; index += 1) {
+          const result = event.results[index]; transcript += result[0].transcript;
+          if (result.isFinal && !voiceResultIndexes.has(index)) { voiceResultIndexes.add(index); addText(result[0].transcript); }
+        }
+        $('tTxt').textContent = transcript || '...';
+      };
+      instance.onerror = (event) => { voiceState = 'idle'; setVoiceStatus(voiceErrorMessage(event.error), 'error'); showToast(voiceErrorMessage(event.error), 'error'); updateVoiceUI(); };
+      instance.onend = () => { voiceState = 'idle'; updateVoiceUI(); clearTimeout(voiceEndTimer); voiceEndTimer = setTimeout(() => { $('voiceTranscript').classList.remove('visible'); setVoiceStatus('Voz pronta'); }, 2400); };
+      setVoiceStatus('Voz pronta');
+      return instance;
+    }
+
+    async function startVoice() {
+      if (!recognition || voiceState !== 'idle') return;
+      voiceState = 'starting'; voiceResultIndexes = new Set(); updateVoiceUI();
+      try {
+        if (navigator.mediaDevices?.getUserMedia) {
+          const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+          stream.getTracks().forEach((track) => track.stop());
+        }
+        recognition.start();
+      } catch (error) {
+        voiceState = 'idle'; const message = error.name === 'NotAllowedError' ? voiceErrorMessage('not-allowed') : error.name === 'NotFoundError' ? voiceErrorMessage('audio-capture') : 'Não foi possível iniciar o microfone.'; setVoiceStatus(message, 'error'); showToast(message, 'error'); updateVoiceUI();
+      }
+    }
+
+    function toggleMic() {
+      if (!recognition) { showToast('Seu navegador não oferece reconhecimento de voz.', 'warn'); return; }
+      if (voiceState === 'listening') { recognition.stop(); return; }
+      if (voiceState === 'starting') return;
+      startVoice();
+    }
+
+    function openListModal(sourceId = '') {
+      $('mLTit').textContent = sourceId ? '📋 Espelhar lista' : '🗂️ Nova lista';
+      $('selMir').value = sourceId || '';
+      const source = lists.find((list) => list.id === sourceId);
+      $('iLName').value = source ? `${source.name} (Cópia)` : '';
+      $('mList').classList.add('open'); setTimeout(() => $('iLName').focus(), 0);
+    }
+
+    function closeModal(id) { $(id).classList.remove('open'); }
+
+    function openPriceModal(item) {
+      priceTarget = item; $('priceName').textContent = `${item.name} · ${item.qty} ${item.unit}`; $('iPrice').value = formatPriceInput(item.price); $('mPrice').classList.add('open'); setTimeout(() => $('iPrice').select(), 0);
+    }
+
+    function buildWhatsAppText() {
+      const list = currentList();
+      let text = `🛒 *${list.name.toUpperCase()} - MERCADOVOZ*\n\n`;
+      list.items.forEach((item) => { text += `${item.done ? '✅' : '⬜'} ${item.qty} ${item.unit} - ${item.name} (${formatCurrency(item.qty * item.price)})\n`; });
+      text += `\n💰 *Total: ${formatCurrency(list.items.reduce((sum, item) => sum + item.qty * item.price, 0))}*`;
+      return text;
+    }
+
+    async function copyText(value) {
+      try {
+        if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(value);
+        else { const area = $('waPrv'); area.focus(); area.select(); if (!document.execCommand('copy')) throw new Error('copy failed'); }
+        showToast('Lista copiada.');
+      } catch (error) { showToast('Não foi possível copiar. Selecione o texto manualmente.', 'error'); }
+    }
+
+    function isStandalone() { return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true; }
+    function isIOS() { return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; }
+
+    async function triggerNativeInstall() {
+      if (isStandalone()) { hideInstallSuggestion(); $('mPwaTitle').textContent = 'Aplicativo já instalado'; $('mPwaDesc').textContent = 'O MercadoVoz já está aberto no modo aplicativo.'; $('mPwa').classList.add('open'); return; }
+      if (installPrompt) { const prompt = installPrompt; installPrompt = null; await prompt.prompt(); const choice = await prompt.userChoice; hideInstallSuggestion(); if (choice.outcome === 'accepted') showToast('Instalação iniciada.'); return; }
+      $('mPwaTitle').textContent = isIOS() ? 'Instalar no iPhone / iPad' : 'Instalar MercadoVoz';
+      $('mPwaDesc').textContent = isIOS() ? 'No Safari, toque em Compartilhar e escolha Adicionar à Tela de Início.' : 'Use o menu do navegador e escolha Instalar aplicativo ou Criar atalho. A opção depende do navegador e do sistema.';
+      $('mPwa').classList.add('open');
+    }
+
+    function hideInstallSuggestion() {
+      $('installSuggestion')?.classList.remove('visible');
+    }
+
+    function showInstallSuggestion() {
+      if (isStandalone()) { hideInstallSuggestion(); return; }
+      try { if (sessionStorage.getItem(INSTALL_DISMISS_KEY) === '1') return; } catch (error) { /* Session storage may be unavailable. */ }
+      $('installSuggestionDesc').textContent = isIOS() ? 'No Safari: toque em Compartilhar e escolha Adicionar à Tela de Início.' : 'Abra sua lista de compras diretamente pela tela inicial.';
+      $('installSuggestion')?.classList.add('visible');
+    }
+
+    function dismissInstallSuggestion() {
+      try { sessionStorage.setItem(INSTALL_DISMISS_KEY, '1'); } catch (error) { /* Dismissal remains in memory. */ }
+      hideInstallSuggestion();
+    }
+
+    function registerServiceWorker() {
+      if (!navigator.serviceWorker?.register) return;
+      navigator.serviceWorker.register('/sw.js', {scope:'/'}).catch(() => showToast('Modo offline indisponível neste endereço.', 'warn'));
+      navigator.serviceWorker.addEventListener('controllerchange', () => showToast('Nova versão ativa. Recarregue quando puder.'));
+    }
+
+    function applyShortcutAction() {
+      const action = new URLSearchParams(window.location.search).get('action');
+      if (action === 'new-list') openListModal();
+      if (action === 'voice') setTimeout(toggleMic, 250);
+    }
+
+    function bindEvents() {
+      $('bMic').onclick = toggleMic; $('bMic2').onclick = toggleMic;
+      $('bInstallSuggest').onclick = triggerNativeInstall; $('bInstallDismiss').onclick = dismissInstallSuggestion;
+      document.querySelectorAll('[data-price-mode]').forEach((button) => { button.onclick = () => setPriceMode(button.dataset.priceMode); });
+      $('bSnd').onclick = () => { soundEnabled = !soundEnabled; localStorage.setItem(SOUND_KEY, soundEnabled ? '1' : '0'); $('bSnd').textContent = soundEnabled ? '🔊' : '🔇'; showToast(soundEnabled ? 'Sons ativados.' : 'Sons silenciados.'); };
+      $('fAdd').onsubmit = (event) => { event.preventDefault(); const input = $('iTxt'); if (input.value.trim()) { addText(input.value); input.value = ''; updateSuggestions(''); } };
+      $('iTxt').oninput = (event) => updateSuggestions(event.target.value);
+      $('iTxt').onkeydown = (event) => { if (!suggestionItems.length) return; if (event.key === 'ArrowDown') { event.preventDefault(); suggestionIndex = Math.min(suggestionIndex + 1, suggestionItems.length - 1); } else if (event.key === 'ArrowUp') { event.preventDefault(); suggestionIndex = Math.max(suggestionIndex - 1, 0); } else if (event.key === 'Enter' && suggestionIndex >= 0) { event.preventDefault(); addProduct(suggestionItems[suggestionIndex]); saveState(); render(); $('iTxt').value = ''; updateSuggestions(''); showToast('Produto adicionado.'); } else if (event.key === 'Escape') updateSuggestions(''); [...$('sugBox').querySelectorAll('.suggestion')].forEach((node, index) => node.classList.toggle('active', index === suggestionIndex)); };
+      $('sugBox').onclick = (event) => { const button = event.target.closest('[data-suggestion]'); if (!button) return; const product = suggestionItems[Number(button.dataset.suggestion)]; if (!product) return; addProduct(product); saveState(); render(); $('iTxt').value = ''; updateSuggestions(''); showToast('Produto adicionado.'); };
+      $('selL').onchange = (event) => { activeListId = event.target.value; saveState(); render(); };
+      $('bNew').onclick = () => openListModal(); $('bMir').onclick = () => openListModal(currentList().id);
+      $('bLCls').onclick = () => closeModal('mList'); $('bLCnc').onclick = () => closeModal('mList');
+      $('fList').onsubmit = (event) => { event.preventDefault(); const name = $('iLName').value.trim(); if (!name) return; const source = lists.find((list) => list.id === $('selMir').value); const items = source ? source.items.map((item) => ({...item, id:`item_${Date.now()}_${Math.random().toString(36).slice(2,6)}`, done:false})) : []; const list = {id:`list_${Date.now()}`,name,items}; lists.unshift(list); activeListId = list.id; saveState(); render(); closeModal('mList'); showToast('Lista salva.'); };
+      $('bDel').onclick = () => { if (lists.length === 1) { showToast('Mantenha ao menos uma lista.', 'warn'); return; } if (!window.confirm(`Excluir “${currentList().name}”?`)) return; lists = lists.filter((list) => list.id !== activeListId); activeListId = lists[0].id; saveState(); render(); showToast('Lista excluída.'); };
+      $('bClr').onclick = () => { if (!activeItems().length || !window.confirm('Limpar todos os itens desta lista?')) return; currentList().items = []; saveState(); render(); showToast('Itens removidos.'); };
+      $('lWrap').onclick = (event) => { const control = event.target.closest('[data-action]'); if (!control) return; const item = activeItems().find((entry) => entry.id === control.dataset.id); if (!item) return; const action = control.dataset.action; if (action === 'toggle') item.done = control.checked; if (action === 'inc') item.qty += 1; if (action === 'dec') item.qty = Math.max(.01, item.qty - 1); if (action === 'price') openPriceModal(item); if (action === 'delete') { if (!window.confirm(`Remover “${item.name}”?`)) return; currentList().items = currentList().items.filter((entry) => entry.id !== item.id); } if (action !== 'price') { saveState(); render(); } };
+      $('fPrice').onsubmit = (event) => { event.preventDefault(); const value = parseNumber($('iPrice').value); if (!priceTarget || value < 0) return; priceTarget.price = value; priceTarget.priceAuto = false; priceTarget.manualPrice = true; saveState(); render(); closeModal('mPrice'); showToast('Preço atualizado.'); priceTarget = null; };
+      $('bPriceCnc').onclick = () => { priceTarget = null; closeModal('mPrice'); }; $('bPriceCls').onclick = () => { priceTarget = null; closeModal('mPrice'); };
+      $('tAll').onclick = () => { activeTab = 'all'; render(); }; $('tPen').onclick = () => { activeTab = 'pen'; render(); }; $('tChk').onclick = () => { activeTab = 'chk'; render(); };
+      $('iSch').oninput = render;
+      $('bWa').onclick = () => { $('waPrv').value = buildWhatsAppText(); $('mWa').classList.add('open'); };
+      $('bWaCls').onclick = () => closeModal('mWa'); $('bCpy').onclick = () => copyText($('waPrv').value);
+      $('bWaGo').onclick = () => { const phone = $('iPh').value.replace(/\D/g, ''); const target = phone ? (phone.startsWith('55') ? phone : `55${phone}`) : ''; window.open(`https://wa.me/${target}?text=${encodeURIComponent($('waPrv').value)}`, '_blank', 'noopener'); };
+      $('bInst').onclick = triggerNativeInstall; $('bPwaOk').onclick = () => closeModal('mPwa');
+      document.querySelectorAll('.modal').forEach((modal) => modal.addEventListener('click', (event) => { if (event.target === modal) modal.classList.remove('open'); }));
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') document.querySelectorAll('.modal.open').forEach((modal) => modal.classList.remove('open')); });
+    }
+
+    window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); installPrompt = event; showInstallSuggestion(); });
+    window.addEventListener('appinstalled', () => { installPrompt = null; dismissInstallSuggestion(); $('bInst').style.display = 'none'; showToast('MercadoVoz instalado.'); });
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveState(); });
+    window.addEventListener('pagehide', saveState);
+
+    async function requestPersistentStorage() {
+      if (!navigator.storage?.persist) return;
+      try { await navigator.storage.persist(); } catch (error) { /* Browser may deny persistence. */ }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      $('bSnd').textContent = soundEnabled ? '🔊' : '🔇';
+      loadState(); bindEvents(); recognition = createRecognition(); updateVoiceUI(); render(); showInstallSuggestion(); loadCatalog(); registerServiceWorker(); requestPersistentStorage(); applyShortcutAction();
+    });
+  </script>
 </body>
 </html>

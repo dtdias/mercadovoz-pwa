@@ -7,9 +7,12 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "prefer_related_applications": false,
   "orientation": "portrait",
   "background_color": "#047857",
   "theme_color": "#047857",
+  "categories": ["shopping", "lifestyle"],
   "icons": [
     {
       "src": "/api/icon?size=192",
@@ -28,6 +31,20 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nova lista",
+      "short_name": "Nova lista",
+      "url": "/?action=new-list",
+      "icons": [{"src": "/api/icon?size=192", "sizes": "192x192", "type": "image/png"}]
+    },
+    {
+      "name": "Falar itens",
+      "short_name": "Falar",
+      "url": "/?action=voice",
+      "icons": [{"src": "/api/icon?size=192", "sizes": "192x192", "type": "image/png"}]
     }
   ]
 }
