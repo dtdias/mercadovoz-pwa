@@ -3,6 +3,7 @@
     {
       "id": "carrefour",
       "name": "Mercado Carrefour",
+      "parser": "carrefour",
       "region": "Brasil - preço online sem CEP",
       "url": "https://mercado.carrefour.com.br/busca/{query}",
       "queries": [
@@ -36,6 +37,23 @@
         {"term": "pasta de dente", "category": "Higiene"},
         {"term": "ração", "category": "Pet"
         }
+      ]
+    },
+    {
+      "id": "zaffari",
+      "name": "Zaffari",
+      "parser": "vtex",
+      "region": "Brasil - preço online sem CEP",
+      "url": "https://www.zaffari.com.br/api/catalog_system/pub/products/search?ft={query}&_from=0&_to=7",
+      "queries": [
+        {"term": "arroz", "category": "Mercearia"},
+        {"term": "frango", "category": "Açougue"},
+        {"term": "carne", "category": "Açougue"},
+        {"term": "pão", "category": "Padaria"},
+        {"term": "macarrão", "category": "Mercearia"},
+        {"term": "café", "category": "Mercearia"},
+        {"term": "detergente", "category": "Limpeza"},
+        {"term": "leite", "category": "Laticínios"}
       ]
     }
   ]
