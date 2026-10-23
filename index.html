@@ -203,6 +203,8 @@
     'use strict';
 
     const STORAGE_KEY = 'mercadovoz_clean_v4';
+    const STORAGE_VERSION = 2;
+    const CORRUPT_STORAGE_KEY = 'mercadovoz_clean_v4_corrupt';
     const SOUND_KEY = 'mercadovoz_sound_v1';
     const CATALOG_CACHE_KEY = 'mercadovoz_catalog_v2';
     const normalizeText = (value) => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -307,6 +309,7 @@
     }
 
     function normalizeItem(item) {
+      if (!item || typeof item !== 'object' || !String(item.name || '').trim()) return null;
       return {
         id: String(item.id || `item_${Date.now()}_${Math.random().toString(36).slice(2,6)}`),
         productId: item.productId ? String(item.productId) : '',
@@ -319,14 +322,36 @@
       };
     }
 
-    function loadState() {
+    function normalizeList(list, index) {
+      if (!list || typeof list !== 'object') return null;
+      return {
+        id: String(list.id || `list_${Date.now()}_${index}`),
+        name: String(list.name || 'Minha Lista').trim() || 'Minha Lista',
+        items: Array.isArray(list.items) ? list.items.map(normalizeItem).filter(Boolean) : []
+      };
+    }
+
+    function backupCorruptStorage(raw) {
+      if (!raw) return;
       try {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-        if (saved?.lists && Array.isArray(saved.lists)) {
-          lists = saved.lists.map((list) => ({id:String(list.id), name:String(list.name || 'Minha Lista'), items:Array.isArray(list.items) ? list.items.map(normalizeItem) : []}));
-          activeListId = String(saved.aid || lists[0]?.id || '');
-        }
+        localStorage.setItem(CORRUPT_STORAGE_KEY, raw.slice(0, 200000));
       } catch (error) {
+        // A full storage area must not prevent a fresh list from opening.
+      }
+    }
+
+    function loadState() {
+      let raw = null;
+      try {
+        raw = localStorage.getItem(STORAGE_KEY);
+        const saved = JSON.parse(raw || 'null');
+        if (saved && !Array.isArray(saved.lists)) throw new Error('invalid list cache');
+        lists = Array.isArray(saved?.lists) ? saved.lists.map(normalizeList).filter(Boolean) : [];
+        activeListId = String(saved?.aid || lists[0]?.id || '');
+        if (saved && saved.version !== STORAGE_VERSION) saveState();
+      } catch (error) {
+        backupCorruptStorage(raw);
+        try { localStorage.removeItem(STORAGE_KEY); } catch (storageError) { /* Continue with a new in-memory list. */ }
         showToast('Dados salvos inválidos. Nova lista criada.', 'warn');
       }
       if (!lists.length) {
@@ -339,7 +364,7 @@
 
     function saveState() {
       try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify({lists, aid:activeListId}));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({version:STORAGE_VERSION, savedAt:new Date().toISOString(), lists, aid:activeListId}));
         return true;
       } catch (error) {
         showToast('Não foi possível salvar. Verifique o armazenamento do navegador.', 'error');
@@ -612,9 +637,17 @@
 
     window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); installPrompt = event; });
     window.addEventListener('appinstalled', () => { installPrompt = null; $('bInst').style.display = 'none'; showToast('MercadoVoz instalado.'); });
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveState(); });
+    window.addEventListener('pagehide', saveState);
+
+    async function requestPersistentStorage() {
+      if (!navigator.storage?.persist) return;
+      try { await navigator.storage.persist(); } catch (error) { /* Browser may deny persistence. */ }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       $('bSnd').textContent = soundEnabled ? '🔊' : '🔇';
-      loadState(); bindEvents(); recognition = createRecognition(); updateVoiceUI(); render(); loadCatalog(); registerServiceWorker(); applyShortcutAction();
+      loadState(); bindEvents(); recognition = createRecognition(); updateVoiceUI(); render(); loadCatalog(); registerServiceWorker(); requestPersistentStorage(); applyShortcutAction();
     });
   </script>
 </body>

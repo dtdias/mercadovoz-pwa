@@ -8,6 +8,7 @@
 ## Structure
 - No package manifest, test runner, linter, formatter, or build step is configured. Do not assume `npm test` or a bundler exists.
 - `index.html` contains all UI, CSS, and application JavaScript. It stores lists in `localStorage` key `mercadovoz_clean_v4` and loads product data from `/precos.json`.
+- Personal list data stays in `localStorage`; `sw.js` caches app/catalog assets only, never user lists.
 - `sw.js` is active: `index.html` registers it at `/sw.js`. If offline assets change, update `SHELL_ASSETS` and bump `CACHE_NAME`. `service-worker.js` is not registered by current app.
 - `manifest.json` points icons at Vercel serverless handler `api/icon.js`; a plain static server cannot exercise `/api/icon`.
 
