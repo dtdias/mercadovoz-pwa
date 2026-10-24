@@ -17,7 +17,7 @@
     :root{--primary:#059669;--primary-dark:#047857;--bg:#f1f5f9;--surface:#fff;--text:#1e293b;--muted:#64748b;--line:#e2e8f0;--danger:#b91c1c;--warning:#b45309;--shadow:0 2px 10px rgba(15,23,42,.08)}
     *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
     html,body{background:var(--bg);color:var(--text);min-height:100%;overflow-x:hidden}
-    body{padding-bottom:92px}
+    body{padding-bottom:112px}
     button,input,select,textarea{font:inherit}
     button{border:0;cursor:pointer}
     button:disabled{cursor:not-allowed;opacity:.55}
@@ -90,15 +90,26 @@
     .category-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:7px;margin-bottom:2px;font-size:13px}
     .item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #f1f5f9}
     .item:last-child{border-bottom:0}.item-main{display:flex;align-items:flex-start;gap:8px;min-width:0;flex:1}.item-main input{width:18px;height:18px;margin-top:2px;flex-shrink:0}.item-name{font-weight:800;font-size:14px;overflow:hidden;text-overflow:ellipsis}.item-name.done{text-decoration:line-through;color:#94a3b8}.item-meta{font-size:11px;color:var(--muted);margin-top:2px}.item-actions{display:flex;gap:4px;flex-shrink:0}.item-actions button{min-width:30px;border-radius:8px;padding:7px 8px;background:#f1f5f9;color:#334155;font-weight:800}.item-actions .remove{color:#dc2626}.item-actions .price{color:var(--warning)}
-    .bottom-bar{position:fixed;z-index:25;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
-    .bottom-total small{display:block;color:var(--muted);font-size:10px;font-weight:800}.bottom-total strong{font-size:17px;color:var(--primary-dark)}
+    .bottom-bar{position:fixed;z-index:25;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:8px 14px;padding-bottom:calc(8px + env(safe-area-inset-bottom));box-shadow:0 -5px 18px rgba(15,23,42,.08)}
+    .bottom-toolbar{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;gap:8px}
+    .bottom-total{min-width:0;display:flex;align-items:center;justify-content:center;gap:7px;color:var(--primary-dark)}
+    .bottom-total-icon{width:31px;height:31px;display:grid;place-items:center;border-radius:10px;background:#ecfdf5;font-size:16px;flex-shrink:0}
+    .bottom-total-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+    .bottom-total small{display:block;max-width:112px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.03em}.bottom-total strong{font-size:16px;color:var(--primary-dark);line-height:1.15}
+    .toolbar-action{min-width:0;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:14px;padding:5px 8px;background:transparent;color:#475569;font-weight:800}
+    .toolbar-action:hover{background:#f8fafc}.toolbar-action:focus-visible{outline:3px solid rgba(5,150,105,.25);outline-offset:2px}
+    .toolbar-action-icon{font-size:19px;line-height:1}.toolbar-action-label{font-size:10px;line-height:1.1}
+    .toolbar-voice{width:70px;height:70px;justify-self:center;margin-top:-25px;border-radius:50%;background:var(--primary);color:#fff;box-shadow:0 7px 18px rgba(5,150,105,.32)}
+    .toolbar-voice .toolbar-action-icon{font-size:26px}.toolbar-voice .toolbar-action-label{font-size:9px}.toolbar-voice:hover{background:var(--primary-dark)}
+    .toolbar-voice.listening{background:#dc2626;box-shadow:0 7px 18px rgba(220,38,38,.3);animation:pulse 1.4s infinite}.toolbar-voice.starting{background:#d97706}.toolbar-voice.processing{background:#0f766e}
+    .toolbar-share .toolbar-action-icon{color:#16a34a}.toolbar-share .toolbar-action-label{color:#15803d}
     .modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(15,23,42,.65)}
     .modal.open{display:flex}.modal-box{width:min(100%,430px);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 20px 60px rgba(15,23,42,.25)}
     .modal-title{font-size:16px}.modal-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.modal-close{border-radius:9px;padding:7px 9px;background:#f1f5f9;color:#334155;font-weight:800}
     .field-label{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}.modal-box textarea{resize:vertical}
     .toast{position:fixed;left:50%;bottom:102px;z-index:80;transform:translate(-50%,12px);opacity:0;pointer-events:none;max-width:min(92vw,430px);background:#0f172a;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;text-align:center;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.toast.error{background:#991b1b}.toast.warn{background:#92400e}
     @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}main{padding:18px 16px}.card{padding:16px}}
-    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.install-suggestion{align-items:flex-start;flex-direction:column;gap:10px}.install-suggestion-actions{width:100%}.install-suggestion-actions .btn{flex:1}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}}
+    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.install-suggestion{align-items:flex-start;flex-direction:column;gap:10px}.install-suggestion-actions{width:100%}.install-suggestion-actions .btn{flex:1}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}.bottom-total{gap:5px}.bottom-total-icon{width:29px;height:29px}.bottom-total small{max-width:92px}.toolbar-action{padding-inline:4px}}
   </style>
 </head>
 <body>
@@ -178,9 +189,13 @@
   </main>
 
   <div class="bottom-bar">
-    <div class="wrap hdr">
-      <div class="bottom-total"><small id="bLName">MINHA LISTA</small><strong id="bTot">R$ 0,00</strong></div>
-      <div class="hdr-actions"><button id="bMic2" class="btn btn-soft" type="button">🎤 Falar</button><button id="bWa" class="btn" style="background:#25d366;color:#fff" type="button">📲 WhatsApp</button></div>
+    <div class="wrap bottom-toolbar">
+      <div class="bottom-total" aria-label="Total da lista">
+        <span class="bottom-total-icon" aria-hidden="true">💰</span>
+        <span class="bottom-total-copy"><small>Total · <span id="bLName">MINHA LISTA</span></small><strong id="bTot">R$ 0,00</strong></span>
+      </div>
+      <button id="bMic2" class="toolbar-action toolbar-voice" type="button" aria-label="Falar itens" aria-pressed="false"><span class="toolbar-action-icon" aria-hidden="true">🎤</span><span id="bMic2Label" class="toolbar-action-label">Falar</span></button>
+      <button id="bWa" class="toolbar-action toolbar-share" type="button" aria-label="Enviar lista pelo WhatsApp"><span class="toolbar-action-icon" aria-hidden="true">📲</span><span class="toolbar-action-label">WhatsApp</span></button>
     </div>
   </div>
 
@@ -823,7 +838,8 @@
     function updateVoiceUI() {
       const listening = voiceState === 'listening'; const starting = voiceState === 'starting'; const processing = voiceState === 'processing';
       [$('bMic'), $('bMic2')].forEach((button) => { button.classList.toggle('listening', listening); button.classList.toggle('starting', starting); button.classList.toggle('processing', processing); button.setAttribute('aria-pressed', String(listening)); });
-      $('mLbl').textContent = listening ? 'PARAR' : starting ? 'AGUARDE' : processing ? 'PROCESSANDO' : 'FALAR';
+      const voiceLabel = listening ? 'Parar' : starting ? 'Aguarde' : processing ? 'Processando' : 'Falar';
+      $('mLbl').textContent = voiceLabel.toUpperCase(); $('bMic2Label').textContent = voiceLabel;
       $('voiceDot').className = `status-dot ${listening ? 'live' : starting ? '' : 'ready'}`;
       if (listening) $('voiceBadge').textContent = 'Ouvindo...';
       if (starting) $('voiceBadge').textContent = 'Iniciando...';
