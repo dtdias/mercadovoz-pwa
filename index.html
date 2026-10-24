@@ -91,25 +91,24 @@
     .item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #f1f5f9}
     .item:last-child{border-bottom:0}.item-main{display:flex;align-items:flex-start;gap:8px;min-width:0;flex:1}.item-main input{width:18px;height:18px;margin-top:2px;flex-shrink:0}.item-name{font-weight:800;font-size:14px;overflow:hidden;text-overflow:ellipsis}.item-name.done{text-decoration:line-through;color:#94a3b8}.item-meta{font-size:11px;color:var(--muted);margin-top:2px}.item-actions{display:flex;gap:4px;flex-shrink:0}.item-actions button{min-width:30px;border-radius:8px;padding:7px 8px;background:#f1f5f9;color:#334155;font-weight:800}.item-actions .remove{color:#dc2626}.item-actions .price{color:var(--warning)}
     .bottom-bar{position:fixed;z-index:25;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:8px 14px;padding-bottom:calc(8px + env(safe-area-inset-bottom));box-shadow:0 -5px 18px rgba(15,23,42,.08)}
-    .bottom-toolbar{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;gap:8px}
-    .bottom-total{min-width:0;display:flex;align-items:center;justify-content:center;gap:7px;color:var(--primary-dark)}
-    .bottom-total-icon{width:31px;height:31px;display:grid;place-items:center;border-radius:10px;background:#ecfdf5;font-size:16px;flex-shrink:0}
-    .bottom-total-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
-    .bottom-total small{display:block;max-width:112px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.03em}.bottom-total strong{font-size:16px;color:var(--primary-dark);line-height:1.15}
+    .bottom-toolbar{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;justify-items:center;gap:8px}
+    .bottom-total{width:100%;min-width:0;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--primary-dark)}
+    .bottom-total-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:#ecfdf5;font-size:15px;flex-shrink:0}
+    .bottom-total-label{color:var(--muted);font-size:9px;font-weight:800;line-height:1.1;max-width:112px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bottom-total strong{font-size:15px;color:var(--primary-dark);line-height:1.1}.bottom-list-name{display:inline-block;max-width:82px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:8px;font-weight:700;vertical-align:bottom}
     .toolbar-action{min-width:0;min-height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:14px;padding:5px 8px;background:transparent;color:#475569;font-weight:800}
     .toolbar-action:hover{background:#f8fafc}.toolbar-action:focus-visible{outline:3px solid rgba(5,150,105,.25);outline-offset:2px}
-    .toolbar-action-icon{font-size:19px;line-height:1}.toolbar-action-label{font-size:10px;line-height:1.1}
+    .toolbar-action-icon{font-size:19px;line-height:1}.toolbar-action-icon svg{display:block;width:21px;height:21px;fill:currentColor}.toolbar-action-label{font-size:10px;line-height:1.1}
     .toolbar-voice{width:70px;height:70px;justify-self:center;margin-top:-25px;border-radius:50%;background:var(--primary);color:#fff;box-shadow:0 7px 18px rgba(5,150,105,.32)}
     .toolbar-voice .toolbar-action-icon{font-size:26px}.toolbar-voice .toolbar-action-label{font-size:9px}.toolbar-voice:hover{background:var(--primary-dark)}
     .toolbar-voice.listening{background:#dc2626;box-shadow:0 7px 18px rgba(220,38,38,.3);animation:pulse 1.4s infinite}.toolbar-voice.starting{background:#d97706}.toolbar-voice.processing{background:#0f766e}
-    .toolbar-share .toolbar-action-icon{color:#16a34a}.toolbar-share .toolbar-action-label{color:#15803d}
+    .toolbar-share{width:100%}.toolbar-share .toolbar-action-icon{color:#25d366}.toolbar-share .toolbar-action-label{color:#15803d}
     .modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(15,23,42,.65)}
     .modal.open{display:flex}.modal-box{width:min(100%,430px);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 20px 60px rgba(15,23,42,.25)}
     .modal-title{font-size:16px}.modal-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.modal-close{border-radius:9px;padding:7px 9px;background:#f1f5f9;color:#334155;font-weight:800}
     .field-label{display:block;font-size:12px;font-weight:800;margin:10px 0 5px}.modal-box textarea{resize:vertical}
     .toast{position:fixed;left:50%;bottom:102px;z-index:80;transform:translate(-50%,12px);opacity:0;pointer-events:none;max-width:min(92vw,430px);background:#0f172a;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;text-align:center;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.toast.error{background:#991b1b}.toast.warn{background:#92400e}
     @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}main{padding:18px 16px}.card{padding:16px}}
-    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.install-suggestion{align-items:flex-start;flex-direction:column;gap:10px}.install-suggestion-actions{width:100%}.install-suggestion-actions .btn{flex:1}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}.bottom-total{gap:5px}.bottom-total-icon{width:29px;height:29px}.bottom-total small{max-width:92px}.toolbar-action{padding-inline:4px}}
+    @media(max-width:480px){.install-btn{font-size:0;padding:9px 10px}.install-btn::before{content:"📲";font-size:15px}.install-suggestion{align-items:flex-start;flex-direction:column;gap:10px}.install-suggestion-actions{width:100%}.install-suggestion-actions .btn{flex:1}.suggestions{right:0;top:calc(100% + 49px)}.add-form{flex-wrap:wrap}.add-form input{flex-basis:calc(100% - 90px)}.add-form>.btn{flex:0 0 78px}.bottom-total-icon{width:25px;height:25px;font-size:14px}.bottom-total-label{max-width:92px}.bottom-list-name{max-width:64px}.toolbar-action{padding-inline:4px}}
   </style>
 </head>
 <body>
@@ -192,10 +191,11 @@
     <div class="wrap bottom-toolbar">
       <div class="bottom-total" aria-label="Total da lista">
         <span class="bottom-total-icon" aria-hidden="true">💰</span>
-        <span class="bottom-total-copy"><small>Total · <span id="bLName">MINHA LISTA</span></small><strong id="bTot">R$ 0,00</strong></span>
+        <span class="bottom-total-label">Total · <span id="bLName" class="bottom-list-name">MINHA LISTA</span></span>
+        <strong id="bTot">R$ 0,00</strong>
       </div>
       <button id="bMic2" class="toolbar-action toolbar-voice" type="button" aria-label="Falar itens" aria-pressed="false"><span class="toolbar-action-icon" aria-hidden="true">🎤</span><span id="bMic2Label" class="toolbar-action-label">Falar</span></button>
-      <button id="bWa" class="toolbar-action toolbar-share" type="button" aria-label="Enviar lista pelo WhatsApp"><span class="toolbar-action-icon" aria-hidden="true">📲</span><span class="toolbar-action-label">WhatsApp</span></button>
+      <button id="bWa" class="toolbar-action toolbar-share" type="button" aria-label="Enviar lista pelo WhatsApp"><span class="toolbar-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12.04 2a9.92 9.92 0 0 0-8.53 15.04L2.07 22l5.1-1.34A9.92 9.92 0 1 0 12.04 2Zm0 18.1a8.17 8.17 0 0 1-4.16-1.14l-.3-.18-3.03.8.81-2.96-.2-.31a8.18 8.18 0 1 1 6.88 3.79Zm4.48-6.12c-.25-.13-1.47-.73-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.65.81-.8.98-.15.17-.3.19-.55.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.52.12-.12.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.49c-.17 0-.45.06-.68.32-.23.25-.89.87-.89 2.11s.91 2.45 1.04 2.62c.13.17 1.78 2.71 4.31 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></span><span class="toolbar-action-label">WhatsApp</span></button>
     </div>
   </div>
 
