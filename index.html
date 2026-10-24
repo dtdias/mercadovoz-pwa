@@ -205,6 +205,15 @@
     </form>
   </div>
 
+  <div id="mConvert" class="modal" role="dialog" aria-modal="true" aria-labelledby="mConvertTitle">
+    <div class="modal-box">
+      <div class="modal-header"><h2 id="mConvertTitle" class="modal-title">📦 Confirmar conversão</h2><button id="bConvertCls" class="modal-close" type="button" aria-label="Fechar">✕</button></div>
+      <p id="convertName" style="font-weight:800"></p>
+      <p id="convertQuestion" class="hint" style="margin-top:8px"></p>
+      <div class="form-actions"><button id="bConvertCnc" class="btn btn-soft" type="button">Cancelar</button><button id="bConvertOk" class="btn btn-primary" type="button">Confirmar</button></div>
+    </div>
+  </div>
+
   <div id="mWa" class="modal" role="dialog" aria-modal="true" aria-labelledby="mWaTitle">
     <div class="modal-box">
       <div class="modal-header"><h2 id="mWaTitle" class="modal-title">📲 Enviar no WhatsApp</h2><button id="bWaCls" class="modal-close" type="button" aria-label="Fechar">✕</button></div>
@@ -253,6 +262,7 @@
     let voiceEndTimer = null;
     let installPrompt = null;
     let priceTarget = null;
+    let pendingConversion = null;
     let priceMode = PRICE_MODES.has(localStorage.getItem(PRICE_MODE_KEY)) ? localStorage.getItem(PRICE_MODE_KEY) : 'median';
     let suggestionItems = [];
     let suggestionIndex = -1;
@@ -274,9 +284,10 @@
     const formatPriceInput = (value) => parseNumber(value).toFixed(2);
     const currentList = () => lists.find((list) => list.id === activeListId) || lists[0];
     const activeItems = () => currentList()?.items || [];
-    const canonicalUnit = (value) => ({quilo:'kg',quilos:'kg',kg:'kg',grama:'g',gramas:'g',g:'g',litro:'l',litros:'l',l:'l',ml:'ml',mg:'mg',un:'un',unid:'un',unidade:'un',unidades:'un',pct:'pct',pacote:'pct',pacotes:'pct',caixa:'cx',caixas:'cx',cx:'cx',rolo:'rolos',rolos:'rolos',dz:'dz','dúzia':'dz','dúzias':'dz'})[normalizeText(value)] || normalizeText(value);
-    const PACKAGE_PATTERN = /(\d+(?:[.,]\d+)?)\s*(kg|g|litros?|l|ml|mg|unidades?|unid|un|pct|pacotes?|caixas?|cx|rolos?|dz|d[uú]zias?)\b/i;
+    const canonicalUnit = (value) => ({quilo:'kg',quilos:'kg',kg:'kg',grama:'g',gramas:'g',g:'g',litro:'l',litros:'l',l:'l',ml:'ml',mg:'mg',un:'un',unid:'un',unidade:'un',unidades:'un',pct:'pct',pacote:'pct',pacotes:'pct',caixa:'cx',caixas:'cx',cx:'cx',rolo:'rolos',rolos:'rolos',dz:'dz',duzia:'dz',duzias:'dz','dúzia':'dz','dúzias':'dz'})[normalizeText(value)] || normalizeText(value);
+    const PACKAGE_PATTERN = /(\d+(?:[.,]\d+)?)\s*(kg|quilos?|g|gramas?|litros?|l|ml|mg|unidades?|unid|un|pct|pacotes?|caixas?|cx|rolos?|dz|d[uú]zias?)\b/i;
     const MEASURE_UNITS = new Set(['kg', 'g', 'l', 'ml', 'mg']);
+    const SINGULAR_FORMS = {feijoes:'feijao',paes:'pao',duzias:'duzia'};
     const GENERIC_PRODUCT_PREFERENCES = {
       leite:{category:'laticinios', unit:'l', amount:1, preferred:'leite integral'},
       arroz:{category:'mercearia', unit:'kg', amount:5},
@@ -309,8 +320,18 @@
       return product.comparisonKey || product.comparison_key || `${slugify(product.category)}|${slugify(family)}|${packageData.key || 'un'}|1`;
     }
 
+    function singularizeToken(token) {
+      if (SINGULAR_FORMS[token]) return SINGULAR_FORMS[token];
+      if (token.endsWith('oes') || token.endsWith('aes')) return `${token.slice(0, -3)}ao`;
+      return token.endsWith('s') && token.length > 3 ? token.slice(0, -1) : token;
+    }
+
     function tokenize(value) {
-      return normalizeText(value).split(/[^a-z0-9]+/).filter(Boolean);
+      return normalizeText(value).split(/[^a-z0-9]+/).filter(Boolean).map(singularizeToken);
+    }
+
+    function canonicalSearchText(value) {
+      return tokenize(value).join(' ');
     }
 
     function normalizeProduct(raw, fallbackCategory = 'Outros') {
@@ -370,7 +391,7 @@
     }
 
     function genericPreferenceScore(query, product) {
-      const preference = GENERIC_PRODUCT_PREFERENCES[query];
+      const preference = GENERIC_PRODUCT_PREFERENCES[canonicalSearchText(query)];
       if (!preference) return 0;
       const packageData = productPackage(product);
       let score = normalizeText(product.category) === preference.category ? 900 : 0;
@@ -381,7 +402,8 @@
     }
 
     function productMatchScore(product, query) {
-      const queryTokens = tokenize(query);
+      const canonicalQuery = canonicalSearchText(query);
+      const queryTokens = tokenize(canonicalQuery);
       if (!queryTokens.length) return 0;
       const name = normalizeText(product.name);
       const family = normalizeText(product.family || product.familyKey || product.family_key || '');
@@ -392,13 +414,13 @@
       if (!hasAllTokens) return 0;
       const strongMatch = queryTokens.every((token) => strongFields.some((field) => tokenize(field).includes(token)));
       let score = strongMatch ? 3500 : 500;
-      if (name === query) score = 16000;
-      else if (family === query) score = 15000;
-      else if (name.startsWith(`${query} `) || name.startsWith(`${query}(`)) score = 12000;
-      else if (family.startsWith(`${query} `)) score = 11000;
+      if (canonicalSearchText(name) === canonicalQuery) score = 16000;
+      else if (canonicalSearchText(family) === canonicalQuery) score = 15000;
+      else if (canonicalSearchText(name).startsWith(`${canonicalQuery} `) || canonicalSearchText(name).startsWith(`${canonicalQuery}(`)) score = 12000;
+      else if (canonicalSearchText(family).startsWith(`${canonicalQuery} `)) score = 11000;
       else if (queryTokens.length === 1 && tokenize(name)[0] === queryTokens[0]) score = 10000;
-      else if (name.includes(query)) score = 5000;
-      if ((product.aliases || []).some((alias) => normalizeText(alias) === query)) score += 1500;
+      else if (canonicalSearchText(name).includes(canonicalQuery)) score = 5000;
+      if ((product.aliases || []).some((alias) => canonicalSearchText(alias) === canonicalQuery)) score += 1500;
       return score + genericPreferenceScore(query, product);
     }
 
@@ -629,7 +651,7 @@
     }
 
     function getSuggestionQuery(value) {
-      return normalizeText(parseQuantity(value).text);
+      return canonicalSearchText(parseQuantity(value).text);
     }
 
     function updateSuggestions(value) {
@@ -652,19 +674,19 @@
     function parseQuantity(text) {
       let rest = text.trim(); let qty = 1; let unit = 'un';
       let requestedPackage = null;
+      let explicitQuantity = false;
       const words = {um:1,uma:1,dois:2,duas:2,tres:3,três:3,quatro:4,cinco:5,seis:6,meia:0.5};
       const quantity = rest.match(/^(\d+(?:[.,]\d+)?|um|uma|dois|duas|tres|três|quatro|cinco|seis|meia)\b\s*/i);
-      if (quantity) { qty = Number(quantity[1].replace(',', '.')) || words[quantity[1].toLowerCase()] || 1; rest = rest.slice(quantity[0].length); }
-      const unitMatch = rest.match(/^(kg|g|litros?|l|ml|pct|pacotes?|caixas?|unidades?|un|dz|dúzias?)\b\s*/i);
+      if (quantity) { explicitQuantity = true; qty = Number(quantity[1].replace(',', '.')) || words[quantity[1].toLowerCase()] || 1; rest = rest.slice(quantity[0].length); }
+      const unitMatch = rest.match(/^(kg|quilos?|g|gramas?|litros?|l|ml|pct|pacotes?|caixas?|unidades?|un|dz|d[uú]zias?)\b\s*/i);
       if (unitMatch) {
         unit = canonicalUnit(unitMatch[1]); rest = rest.slice(unitMatch[0].length);
-        const hasDe = /^de\b\s*/i.test(rest);
-        if (MEASURE_UNITS.has(unit) && !hasDe) { requestedPackage = {amount:qty, unit}; qty = 1; }
+        if (MEASURE_UNITS.has(unit)) { requestedPackage = {amount:qty, unit}; qty = 1; }
       }
       rest = rest.replace(/^de\s+/i, '').trim();
       const packageMatch = rest.match(PACKAGE_PATTERN);
       if (packageMatch) { requestedPackage = parsePackage(packageMatch[0]); rest = rest.replace(packageMatch[0], ' '); }
-      return {qty:Math.max(.01, qty), unit, requestedPackage, text:rest.replace(/\s+/g, ' ').trim()};
+      return {qty:Math.max(.01, qty), unit, requestedPackage, explicitQuantity, text:rest.replace(/\s+/g, ' ').trim()};
     }
 
     function splitItems(raw) {
@@ -674,26 +696,66 @@
         if (pieces.length === 1) return pieces;
         const result = [pieces[0]];
         pieces.slice(1).forEach((piece) => {
-          const normalized = normalizeText(piece);
+          const normalized = canonicalSearchText(piece);
           const startsWithQuantity = /^(?:\d|um\b|uma\b|dois\b|duas\b|tres\b|três\b|quatro\b|cinco\b)/i.test(piece.trim());
-          const isCatalogTerm = DB.some((product) => [product.name, ...product.aliases].some((alias) => normalized.includes(normalizeText(alias))));
+          const isCatalogTerm = DB.some((product) => [product.name, ...product.aliases].some((alias) => normalized.includes(canonicalSearchText(alias))));
           if (startsWithQuantity || isCatalogTerm) result.push(piece); else result[result.length - 1] += ` e ${piece}`;
         });
         return result;
       }).map((item) => item.trim()).filter(Boolean);
     }
 
-    function findProduct(text, parsed = {}) {
-      const query = normalizeText(text);
+    const UNIT_FACTORS = {g:{dimension:'weight', factor:1},kg:{dimension:'weight', factor:1000},mg:{dimension:'weight', factor:.001},ml:{dimension:'volume', factor:1},l:{dimension:'volume', factor:1000},un:{dimension:'count', factor:1},dz:{dimension:'count', factor:12}};
+
+    function formatMeasure(amount, unit) {
+      const value = Number.isInteger(amount) ? amount : Number(amount.toFixed(2));
+      return `${value} ${unit}`;
+    }
+
+    function baseAmount(amount, unit) {
+      const definition = UNIT_FACTORS[unit];
+      return definition ? {dimension:definition.dimension, value:amount * definition.factor} : null;
+    }
+
+    function findProductMatch(text, parsed = {}) {
+      const query = canonicalSearchText(text);
+      const requested = parsed.requestedPackage;
       const candidates = DB.map((product) => {
         const score = productMatchScore(product, query);
+        if (!score) return null;
         const packageData = productPackage(product);
-        const requested = parsed.requestedPackage;
-        const exactPackage = requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001;
-        const sameUnit = parsed.unit && MEASURE_UNITS.has(parsed.unit) && packageData.unit === parsed.unit;
-        return score ? {product, score:score + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage} : null;
-      }).filter((entry) => entry && entry.valid).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR'));
-      return candidates[0]?.product || null;
+        const exactPackage = Boolean(requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001);
+        const sameUnit = Boolean(requested && packageData.unit === requested.unit);
+        const requestedBase = requested && baseAmount(requested.amount, requested.unit);
+        const productBase = baseAmount(packageData.amount * (packageData.count || 1), packageData.unit);
+        const compatible = !requested || exactPackage || Boolean(requestedBase && productBase && requestedBase.dimension === productBase.dimension);
+        return {product, score:score + (exactPackage ? 10000 : sameUnit ? 600 : 0), exactPackage, compatible};
+      }).filter((entry) => entry && entry.compatible).sort((a, b) => Number(b.exactPackage) - Number(a.exactPackage) || b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR'));
+      const selected = candidates[0];
+      return selected ? {...selected, requested} : {product:null, exactPackage:false, requested};
+    }
+
+    function findProduct(text, parsed = {}) {
+      return findProductMatch(text, parsed).product;
+    }
+
+    function buildConversion(product, parsed, match) {
+      if (!product || match.exactPackage) return null;
+      const packageData = productPackage(product);
+      const requested = parsed.requestedPackage || (parsed.explicitQuantity && packageData.unit === 'dz' && parsed.unit === 'un' ? {amount:parsed.qty, unit:'un'} : null);
+      if (!requested) return null;
+      const requestedBase = baseAmount(requested.amount, requested.unit);
+      const productBase = baseAmount(packageData.amount * (packageData.count || 1), packageData.unit);
+      if (!requestedBase || !productBase || requestedBase.dimension !== productBase.dimension) return null;
+      if (Math.abs(requestedBase.value - productBase.value) < .001 && requested.unit === packageData.unit) return null;
+      return {
+        product,
+        requested,
+        packageData,
+        quantity:Math.max(1, Math.ceil(requestedBase.value / productBase.value - .000001)),
+        requestedLabel:formatMeasure(requested.amount, requested.unit),
+        packageLabel:formatMeasure(packageData.amount * (packageData.count || 1), packageData.unit)
+      };
     }
 
     function addProduct(product, qty = 1, spokenUnit = '') {
@@ -710,20 +772,52 @@
       }
     }
 
-    function addText(raw) {
-      const parts = splitItems(raw);
-      if (!parts.length) return;
-      parts.forEach((part) => {
-        const parsed = parseQuantity(part);
-        const product = findProduct(parsed.text, parsed);
-        if (product) addProduct(product, parsed.qty, product.unit || parsed.unit);
-        else {
+    function commitAdded(count) {
+      if (!count) return;
+      beep(); saveState(); render();
+      showToast(`${count} item(ns) adicionado(s).`);
+    }
+
+    function openConversionModal(conversion) {
+      $('convertName').textContent = conversion.product.name;
+      $('convertQuestion').textContent = `Não encontrei embalagem de ${conversion.requestedLabel}. Adicionar ${conversion.quantity} × ${conversion.packageLabel} para atender ${conversion.requestedLabel}?`;
+      $('mConvert').classList.add('open');
+      $('bConvertOk').focus();
+    }
+
+    function closeConversionModal(notify = false) {
+      pendingConversion = null;
+      closeModal('mConvert');
+      if (notify) showToast('Conversão cancelada.');
+    }
+
+    function processAddParts(parts) {
+      let added = 0;
+      for (let index = 0; index < parts.length; index += 1) {
+        const parsed = parseQuantity(parts[index]);
+        const match = findProductMatch(parsed.text, parsed);
+        if (match.product) {
+          const conversion = buildConversion(match.product, parsed, match);
+          if (conversion) {
+            if (added) commitAdded(added);
+            pendingConversion = {conversion, remainingParts:parts.slice(index + 1)};
+            openConversionModal(conversion);
+            return;
+          }
+          addProduct(match.product, parsed.qty, match.product.unit || parsed.unit);
+          added += 1;
+        } else {
           const packageLabel = parsed.requestedPackage?.key ? ` (${parsed.requestedPackage.key})` : '';
           addProduct({id:'',name:(parsed.text.charAt(0).toUpperCase() + parsed.text.slice(1)) + packageLabel,unit:parsed.unit,package:parsed.requestedPackage?.key || '',price:0,category:'Outros',aliases:[]}, parsed.qty, parsed.unit);
+          added += 1;
         }
-      });
-      beep(); saveState(); render();
-      showToast(`${parts.length} item(ns) adicionado(s).`);
+      }
+      commitAdded(added);
+    }
+
+    function addText(raw) {
+      const parts = splitItems(raw);
+      if (parts.length) processAddParts(parts);
     }
 
     function updateVoiceUI() {
@@ -872,14 +966,16 @@
       $('lWrap').onclick = (event) => { const control = event.target.closest('[data-action]'); if (!control) return; const item = activeItems().find((entry) => entry.id === control.dataset.id); if (!item) return; const action = control.dataset.action; if (action === 'toggle') item.done = control.checked; if (action === 'inc') item.qty += 1; if (action === 'dec') item.qty = Math.max(.01, item.qty - 1); if (action === 'price') openPriceModal(item); if (action === 'delete') { if (!window.confirm(`Remover “${item.name}”?`)) return; currentList().items = currentList().items.filter((entry) => entry.id !== item.id); } if (action !== 'price') { saveState(); render(); } };
       $('fPrice').onsubmit = (event) => { event.preventDefault(); const value = parseNumber($('iPrice').value); if (!priceTarget || value < 0) return; priceTarget.price = value; priceTarget.priceAuto = false; priceTarget.manualPrice = true; saveState(); render(); closeModal('mPrice'); showToast('Preço atualizado.'); priceTarget = null; };
       $('bPriceCnc').onclick = () => { priceTarget = null; closeModal('mPrice'); }; $('bPriceCls').onclick = () => { priceTarget = null; closeModal('mPrice'); };
-      $('tAll').onclick = () => { activeTab = 'all'; render(); }; $('tPen').onclick = () => { activeTab = 'pen'; render(); }; $('tChk').onclick = () => { activeTab = 'chk'; render(); };
+      $('bConvertOk').onclick = () => { const pending = pendingConversion; pendingConversion = null; closeModal('mConvert'); if (!pending) return; addProduct(pending.conversion.product, pending.conversion.quantity, pending.conversion.product.unit || 'un'); commitAdded(1); if (pending.remainingParts.length) processAddParts(pending.remainingParts); };
+      $('bConvertCnc').onclick = () => closeConversionModal(true); $('bConvertCls').onclick = () => closeConversionModal(true);
+       $('tAll').onclick = () => { activeTab = 'all'; render(); }; $('tPen').onclick = () => { activeTab = 'pen'; render(); }; $('tChk').onclick = () => { activeTab = 'chk'; render(); };
       $('iSch').oninput = render;
       $('bWa').onclick = () => { $('waPrv').value = buildWhatsAppText(); $('mWa').classList.add('open'); };
       $('bWaCls').onclick = () => closeModal('mWa'); $('bCpy').onclick = () => copyText($('waPrv').value);
       $('bWaGo').onclick = () => { const phone = $('iPh').value.replace(/\D/g, ''); const target = phone ? (phone.startsWith('55') ? phone : `55${phone}`) : ''; window.open(`https://wa.me/${target}?text=${encodeURIComponent($('waPrv').value)}`, '_blank', 'noopener'); };
       $('bInst').onclick = triggerNativeInstall; $('bPwaOk').onclick = () => closeModal('mPwa');
-      document.querySelectorAll('.modal').forEach((modal) => modal.addEventListener('click', (event) => { if (event.target === modal) modal.classList.remove('open'); }));
-      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') document.querySelectorAll('.modal.open').forEach((modal) => modal.classList.remove('open')); });
+      document.querySelectorAll('.modal').forEach((modal) => modal.addEventListener('click', (event) => { if (event.target !== modal) return; if (modal.id === 'mConvert') closeConversionModal(true); else modal.classList.remove('open'); }));
+      document.addEventListener('keydown', (event) => { if (event.key !== 'Escape') return; if ($('mConvert').classList.contains('open')) closeConversionModal(true); else document.querySelectorAll('.modal.open').forEach((modal) => modal.classList.remove('open')); });
     }
 
     window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); installPrompt = event; showInstallSuggestion(); });
