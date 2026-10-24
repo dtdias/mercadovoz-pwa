@@ -499,16 +499,34 @@
       return Number((values.length % 2 ? values[middle] : (values[middle - 1] + values[middle]) / 2).toFixed(2));
     }
 
+    function catalogMatchBonus(product) {
+      return product?.offers?.length ? 2000 : 0;
+    }
+
+    function preferredCatalogProduct(product) {
+      if (!product || product.offers?.length || new Set(priceValues(product).map((value) => value.toFixed(2))).size < 2) return product;
+      return equivalentProducts(product).find((candidate) => candidate.offers?.length) || product;
+    }
+
+    function upgradeCatalogProduct(product) {
+      const preferred = preferredCatalogProduct(product);
+      if (!preferred || preferred !== product || product.offers?.length) return preferred;
+      const packageData = productPackage(product);
+      const match = findProductMatch(product.aliases?.[0] || product.family || product.name, {requestedPackage:{amount:packageData.amount, unit:packageData.unit, count:packageData.count}});
+      return match.product?.offers?.length ? match.product : product;
+    }
+
     function findCatalogProduct(item) {
       if (!item) return null;
       const byId = item.productId && DB.find((product) => product.id === item.productId);
-      if (byId) return byId;
+      if (byId) return upgradeCatalogProduct(byId);
       const bySku = item.skuKey && DB.find((product) => product.skuKey === item.skuKey);
-      if (bySku) return bySku;
+      if (bySku) return upgradeCatalogProduct(bySku);
       const itemPackage = parsePackage(item.package || item.name).key;
       const byName = DB.find((product) => normalizeText(product.name) === normalizeText(item.name) && (!itemPackage || productPackage(product).key === itemPackage));
-      if (byName) return byName;
-      return item.comparisonKey ? DB.find((product) => productComparisonKey(product) === item.comparisonKey) : null;
+      if (byName) return upgradeCatalogProduct(byName);
+      const byComparison = item.comparisonKey ? DB.find((product) => productComparisonKey(product) === item.comparisonKey) : null;
+      return upgradeCatalogProduct(byComparison);
     }
 
     function refreshAutoPrices(list = currentList()) {
@@ -538,6 +556,7 @@
       priceMode = mode;
       localStorage.setItem(PRICE_MODE_KEY, priceMode);
       refreshAutoPrices();
+      saveState();
       renderPriceMode();
       render();
     }
@@ -696,8 +715,8 @@
         const requested = parsed.requestedPackage;
         const exactPackage = requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001;
         const sameUnit = parsed.unit && MEASURE_UNITS.has(parsed.unit) && packageData.unit === parsed.unit;
-        return {product, score:score + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage};
-      }).filter((entry) => entry.score > 0 && entry.valid).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR')).slice(0, 8).map((entry) => entry.product);
+        return {product, score:score + catalogMatchBonus(product) + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage};
+      }).filter((entry) => entry.score > 0 && entry.valid).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR')).slice(0, 8).map((entry) => preferredCatalogProduct(entry.product));
       suggestionIndex = -1;
       $('sugBox').innerHTML = suggestionItems.map((product, index) => `<button class="suggestion" type="button" role="option" data-suggestion="${index}"><span class="suggestion-name">${escapeHtml(product.name)}</span><span class="suggestion-meta">${formatPrice(selectedPrice(product))}</span></button>`).join('');
       $('sugBox').classList.toggle('visible', suggestionItems.length > 0);
@@ -761,10 +780,10 @@
         const requestedBase = requested && baseAmount(requested.amount, requested.unit);
         const productBase = baseAmount(packageData.amount * (packageData.count || 1), packageData.unit);
         const compatible = !requested || exactPackage || Boolean(requestedBase && productBase && requestedBase.dimension === productBase.dimension);
-        return {product, score:score + (exactPackage ? 10000 : sameUnit ? 600 : 0), exactPackage, compatible};
+        return {product, score:score + catalogMatchBonus(product) + (exactPackage ? 10000 : sameUnit ? 600 : 0), exactPackage, compatible};
       }).filter((entry) => entry && entry.compatible).sort((a, b) => Number(b.exactPackage) - Number(a.exactPackage) || b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR'));
       const selected = candidates[0];
-      return selected ? {...selected, requested} : {product:null, exactPackage:false, requested};
+      return selected ? {...selected, product:preferredCatalogProduct(selected.product), requested} : {product:null, exactPackage:false, requested};
     }
 
     function findProduct(text, parsed = {}) {
