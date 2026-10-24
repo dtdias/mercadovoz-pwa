@@ -156,7 +156,7 @@ python scripts/atualizar_precos.py
 python scripts/atualizar_precos.py --check
 ```
 
-`--no-scrape` somente normaliza o catálogo existente, sem consultar fontes. A execução padrão pode alterar preços gerados; use-a de forma consciente. Limites podem ser ajustados por `PRICE_MAX_QUERIES`, `PRICE_RESULTS_PER_QUERY`, `PRICE_TIMEOUT` e `PRICE_DELAY`.
+`--no-scrape` somente normaliza o catálogo existente, sem consultar fontes. A execução padrão pode alterar preços gerados; use-a de forma consciente. Limites podem ser ajustados por `PRICE_MAX_QUERIES`, `PRICE_RESULTS_PER_QUERY`, `PRICE_TIMEOUT`, `PRICE_DELAY` e `PRICE_RETRIES`.
 
 ## Qualidade
 
@@ -165,6 +165,7 @@ Comandos definidos pelo projeto:
 ```bash
 python -m json.tool manifest.json
 python -m json.tool precos.json
+python scripts/test_atualizar_precos.py
 python scripts/atualizar_precos.py --check
 node -e "const fs=require('fs');const h=fs.readFileSync('index.html','utf8');new Function(h.slice(h.indexOf('<script>')+8,h.lastIndexOf('</script>')));"
 node --check sw.js

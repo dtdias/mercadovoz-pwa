@@ -6,12 +6,14 @@ import argparse
 import datetime as dt
 import html
 import json
+import math
 import os
 import re
 import time
 import unicodedata
 from pathlib import Path
 from statistics import median
+from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
@@ -55,15 +57,18 @@ def slugify(value: object) -> str:
 
 
 def parse_price(value: object) -> float:
+    if isinstance(value, bool):
+        return 0.0
     if isinstance(value, (int, float)):
-        return round(float(value), 2) if 0.05 <= float(value) <= 10000 else 0.0
+        price = float(value)
+        return round(price, 2) if math.isfinite(price) and 0.05 <= price <= 10000 else 0.0
     text = str(value or "").replace("R$", "").strip()
     text = re.sub(r"\.(?=\d{3}(?:,|$))", "", text).replace(",", ".")
     try:
         price = float(re.sub(r"[^\d.-]", "", text))
     except ValueError:
         return 0.0
-    return round(price, 2) if 0.05 <= price <= 10000 else 0.0
+    return round(price, 2) if math.isfinite(price) and 0.05 <= price <= 10000 else 0.0
 
 
 def parse_count(value: object, default: int = 1) -> int:
@@ -124,13 +129,15 @@ def extract_brand(name: str, explicit: str = "") -> str:
 
 
 def price_stats(offers: list[dict]) -> dict:
-    prices = sorted(price for offer in offers if (price := parse_price(offer.get("price"))) > 0)
+    prices = sorted(price for offer in offers if isinstance(offer, dict) and (price := parse_price(offer.get("price"))) > 0)
     if not prices:
         return {"min": 0.0, "median": 0.0, "max": 0.0, "count": 0}
     return {"min": prices[0], "median": round(float(median(prices)), 2), "max": prices[-1], "count": len(prices)}
 
 
 def normalize_offer(raw: dict, source: str, source_url: str, region: str, collected_at: str) -> dict | None:
+    if not isinstance(raw, dict):
+        return None
     price = parse_price(raw.get("price"))
     if not price:
         return None
@@ -144,6 +151,10 @@ def normalize_offer(raw: dict, source: str, source_url: str, region: str, collec
 
 
 def normalize_product(raw: dict, category: str = "Outros", source: str = "Catálogo local", source_url: str = "", region: str = "") -> dict:
+    if not isinstance(raw, dict):
+        raise ValueError("product must be an object")
+    if "offers" in raw and not isinstance(raw.get("offers"), list):
+        raise ValueError("offers must be a list")
     legacy = not raw.get("name") and raw.get("un")
     name = str(raw.get("name") or (raw.get("un") if legacy else raw.get("nome")) or "Produto").strip()
     category = str(raw.get("category") or raw.get("categoria") or category or "Outros")
@@ -160,6 +171,8 @@ def normalize_product(raw: dict, category: str = "Outros", source: str = "Catál
     raw_offers = raw.get("offers") if isinstance(raw.get("offers"), list) else []
     offers = []
     for offer in raw_offers:
+        if not isinstance(offer, dict) or not parse_price(offer.get("price")):
+            raise ValueError(f"invalid offer for product: {name}")
         normalized = normalize_offer(offer, str(raw.get("source") or source), str(raw.get("source_url") or source_url), str(raw.get("region") or region), collected_at)
         if normalized:
             offers.append(normalized)
@@ -208,11 +221,14 @@ def load_catalog() -> list[dict]:
         return []
     payload = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     if isinstance(payload.get("produtos"), list):
-        return [normalize_product(item) for item in payload["produtos"]]
+        products = [normalize_product(item) for item in payload["produtos"]]
+        validate_catalog(products)
+        return products
     products: list[dict] = []
     for category, items in (payload.get("categorias") or {}).items():
         if isinstance(items, list):
             products.extend(normalize_product(item, category) for item in items)
+    validate_catalog(products)
     return products
 
 
@@ -264,12 +280,23 @@ def merge_products(existing: list[dict], scraped: list[dict]) -> list[dict]:
     return result
 
 
-def fetch_page(url: str, timeout: int) -> str:
+def fetch_page(url: str, timeout: int, retries: int = 2) -> str:
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.5"})
-    with urlopen(request, timeout=timeout) as response:
-        if response.status not in {200, 206}:
-            raise RuntimeError(f"HTTP {response.status}")
-        return response.read().decode("utf-8", errors="replace")
+    transient_statuses = {408, 425, 429, 500, 502, 503, 504}
+    for attempt in range(max(0, retries) + 1):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                if response.status not in {200, 206}:
+                    raise RuntimeError(f"HTTP {response.status}")
+                return response.read().decode("utf-8", errors="replace")
+        except HTTPError as error:
+            if error.code not in transient_statuses or attempt >= retries:
+                raise
+        except (URLError, TimeoutError):
+            if attempt >= retries:
+                raise
+        time.sleep(min(2 ** attempt, 4))
+    raise RuntimeError(f"request failed after {retries} retries: {url}")
 
 
 def scraped_product(name: str, prices: list[float], query: str, source: dict, source_url: str, brand: str = "") -> dict:
@@ -357,30 +384,36 @@ def parse_vtex_json(payload_text: str, query: str, source: dict, limit: int) -> 
         name = str(product.get("productName") or product.get("productTitle") or "").strip()
         if not name or tokens and not any(token in normalize_text(name) for token in tokens):
             continue
-        prices = []
-        for item in product.get("items", []):
+        brand = product.get("brand")
+        if isinstance(brand, dict):
+            brand = brand.get("name", "")
+        items = product.get("items") if isinstance(product.get("items"), list) else []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            item_name = str(item.get("nameComplete") or item.get("name") or name).strip()
+            prices = []
             for seller in item.get("sellers", []):
+                if not isinstance(seller, dict):
+                    continue
                 offer = seller.get("commertialOffer") or {}
                 if offer.get("IsAvailable", True):
                     price = parse_price(offer.get("Price"))
                     if price:
                         prices.append(price)
-        if not prices:
-            continue
-        product_url = str(product.get("link") or source_url)
-        brand = product.get("brand")
-        if isinstance(brand, dict):
-            brand = brand.get("name", "")
-        products.append(scraped_product(name, prices, query, source, product_url, str(brand or "")))
-        if len(products) >= limit:
-            break
+            if not item_name or not prices:
+                continue
+            product_url = str(item.get("link") or product.get("link") or source_url)
+            products.append(scraped_product(item_name, [min(prices)], query, source, product_url, str(brand or "")))
+            if len(products) >= limit:
+                return products
     return products
 
 
 PARSERS = {"carrefour": parse_carrefour, "jsonld": parse_jsonld, "vtex": parse_vtex_json}
 
 
-def scrape_sources(sources: list[dict], max_queries: int, limit: int, timeout: int, delay: float) -> tuple[list[dict], list[dict]]:
+def scrape_sources(sources: list[dict], max_queries: int, limit: int, timeout: int, delay: float, retries: int = 2) -> tuple[list[dict], list[dict]]:
     scraped: list[dict] = []
     reports: list[dict] = []
     for source in sources:
@@ -395,15 +428,24 @@ def scrape_sources(sources: list[dict], max_queries: int, limit: int, timeout: i
                 continue
             source_report["consultas"] += 1
             try:
-                page = fetch_page(source["url"].format(query=quote(term)), timeout)
+                page = fetch_page(source["url"].format(query=quote(term)), timeout, retries)
                 batch = parser(page, term, {**source, **query}, limit)
                 scraped.extend(batch)
                 source_report["produtos"] += len(batch)
             except Exception as error:
                 source_report["erros"].append({"consulta": term, "erro": str(error)[:180]})
             time.sleep(delay)
+        if source_report["produtos"] == 0:
+            source_report["erros"].append({"consulta": "*", "erro": "nenhum produto válido retornado"})
         reports.append(source_report)
     return scraped, reports
+
+
+def require_scrape_success(scraped: list[dict], reports: list[dict]) -> None:
+    if scraped and any(report.get("produtos", 0) > 0 for report in reports):
+        return
+    details = "; ".join(f"{report.get('nome', report.get('id', 'fonte'))}: {len(report.get('erros', []))} erro(s)" for report in reports)
+    raise RuntimeError(f"no valid prices collected; existing catalog preserved. {details}")
 
 
 def validate_catalog(products: list[dict]) -> None:
@@ -418,9 +460,34 @@ def validate_catalog(products: list[dict]) -> None:
         if product["id"] in seen_ids:
             raise ValueError(f"duplicate product id: {product['id']}")
         seen_ids.add(product["id"])
-        if not product["name"].strip() or not isinstance(product["aliases"], list) or not isinstance(product["offers"], list) or product["price"] < 0:
+        if not product["name"].strip() or not isinstance(product["aliases"], list) or not isinstance(product["offers"], list):
             raise ValueError(f"invalid product: {product['id']}")
-        if product["price"] != product["price_stats"]["median"]:
+        stats = product.get("price_stats")
+        if not isinstance(stats, dict) or set(stats) != {"min", "median", "max", "count"}:
+            raise ValueError(f"invalid price_stats: {product['id']}")
+        for field in ("min", "median", "max"):
+            value = stats[field]
+            if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(float(value)) or value < 0:
+                raise ValueError(f"invalid price_stats values: {product['id']}")
+        if not isinstance(stats["count"], int) or stats["count"] < 0:
+            raise ValueError(f"invalid price_stats count: {product['id']}")
+        offer_keys: set[tuple[str, str]] = set()
+        for offer in product["offers"]:
+            if not isinstance(offer, dict):
+                raise ValueError(f"invalid offer: {product['id']}")
+            price = parse_price(offer.get("price"))
+            if price <= 0 or offer.get("price") != price:
+                raise ValueError(f"invalid offer price: {product['id']}")
+            offer_key = (normalize_text(offer.get("source")), normalize_text(offer.get("region")))
+            if offer_key in offer_keys:
+                raise ValueError(f"duplicate offer: {product['id']}")
+            offer_keys.add(offer_key)
+        if product["offers"]:
+            expected_stats = price_stats(product["offers"])
+        else:
+            base_price = parse_price(product.get("price"))
+            expected_stats = {"min":base_price, "median":base_price, "max":base_price, "count":0}
+        if stats != expected_stats or product["price"] != stats["median"]:
             raise ValueError(f"median mismatch: {product['id']}")
 
 
@@ -445,7 +512,11 @@ def main() -> int:
     reports: list[dict] = []
     scraped: list[dict] = []
     if not args.no_scrape:
-        scraped, reports = scrape_sources(load_sources(), int(os.getenv("PRICE_MAX_QUERIES", "24")), int(os.getenv("PRICE_RESULTS_PER_QUERY", "8")), int(os.getenv("PRICE_TIMEOUT", "20")), float(os.getenv("PRICE_DELAY", "0.8")))
+        sources = load_sources()
+        configured_queries = os.getenv("PRICE_MAX_QUERIES")
+        max_queries = int(configured_queries) if configured_queries is not None else max((len(source.get("queries", [])) for source in sources), default=0)
+        scraped, reports = scrape_sources(sources, max_queries, int(os.getenv("PRICE_RESULTS_PER_QUERY", "8")), int(os.getenv("PRICE_TIMEOUT", "20")), float(os.getenv("PRICE_DELAY", "0.8")), int(os.getenv("PRICE_RETRIES", "2")))
+        require_scrape_success(scraped, reports)
     products = merge_products(products, [normalize_product(item) for item in scraped])
     write_catalog(products, reports)
     print(f"Catalog updated: {len(products)} products ({len(scraped)} scraped)")

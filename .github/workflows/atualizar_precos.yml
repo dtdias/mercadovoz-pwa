@@ -1,6 +1,9 @@
 name: Atualizar Preços Semanais
 permissions:
   contents: write
+concurrency:
+  group: atualizar-precos-${{ github.ref }}
+  cancel-in-progress: false
 on:
   schedule:
     - cron: '0 7 * * 1'
@@ -12,11 +15,16 @@ jobs:
     steps:
       - name: Checkout repositório
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
+      - name: Testar atualizador
+        run: python scripts/test_atualizar_precos.py
 
       - name: Executar script de atualização
         run: python scripts/atualizar_precos.py
@@ -28,8 +36,14 @@ jobs:
 
       - name: Commit e Push das alterações
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add precos.json
-          git status
-          git diff --quiet && git diff --staged --quiet || (git commit -m "bot: atualização semanal de preços" && git push)
+          git diff --cached --check
+          if git diff --cached --quiet -- precos.json; then
+            echo "Nenhuma alteração válida no catálogo."
+            exit 0
+          fi
+          git status --short
+          git commit -m "bot: atualização semanal de preços"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
