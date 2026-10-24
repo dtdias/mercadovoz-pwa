@@ -276,6 +276,11 @@
     const canonicalUnit = (value) => ({quilo:'kg',quilos:'kg',kg:'kg',grama:'g',gramas:'g',g:'g',litro:'l',litros:'l',l:'l',ml:'ml',mg:'mg',un:'un',unid:'un',unidade:'un',unidades:'un',pct:'pct',pacote:'pct',pacotes:'pct',caixa:'cx',caixas:'cx',cx:'cx',rolo:'rolos',rolos:'rolos',dz:'dz','dúzia':'dz','dúzias':'dz'})[normalizeText(value)] || normalizeText(value);
     const PACKAGE_PATTERN = /(\d+(?:[.,]\d+)?)\s*(kg|g|litros?|l|ml|mg|unidades?|unid|un|pct|pacotes?|caixas?|cx|rolos?|dz|d[uú]zias?)\b/i;
     const MEASURE_UNITS = new Set(['kg', 'g', 'l', 'ml', 'mg']);
+    const GENERIC_PRODUCT_PREFERENCES = {
+      leite:{category:'laticinios', unit:'l', amount:1, preferred:'leite integral'},
+      arroz:{category:'mercearia', unit:'kg', amount:5},
+      detergente:{category:'limpeza', unit:'ml', amount:500}
+    };
 
     function parsePackage(value) {
       const text = String(value ?? '');
@@ -303,11 +308,16 @@
       return product.comparisonKey || product.comparison_key || `${slugify(product.category)}|${slugify(family)}|${packageData.key || 'un'}|1`;
     }
 
+    function tokenize(value) {
+      return normalizeText(value).split(/[^a-z0-9]+/).filter(Boolean);
+    }
+
     function normalizeProduct(raw, fallbackCategory = 'Outros') {
       const legacy = !raw.name && raw.un && raw.marca !== undefined;
       const category = String(raw.category || raw.categoria || fallbackCategory || 'Outros');
       const name = String(raw.name || (legacy ? raw.un : raw.nome) || 'Produto').trim();
-      const aliases = Array.isArray(raw.aliases) ? raw.aliases : String(raw.aliases || raw.nome || name).split('|');
+      const rawAliases = Array.isArray(raw.aliases) ? raw.aliases : String(raw.aliases || raw.nome || name).split('|');
+      const rawSearchTerms = Array.isArray(raw.search_terms) ? raw.search_terms : Array.isArray(raw.searchTerms) ? raw.searchTerms : [];
       const rawPackage = String(raw.package || raw.embalagem || '');
       const parsedPackage = parsePackage(rawPackage || name);
       const packageAmount = parseNumber(raw.package_amount ?? raw.packageAmount) || parsedPackage.amount;
@@ -321,13 +331,28 @@
       const offers = Array.isArray(raw.offers) ? raw.offers.map((offer) => ({...offer, price:parseNumber(offer.price)})).filter((offer) => offer.price > 0) : [];
       const stats = raw.price_stats || raw.priceStats || {};
       const price = parseNumber(raw.price ?? stats.median ?? 0);
+      const source = String(raw.source || raw.fonte || 'Catálogo');
+      const externalCatalog = !['', 'catalogo', 'catalogo local', 'catalogo inicial'].includes(normalizeText(source));
+      const normalizedName = normalizeText(name);
+      const normalizedFamily = normalizeText(family);
+      const normalizedBrand = normalizeText(brand);
+      const aliases = [];
+      const searchTerms = [...rawSearchTerms];
+      rawAliases.forEach((alias) => {
+        const value = String(alias).trim();
+        const normalizedAlias = normalizeText(value);
+        const broad = externalCatalog && tokenize(value).length === 1 && ![normalizedName, normalizedFamily, normalizedBrand].includes(normalizedAlias);
+        (broad ? searchTerms : aliases).push(value);
+      });
       return {
         id: String(raw.id || `sku_${slugify(skuKey)}`),
         skuKey,
         comparisonKey,
         familyKey,
+        family,
         brand,
-        aliases: [...new Set([...aliases, name, family, ...family.split(/\s+/).filter((alias) => alias.length > 2)].map((alias) => String(alias).trim()).filter(Boolean))],
+        aliases: [...new Set([...aliases, name, family].map((alias) => String(alias).trim()).filter(Boolean))],
+        searchTerms: [...new Set(searchTerms.map((term) => String(term).trim()).filter(Boolean))],
         name,
         category,
         unit: String(raw.unit || raw.unidade || (packageUnit === 'kg' || packageUnit === 'g' ? 'pct' : 'un')),
@@ -338,9 +363,42 @@
         offers,
         priceStats: stats,
         price,
-        source: String(raw.source || raw.fonte || 'Catálogo'),
+        source,
         sourceUrl: raw.source_url || raw.sourceUrl || ''
       };
+    }
+
+    function genericPreferenceScore(query, product) {
+      const preference = GENERIC_PRODUCT_PREFERENCES[query];
+      if (!preference) return 0;
+      const packageData = productPackage(product);
+      let score = normalizeText(product.category) === preference.category ? 900 : 0;
+      if (packageData.unit === preference.unit) score += 700;
+      if (Math.abs(packageData.amount - preference.amount) < .001) score += 700;
+      if (preference.preferred && normalizeText(`${product.name} ${product.family || ''}`).includes(preference.preferred)) score += 500;
+      return score;
+    }
+
+    function productMatchScore(product, query) {
+      const queryTokens = tokenize(query);
+      if (!queryTokens.length) return 0;
+      const name = normalizeText(product.name);
+      const family = normalizeText(product.family || product.familyKey || product.family_key || '');
+      const brand = normalizeText(product.brand);
+      const strongFields = [name, family, brand, ...(product.aliases || []).map(normalizeText)];
+      const searchableFields = [...strongFields, ...(product.searchTerms || []).map(normalizeText)];
+      const hasAllTokens = queryTokens.every((token) => searchableFields.some((field) => tokenize(field).includes(token)));
+      if (!hasAllTokens) return 0;
+      const strongMatch = queryTokens.every((token) => strongFields.some((field) => tokenize(field).includes(token)));
+      let score = strongMatch ? 3500 : 500;
+      if (name === query) score = 16000;
+      else if (family === query) score = 15000;
+      else if (name.startsWith(`${query} `) || name.startsWith(`${query}(`)) score = 12000;
+      else if (family.startsWith(`${query} `)) score = 11000;
+      else if (queryTokens.length === 1 && tokenize(name)[0] === queryTokens[0]) score = 10000;
+      else if (name.includes(query)) score = 5000;
+      if ((product.aliases || []).some((alias) => normalizeText(alias) === query)) score += 1500;
+      return score + genericPreferenceScore(query, product);
     }
 
     function catalogFromPayload(payload) {
@@ -578,13 +636,7 @@
       if (!query) { suggestionItems = []; suggestionIndex = -1; $('sugBox').classList.remove('visible'); $('sugBox').innerHTML = ''; return; }
       const parsed = parseQuantity(value);
       suggestionItems = DB.map((product) => {
-        const terms = [product.name, ...product.aliases].map(normalizeText);
-        const score = terms.reduce((best, term) => {
-          if (term === query) return Math.max(best, 1000);
-          if (term.startsWith(query)) return Math.max(best, 700 + query.length);
-          if (term.includes(query)) return Math.max(best, 400 + query.length);
-          return best;
-        }, 0);
+        const score = productMatchScore(product, query);
         const packageData = productPackage(product);
         const requested = parsed.requestedPackage;
         const exactPackage = requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001;
@@ -633,13 +685,12 @@
     function findProduct(text, parsed = {}) {
       const query = normalizeText(text);
       const candidates = DB.map((product) => {
-        const terms = [product.name, ...product.aliases].map(normalizeText).filter(Boolean);
-        const term = terms.filter((candidate) => query.includes(candidate)).sort((a, b) => b.length - a.length)[0];
+        const score = productMatchScore(product, query);
         const packageData = productPackage(product);
         const requested = parsed.requestedPackage;
         const exactPackage = requested && packageData.unit === requested.unit && packageData.count === (requested.count || 1) && Math.abs(packageData.amount - requested.amount) < .001;
         const sameUnit = parsed.unit && MEASURE_UNITS.has(parsed.unit) && packageData.unit === parsed.unit;
-        return term ? {product, score:term.length + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage} : null;
+        return score ? {product, score:score + (exactPackage ? 10000 : sameUnit ? (packageData.count === 1 ? 100 : 80) : 0), valid:!requested ? (!MEASURE_UNITS.has(parsed.unit) || sameUnit) : exactPackage} : null;
       }).filter((entry) => entry && entry.valid).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name, 'pt-BR'));
       return candidates[0]?.product || null;
     }
