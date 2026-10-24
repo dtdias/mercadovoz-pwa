@@ -70,6 +70,7 @@
     .mic-btn{width:68px;height:68px;flex-shrink:0;border-radius:50%;background:var(--primary);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:800;box-shadow:0 5px 14px rgba(5,150,105,.3)}
     .mic-btn.listening{background:#dc2626;box-shadow:0 5px 14px rgba(220,38,38,.3);animation:pulse 1.4s infinite}
     .mic-btn.starting{background:#d97706}
+    .mic-btn.processing{background:#0f766e}
     .mic-label{font-size:9px}
     @keyframes pulse{50%{transform:scale(1.05)}}
     .transcript{display:none;margin-top:9px;background:#0f172a;color:#a7f3d0;border-radius:9px;padding:9px 10px;font-size:12px;line-height:1.4}
@@ -726,11 +727,14 @@
     }
 
     function updateVoiceUI() {
-      const listening = voiceState === 'listening'; const starting = voiceState === 'starting';
-      [$('bMic'), $('bMic2')].forEach((button) => { button.classList.toggle('listening', listening); button.classList.toggle('starting', starting); button.setAttribute('aria-pressed', String(listening)); });
-      $('mLbl').textContent = listening ? 'PARAR' : starting ? 'AGUARDE' : 'FALAR';
+      const listening = voiceState === 'listening'; const starting = voiceState === 'starting'; const processing = voiceState === 'processing';
+      [$('bMic'), $('bMic2')].forEach((button) => { button.classList.toggle('listening', listening); button.classList.toggle('starting', starting); button.classList.toggle('processing', processing); button.setAttribute('aria-pressed', String(listening)); });
+      $('mLbl').textContent = listening ? 'PARAR' : starting ? 'AGUARDE' : processing ? 'PROCESSANDO' : 'FALAR';
       $('voiceDot').className = `status-dot ${listening ? 'live' : starting ? '' : 'ready'}`;
-      if (listening) { $('voiceBadge').textContent = 'Ouvindo...'; $('voiceTranscript').classList.add('visible'); }
+      if (listening) $('voiceBadge').textContent = 'Ouvindo...';
+      if (starting) $('voiceBadge').textContent = 'Iniciando...';
+      if (processing) $('voiceBadge').textContent = 'Processando...';
+      if (listening || starting || processing) $('voiceTranscript').classList.add('visible');
     }
 
     function setVoiceStatus(message, type = '') {
@@ -750,12 +754,13 @@
       instance.lang = 'pt-BR'; instance.continuous = false; instance.interimResults = true; instance.maxAlternatives = 1;
       instance.onstart = () => { voiceState = 'listening'; $('tTxt').textContent = '...'; updateVoiceUI(); };
       instance.onresult = (event) => {
-        let transcript = '';
+        let transcript = ''; let finalTranscript = '';
         for (let index = event.resultIndex; index < event.results.length; index += 1) {
           const result = event.results[index]; transcript += result[0].transcript;
-          if (result.isFinal && !voiceResultIndexes.has(index)) { voiceResultIndexes.add(index); addText(result[0].transcript); }
+          if (result.isFinal && !voiceResultIndexes.has(index)) { voiceResultIndexes.add(index); finalTranscript += result[0].transcript; }
         }
         $('tTxt').textContent = transcript || '...';
+        if (finalTranscript.trim()) { voiceState = 'processing'; updateVoiceUI(); addText(finalTranscript); }
       };
       instance.onerror = (event) => { voiceState = 'idle'; setVoiceStatus(voiceErrorMessage(event.error), 'error'); showToast(voiceErrorMessage(event.error), 'error'); updateVoiceUI(); };
       instance.onend = () => { voiceState = 'idle'; updateVoiceUI(); clearTimeout(voiceEndTimer); voiceEndTimer = setTimeout(() => { $('voiceTranscript').classList.remove('visible'); setVoiceStatus('Voz pronta'); }, 2400); };
@@ -763,14 +768,10 @@
       return instance;
     }
 
-    async function startVoice() {
+    function startVoice() {
       if (!recognition || voiceState !== 'idle') return;
-      voiceState = 'starting'; voiceResultIndexes = new Set(); updateVoiceUI();
+      voiceState = 'starting'; voiceResultIndexes = new Set(); clearTimeout(voiceEndTimer); voiceEndTimer = null; updateVoiceUI();
       try {
-        if (navigator.mediaDevices?.getUserMedia) {
-          const stream = await navigator.mediaDevices.getUserMedia({audio:true});
-          stream.getTracks().forEach((track) => track.stop());
-        }
         recognition.start();
       } catch (error) {
         voiceState = 'idle'; const message = error.name === 'NotAllowedError' ? voiceErrorMessage('not-allowed') : error.name === 'NotFoundError' ? voiceErrorMessage('audio-capture') : 'Não foi possível iniciar o microfone.'; setVoiceStatus(message, 'error'); showToast(message, 'error'); updateVoiceUI();
@@ -780,7 +781,7 @@
     function toggleMic() {
       if (!recognition) { showToast('Seu navegador não oferece reconhecimento de voz.', 'warn'); return; }
       if (voiceState === 'listening') { recognition.stop(); return; }
-      if (voiceState === 'starting') return;
+      if (voiceState === 'starting' || voiceState === 'processing') return;
       startVoice();
     }
 
