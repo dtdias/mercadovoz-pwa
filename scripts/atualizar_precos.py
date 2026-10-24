@@ -165,9 +165,17 @@ def normalize_product(raw: dict, category: str = "Outros", source: str = "Catál
             offers.append(normalized)
     base_price = parse_price(raw.get("price") if raw.get("price") is not None else raw.get("preco"))
     stats = price_stats(offers) if offers else {"min": base_price, "median": base_price, "max": base_price, "count": 0}
-    aliases = raw.get("aliases")
-    if not isinstance(aliases, list):
-        aliases = str(raw.get("nome") or name).split("|")
+    aliases = raw.get("aliases") if isinstance(raw.get("aliases"), list) else str(raw.get("nome") or name).split("|")
+    search_terms = raw.get("search_terms") if isinstance(raw.get("search_terms"), list) else []
+    normalized_name = normalize_text(name)
+    normalized_family = normalize_text(family)
+    normalized_brand = normalize_text(brand)
+    strong_aliases = []
+    for alias in aliases:
+        alias_text = str(alias).strip()
+        normalized_alias = normalize_text(alias_text)
+        is_broad = len(normalized_alias.split()) == 1 and normalized_alias not in {normalized_name, normalized_family, normalized_brand}
+        (search_terms if is_broad else strong_aliases).append(alias_text)
     unit = str(raw.get("unit") or raw.get("unidade") or ("pct" if package["unit"] in {"kg", "g"} else "un"))
     product_id = str(raw.get("id") or f"sku_{slugify(sku_key)}")
     return {
@@ -175,9 +183,11 @@ def normalize_product(raw: dict, category: str = "Outros", source: str = "Catál
         "sku_key": sku_key,
         "comparison_key": comparison_key,
         "family_key": family_key,
+        "family": family,
         "brand": brand,
         "name": name,
-        "aliases": sorted({str(alias).strip() for alias in [*aliases, name, family] if str(alias).strip()}),
+        "aliases": sorted({str(alias).strip() for alias in [*strong_aliases, name, family] if str(alias).strip()}),
+        "search_terms": sorted({str(term).strip() for term in [*search_terms] if str(term).strip()}),
         "category": category,
         "unit": unit,
         "package": package_key,
@@ -231,8 +241,9 @@ def merge_products(existing: list[dict], scraped: list[dict]) -> list[dict]:
         if position is not None:
             current = result[position]
             if is_scraped or product.get("offers"):
-                current.update({field: product[field] for field in ("sku_key", "comparison_key", "family_key", "brand", "category", "unit", "package", "package_amount", "package_unit", "package_count")})
+                current.update({field: product[field] for field in ("sku_key", "comparison_key", "family_key", "family", "brand", "category", "unit", "package", "package_amount", "package_unit", "package_count")})
             current["aliases"] = sorted(set(current.get("aliases", [])) | set(product.get("aliases", [])))
+            current["search_terms"] = sorted(set(current.get("search_terms", [])) | set(product.get("search_terms", [])))
             current["offers"] = merge_offers(current.get("offers", []), product.get("offers", []))
             if is_scraped and (product.get("source") != "Catálogo local" or product.get("offers")):
                 current["name"] = product["name"]
@@ -264,7 +275,7 @@ def fetch_page(url: str, timeout: int) -> str:
 def scraped_product(name: str, prices: list[float], query: str, source: dict, source_url: str, brand: str = "") -> dict:
     collected_at = dt.datetime.now(dt.timezone.utc).isoformat()
     offers = [{"price": price, "source": source["name"], "source_url": source_url, "region": source.get("region", ""), "collected_at": collected_at} for price in prices]
-    return {"name": name, "brand": brand, "aliases": [query], "category": source.get("category", "Outros"), "offers": offers, "source": source["name"], "source_url": source_url, "region": source.get("region", ""), "collected_at": collected_at}
+    return {"name": name, "brand": brand, "aliases": [], "search_terms": [query], "category": source.get("category", "Outros"), "offers": offers, "source": source["name"], "source_url": source_url, "region": source.get("region", ""), "collected_at": collected_at}
 
 
 def parse_carrefour(html_page: str, query: str, source: dict, limit: int) -> list[dict]:
