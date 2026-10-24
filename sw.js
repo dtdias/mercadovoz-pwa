@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mercadovoz-pwa-v13';
+const CACHE_NAME = 'mercadovoz-pwa-v14';
 const CACHE_PREFIX = 'mercadovoz-pwa-';
 const SHELL_ASSETS = [
   '/',
